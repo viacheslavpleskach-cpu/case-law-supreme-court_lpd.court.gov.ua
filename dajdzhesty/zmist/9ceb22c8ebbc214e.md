@@ -1,6 +1,6 @@
 # Огляд судової практики Касаційного цивільного суду у складі Верховного Суду (актуальна практика) за грудень 2021 року
 
-- Суд / тип: КЦС, періодичний (32 с.)
+- Суд / тип: КЦС, періодичний (32 с.); оприлюднено 2022-01-28
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/9ceb22c8ebbc214e · джерело: https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KCS_12_2021.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/9ceb22c8ebbc214e.txt.gz` (сторінки розділені символом \f)

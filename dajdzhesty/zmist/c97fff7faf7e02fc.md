@@ -1,6 +1,6 @@
 # Огляд судової практики Касаційного господарського суду у складі Верховного Суду за 2023 рік
 
-- Суд / тип: КГС, періодичний (90 с.)
+- Суд / тип: КГС, періодичний (90 с.); оприлюднено 2024-02-23
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/c97fff7faf7e02fc · джерело: https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Richniy_Oglyad_KGS_2023.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/c97fff7faf7e02fc.txt.gz` (сторінки розділені символом \f)

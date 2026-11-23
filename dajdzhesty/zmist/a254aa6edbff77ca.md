@@ -1,6 +1,6 @@
 # Огляд судової практики Касаційного кримінального суду у складі Верховного Суду (актуальна практика) за вересень 2024 року
 
-- Суд / тип: ККС, періодичний (46 с.)
+- Суд / тип: ККС, періодичний (46 с.); оприлюднено 2024-10-30
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/a254aa6edbff77ca · джерело: https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_09_2024.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/a254aa6edbff77ca.txt.gz` (сторінки розділені символом \f)

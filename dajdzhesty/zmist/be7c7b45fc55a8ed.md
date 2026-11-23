@@ -1,6 +1,6 @@
 # Огляд практики Суду справедливості Європейського Союзу (червень 2025 року)
 
-- Суд / тип: Суд ЄС, періодичний (34 с.)
+- Суд / тип: Суд ЄС, періодичний (34 с.); оприлюднено 2025-10-17
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/be7c7b45fc55a8ed · джерело: https://court.gov.ua/storage/portal/supreme/Oglyad_SES_6_2025.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/be7c7b45fc55a8ed.txt.gz` (сторінки розділені символом \f)

@@ -1,6 +1,6 @@
 # Дайджест судової практики Великої Палати Верховного Суду (01.12.2024 - 31.12.2024)
 
-- Суд / тип: Велика Палата, періодичний (42 с.)
+- Суд / тип: Велика Палата, періодичний (42 с.); оприлюднено 2025-01-31
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/1b8fc3e80f5edea2 · джерело: https://court.gov.ua/storage/portal/supreme/ogliady/Daigest_VP_2024_12.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/1b8fc3e80f5edea2.txt.gz` (сторінки розділені символом \f)

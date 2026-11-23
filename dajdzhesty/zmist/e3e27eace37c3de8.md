@@ -1,6 +1,6 @@
 # Огляд рішень Європейського суду з прав людини (травень 2024 року)
 
-- Суд / тип: ЄСПЛ, періодичний (71 с.)
+- Суд / тип: ЄСПЛ, періодичний (71 с.); оприлюднено 2024-08-06
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/e3e27eace37c3de8 · джерело: https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_ESPL_05_2024.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/e3e27eace37c3de8.txt.gz` (сторінки розділені символом \f)

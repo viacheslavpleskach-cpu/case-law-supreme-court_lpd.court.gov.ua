@@ -10,7 +10,7 @@
 Потребує: pdftotext (poppler-utils), pypdf (необов'язково — закладки PDF).
 Спершу запустити scripts/lpd_sync.py: він кешує перелік дайджестів і дерево навігації.
 """
-import argparse, collections, csv, gzip, json, os, re, shutil, sys, time, urllib.request
+import argparse, collections, csv, gzip, json, os, re, shutil, sys, time, urllib.parse, urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import digest_parse as P
@@ -36,7 +36,16 @@ def load_raw():
         return json.load(f)
 
 
-def download(ids, pdf_dir=None):
+def mirror_urls():
+    """Резервні адреси PDF на supreme.court.gov.ua (з dajdzhesty/dzerkalo.csv або з поля externalUrl)."""
+    p = os.path.join(OUT, 'dzerkalo.csv')
+    if not os.path.exists(p):
+        return {}
+    with open(p, encoding='utf-8-sig') as f:
+        return {r['id']: r for r in csv.DictReader(f)}
+
+
+def download(ids, pdf_dir=None, ext=None):
     os.makedirs(PDF, exist_ok=True)
     for n, i in enumerate(ids, 1):
         dst = os.path.join(PDF, f'{i}.pdf')
@@ -45,14 +54,19 @@ def download(ids, pdf_dir=None):
         if pdf_dir and os.path.exists(os.path.join(pdf_dir, f'{i}.pdf')):
             shutil.copy(os.path.join(pdf_dir, f'{i}.pdf'), dst)
             continue
-        for t in range(3):
+        srcs = [f'{API}/digest/file/{i}'] + ([ext[i]] if ext and ext.get(i) else [])
+        for t in range(4):
+            src = srcs[min(t // 2, len(srcs) - 1)]          # дві спроби з lpd, далі — дзеркало supreme.court.gov.ua
             try:
-                with urllib.request.urlopen(f'{API}/digest/file/{i}', timeout=300) as r, open(dst + '.part', 'wb') as f:
+                q = urllib.request.Request(urllib.parse.quote(src, safe=':/?=&%'), headers={'User-Agent': 'Mozilla/5.0'})
+                with urllib.request.urlopen(q, timeout=300) as r, open(dst + '.part', 'wb') as f:
                     shutil.copyfileobj(r, f)
                 os.replace(dst + '.part', dst)
+                if src != srcs[0]:
+                    log('  pdf із дзеркала', i)
                 break
             except Exception as e:
-                log('  pdf', i, e)
+                log('  pdf', i, src, e)
                 time.sleep(5 * (t + 1))
         time.sleep(0.5)
         if n % 50 == 0:
@@ -133,6 +147,7 @@ def esc(s):
 def build(raw, parsed):
     nav = nav_paths(raw['digest_nav'])
     by_doc, by_case = lp_index()
+    mir = mirror_urls()
     items = []
     for d in raw['digests']:
         i = d['digestId']
@@ -152,7 +167,7 @@ def build(raw, parsed):
                       'rik': y, 'misiats': mth, 'storinok': p.get('pages') or int(re.sub(r'\D', '', d.get('pageLabel', '0')) or 0),
                       'temy_saitu': [' / '.join(x) for x in nav.get(i, [])], 'pdf': f'{API}/digest/file/{i}', 'dzherelo': d.get('externalUrl'),
                       'zmist_metod': p.get('toc_method'), 'zmist': p.get('toc', []), 'spravy': cases, 'edrsr': revs,
-                      'pozytsii_bazy': sorted(lps)})
+                      'pozytsii_bazy': sorted(lps), 'opublikovano': (mir.get(i) or {}).get('data_publikatsii') or ''})
     return items, by_doc
 
 
@@ -180,7 +195,7 @@ def write(items, by_doc):
             pos_title[r['id']] = r
     # 1) зміст кожного дайджесту
     for it in items:
-        L = [f"# {it['nazva']}", '', f"- Суд / тип: {it['sud']}, {it['typ'].lower()} ({it['storinok']} с.)",
+        L = [f"# {it['nazva']}", '', f"- Суд / тип: {it['sud']}, {it['typ'].lower()} ({it['storinok']} с.)" + (f"; оприлюднено {it['opublikovano']}" if it['opublikovano'] else ''),
              f"- PDF: {it['pdf']}" + (f" · джерело: {it['dzherelo']}" if it['dzherelo'] else ''),
              f"- Теми на сайті: {'; '.join(it['temy_saitu']) or '—'}", f"- Текст: `dajdzhesty/tekst/{it['id']}.txt.gz` (сторінки розділені символом \\f)", '',
              '## Зміст', '']
@@ -206,9 +221,9 @@ def write(items, by_doc):
         w.writerows(flat)
     with open(os.path.join(OUT, 'katalog.csv'), 'w', newline='', encoding='utf-8-sig') as f:
         w = csv.writer(f)
-        w.writerow(['id', 'sud', 'typ', 'rik', 'misiats', 'storinok', 'nazva', 'temy_saitu', 'punktiv_zmistu', 'zmist_metod', 'sprav', 'pozytsii_bazy', 'pdf', 'dzherelo'])
+        w.writerow(['id', 'sud', 'typ', 'rik', 'misiats', 'opublikovano', 'storinok', 'nazva', 'temy_saitu', 'punktiv_zmistu', 'zmist_metod', 'sprav', 'pozytsii_bazy', 'pdf', 'dzherelo'])
         for it in items:
-            w.writerow([it['id'], it['sud'], it['typ'], it['rik'] or '', it['misiats'] or '', it['storinok'], it['nazva'], '; '.join(it['temy_saitu']),
+            w.writerow([it['id'], it['sud'], it['typ'], it['rik'] or '', it['misiats'] or '', it['opublikovano'], it['storinok'], it['nazva'], '; '.join(it['temy_saitu']),
                         len(it['zmist']), it['zmist_metod'], len(it['spravy']), len(it['pozytsii_bazy']), it['pdf'], it['dzherelo'] or ''])
     json.dump([{k: v for k, v in it.items() if k != 'zmist'} | {'punktiv_zmistu': len(it['zmist'])} for it in items],
               open(os.path.join(OUT, 'katalog.json'), 'w'), ensure_ascii=False)
@@ -252,7 +267,7 @@ def write(items, by_doc):
                 idx.append(f'**{sub}**')
                 S += [f'## {sub}', '']
             for it in lst:
-                idx.append(f"- {esc(it['nazva'])} ({it['storinok']} с.) — [зміст](zmist/{it['id']}.md) · [PDF]({it['dzherelo'] or it['pdf']})")
+                idx.append(f"- {esc(it['nazva'])} ({it['storinok']} с.{', оприлюднено ' + it['opublikovano'] if it['opublikovano'] else ''}) — [зміст](zmist/{it['id']}.md) · [PDF]({it['dzherelo'] or it['pdf']})")
                 S += [f"### {esc(it['nazva'])}", '', f"{it['sud']}, {it['storinok']} с. · [повний зміст](../zmist/{it['id']}.md) · [PDF]({it['dzherelo'] or it['pdf']})"
                       + (f" · позицій бази: {len(it['pozytsii_bazy'])}" if it['pozytsii_bazy'] else ''), '']
                 S += toc_lines(it, maxlvl=2, limit=60) or ['_Зміст автоматично не виділено._']
@@ -294,7 +309,9 @@ def main():
     raw = load_raw()
     ids = [d['digestId'] for d in raw['digests']]
     if not a.offline:      # завантажуємо лише ще не розібрані (PDF у репозиторій не входять)
-        download([i for i in ids if not os.path.exists(os.path.join(PARSED, f'{i}.json'))], a.pdf_dir)
+        ext = {d['digestId']: d.get('externalUrl') for d in raw['digests']}
+        ext.update({k: v['dzerkalo_pdf'] for k, v in mirror_urls().items() if v.get('dzerkalo_pdf')})
+        download([i for i in ids if not os.path.exists(os.path.join(PARSED, f'{i}.json'))], a.pdf_dir, ext)
     parsed = parse_all(raw['digests'])
     items, by_doc = build(raw, parsed)
     print(json.dumps(write(items, by_doc), ensure_ascii=False, indent=1))

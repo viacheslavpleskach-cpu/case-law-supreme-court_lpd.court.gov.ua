@@ -1,6 +1,6 @@
 # Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду (актуальна практика) за листопад 2024 року
 
-- Суд / тип: КАС, періодичний (32 с.)
+- Суд / тип: КАС, періодичний (32 с.); оприлюднено 2024-12-24
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/2fcdae5dfe4bbf2a · джерело: https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KAS_11_2024.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/2fcdae5dfe4bbf2a.txt.gz` (сторінки розділені символом \f)

@@ -1,6 +1,6 @@
 # Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у спорах щодо відшкодування витрат на житлово-комунальні послуги
 
-- Суд / тип: КАС, тематичний (25 с.)
+- Суд / тип: КАС, тематичний (25 с.); оприлюднено 2024-03-18
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/71bfed1bed9f4a9f · джерело: https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_vidshkod_vutrat_kom_posl.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/71bfed1bed9f4a9f.txt.gz` (сторінки розділені символом \f)

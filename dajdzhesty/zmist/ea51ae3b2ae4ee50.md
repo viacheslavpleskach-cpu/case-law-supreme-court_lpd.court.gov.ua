@@ -1,6 +1,6 @@
 # Огляд судової практики Касаційного кримінального суду у складі Верховного Суду за липень 2025 року
 
-- Суд / тип: ККС, періодичний (47 с.)
+- Суд / тип: ККС, періодичний (47 с.); оприлюднено 2025-08-27
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/ea51ae3b2ae4ee50 · джерело: https://court.gov.ua/storage/portal/supreme/rizne/Oglyad_KKS_07_2025.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/ea51ae3b2ae4ee50.txt.gz` (сторінки розділені символом \f)

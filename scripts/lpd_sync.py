@@ -191,33 +191,47 @@ def sklad_from_head(h):
     return None
 
 
-def fetch_heads(ids, limit, max_minutes=None):
+def fetch_heads(ids, limit, max_minutes=None, threads=2):
+    """Шапки рішень (склад суду, № провадження). Пишуться рядок за рядком — переривання безпечне."""
+    import threading
+    from concurrent.futures import ThreadPoolExecutor
     heads = load_heads()
     todo = [i for i in ids if i not in heads][:limit]
-    log('шапки рішень: є', len(heads), 'дозбираю', len(todo))
-    with open(DOCS, 'a', encoding='utf-8') as f:
-        t0 = time.time()
-        for n, i in enumerate(todo, 1):
-            if max_minutes and time.time() - t0 > max_minutes * 60:
-                log('  ліміт часу — зупинка на', n - 1)
-                break
-            try:
-                d = req(f'/document/{i}', tries=2)
-            except RuntimeError:
-                continue
-            txt = ''
-            if d.get('fullText'):
-                raw = gzip.decompress(base64.b64decode(d['fullText'])).decode('utf-8', 'replace')
-                txt = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', raw))).strip()
-            m = re.search(r'провадження\s*№\s*([0-9A-Za-zА-Яа-яіїєґ\-/ ]{3,25}?)(?=\s+[А-ЯІЇЄҐ]|\s*$)', txt[:1500])
-            rec = {'id': i, 'doc_id': d.get('doc_id'), 'sklad': sklad_from_head(txt), 'provadzhennia': m.group(1).strip() if m else None,
-                   'head': txt[:600]}
+    log('шапки рішень: є', len(heads), 'дозбираю', len(todo), 'потоків', threads)
+    lock, t0, stop = threading.Lock(), time.time(), threading.Event()
+    done = [0]
+    f = open(DOCS, 'a', encoding='utf-8')
+
+    def one(i):
+        if stop.is_set():
+            return
+        if max_minutes and time.time() - t0 > max_minutes * 60:
+            stop.set()
+            return
+        try:
+            d = req(f'/document/{i}', tries=2)
+        except RuntimeError:
+            return
+        txt = ''
+        if d.get('fullText'):
+            raw = gzip.decompress(base64.b64decode(d['fullText'])).decode('utf-8', 'replace')
+            txt = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', raw))).strip()
+        m = re.search(r'провадження\s*№\s*([0-9A-Za-zА-Яа-яіїєґ\-/ ]{3,25}?)(?=\s+[А-ЯІЇЄҐ]|\s*$)', txt[:1500])
+        rec = {'id': i, 'doc_id': d.get('doc_id'), 'sklad': sklad_from_head(txt), 'provadzhennia': m.group(1).strip() if m else None,
+               'head': txt[:600]}
+        with lock:
             f.write(json.dumps(rec, ensure_ascii=False) + '\n')
             f.flush()
             heads[i] = rec
-            if n % 100 == 0:
-                log('  ', n)
-            time.sleep(PAUSE)
+            done[0] += 1
+            if done[0] % 500 == 0:
+                log('  ', done[0], f'{time.time() - t0:.0f} c')
+        time.sleep(PAUSE / 2)
+
+    with ThreadPoolExecutor(threads) as ex:
+        list(ex.map(one, todo))
+    f.close()
+    log('  зібрано', done[0], 'за', f'{time.time() - t0:.0f} c' + (' (ліміт часу)' if stop.is_set() else ''))
     return heads
 
 
@@ -448,12 +462,13 @@ def main():
     ap.add_argument('--offline', action='store_true')
     ap.add_argument('--docs', type=int, default=0, help='скільки шапок рішень дозібрати')
     ap.add_argument('--docs-minutes', type=float, default=None, help='обмеження часу на шапки, хв')
+    ap.add_argument('--docs-threads', type=int, default=2, help='паралельних запитів (не більше 3)')
     a = ap.parse_args()
     raw = load_cached() if a.offline else fetch_all()
     if a.docs:
         rows0, _, _ = build(raw, load_heads())     # спочатку рішення зразкових, ВП, ОП, палат; далі новіші
         ids = list(dict.fromkeys(d['id'] for r in sorted(rows0, key=lambda x: (x['riven'] if x['riven'] != 2 else 9, -(x['id']))) for d in r['rishennia']))
-        heads = fetch_heads(ids, a.docs, a.docs_minutes)
+        heads = fetch_heads(ids, a.docs, a.docs_minutes, min(max(a.docs_threads, 1), 3))
     else:
         heads = load_heads()
     rows, cats, path = build(raw, heads)

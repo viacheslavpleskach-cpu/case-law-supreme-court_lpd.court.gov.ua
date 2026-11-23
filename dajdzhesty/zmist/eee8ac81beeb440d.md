@@ -1,6 +1,6 @@
 # Огляд судової практики Касаційного кримінального суду у складі Верховного Суду (актуальна практика) за червень 2026 року
 
-- Суд / тип: ККС, періодичний (58 с.)
+- Суд / тип: ККС, періодичний (58 с.); оприлюднено 2026-07-21
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/eee8ac81beeb440d · джерело: https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_06_2026.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/eee8ac81beeb440d.txt.gz` (сторінки розділені символом \f)

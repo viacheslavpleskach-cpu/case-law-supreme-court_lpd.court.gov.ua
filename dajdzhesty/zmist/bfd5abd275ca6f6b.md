@@ -1,6 +1,6 @@
 # Дайджест судової практики Великої Палати Верховного Суду за 2025 рік
 
-- Суд / тип: Велика Палата, періодичний (22 с.)
+- Суд / тип: Велика Палата, періодичний (22 с.); оприлюднено 2026-02-11
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/bfd5abd275ca6f6b · джерело: https://court.gov.ua/storage/portal/supreme/ogliady/Daidzhest_VP_2025.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/bfd5abd275ca6f6b.txt.gz` (сторінки розділені символом \f)

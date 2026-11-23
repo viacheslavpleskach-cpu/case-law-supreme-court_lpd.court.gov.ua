@@ -1,6 +1,6 @@
 # Огляд судової практики Касаційного господарського суду у складі Верховного Суду (актуальна практика) за жовтень 2026 року
 
-- Суд / тип: КГС, періодичний (33 с.)
+- Суд / тип: КГС, періодичний (33 с.); оприлюднено 2026-11-12
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/4ead0aab32e63adf · джерело: https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KGS_10_2026.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/4ead0aab32e63adf.txt.gz` (сторінки розділені символом \f)

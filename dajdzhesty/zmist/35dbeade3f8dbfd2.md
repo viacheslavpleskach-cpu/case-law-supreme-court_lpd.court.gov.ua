@@ -1,6 +1,6 @@
 # Огляд судової практики Касаційного цивільного суду у складі Верховного Суду (актуальна практика) за жовтень 2025 року
 
-- Суд / тип: КЦС, періодичний (60 с.)
+- Суд / тип: КЦС, періодичний (60 с.); оприлюднено 2025-11-20
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/35dbeade3f8dbfd2 · джерело: https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KCS_10_2025.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/35dbeade3f8dbfd2.txt.gz` (сторінки розділені символом \f)

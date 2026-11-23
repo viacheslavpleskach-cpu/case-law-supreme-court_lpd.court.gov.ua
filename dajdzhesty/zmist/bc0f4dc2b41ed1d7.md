@@ -1,6 +1,6 @@
 # Огляд судової практики Касаційного кримінального суду у складі Верховного Суду за І півріччя 2022 року
 
-- Суд / тип: ККС, періодичний (27 с.)
+- Суд / тип: ККС, періодичний (27 с.); оприлюднено 2022-08-30
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/bc0f4dc2b41ed1d7 · джерело: https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_KKS_1_pivr_2022.pdf
 - Теми на сайті: Огляди судової практики касаційних судів / Касаційний кримінальний суд / Періодичні огляди
 - Текст: `dajdzhesty/tekst/bc0f4dc2b41ed1d7.txt.gz` (сторінки розділені символом \f)

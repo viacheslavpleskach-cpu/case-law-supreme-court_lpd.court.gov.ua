@@ -1,6 +1,6 @@
 # Зведений огляд судової практики Касаційного господарського суду у складі Верховного Суду (актуальна судова практика) за І півріччя 2022 року
 
-- Суд / тип: КГС, періодичний (22 с.)
+- Суд / тип: КГС, періодичний (22 с.); оприлюднено 2022-09-15
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/fce59f19ff4aa9d7 · джерело: https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Zveden_oglyad_KGS_1_pivr_2022.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/fce59f19ff4aa9d7.txt.gz` (сторінки розділені символом \f)

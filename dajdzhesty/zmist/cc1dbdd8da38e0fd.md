@@ -1,6 +1,6 @@
 # Огляд рішень Європейського суду з прав людини (листопад 2025 року)
 
-- Суд / тип: ЄСПЛ, періодичний (42 с.)
+- Суд / тип: ЄСПЛ, періодичний (42 с.); оприлюднено 2026-02-24
 - PDF: https://lpd-api-prod.court.gov.ua/api/v1/digest/file/cc1dbdd8da38e0fd · джерело: https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_ESPL_11_2025.pdf
 - Теми на сайті: —
 - Текст: `dajdzhesty/tekst/cc1dbdd8da38e0fd.txt.gz` (сторінки розділені символом \f)
