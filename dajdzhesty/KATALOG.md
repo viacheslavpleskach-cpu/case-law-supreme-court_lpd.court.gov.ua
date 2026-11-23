@@ -1,0 +1,622 @@
+# Тематичний каталог дайджестів і оглядів Верховного Суду
+
+Автор: В'ячеслав Плескач. Згенеровано `scripts/digest_sync.py` з lpd.court.gov.ua.
+
+Усього: 896 документів — тематичних 304, періодичних 592.
+
+Як шукати:
+- за темою — розділи нижче (теми сайту); у кожному розділі — назви дайджестів, далі файл розділу з короткими змістами;
+- за конкретним питанням — пошук у `dajdzhesty/zmist_usi.tsv` (один рядок = пункт змісту) або в текстах `dajdzhesty/tekst/*.txt.gz`; скрипт `scripts/poshuk.py`;
+- повний зміст і пов'язані позиції бази — `dajdzhesty/zmist/<id>.md`.
+
+## Тематичні дайджести й огляди
+
+### Дайджести судової практики Великої Палати Верховного Суду (11)
+
+Короткий зміст кожного: [tematychni/01_Дайджести_судової_практики_Великої_Палати_Верховно.md](tematychni/01_Дайджести_судової_практики_Великої_Палати_Верховно.md)
+
+**Суддівське врядування та дисциплінарна відповідальність суддів**
+- Дайджест судової практики Великої Палати Верховного Суду у справах щодо оскарження рішень, дій, бездіяльності Вищої ради правосуддя (01 січня 2025 року - 01 липня 2026 року) (95 с.) — [зміст](zmist/a2826398adf21a99.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Daigest_VP_VRP_01_2025_07_2026_1.pdf)
+- Дайджест судової практики Великої Палати Верховного Суду у справах щодо оскарження рішень, дій, бездіяльності Вищої кваліфікаційної комісії суддів України (станом на 01 лютого 2025 року) (93 с.) — [зміст](zmist/3ff1324c1672c675.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Daijest_VKKS_01_02_2025.pdf)
+- Дайджест судової практики Великої Палати Верховного Суду у справах щодо оскарження рішень, дій, бездіяльності Вищої ради правосуддя (станом на 01 січня 2025 року) (135 с.) — [зміст](zmist/8d5198b5fefc8e78.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Daigest_VP_VRP_01_01_2025.pdf)
+
+**Перегляд судових рішень за виключними обставинами**
+- Дайджест судової практики Великої Палати Верховного Суду у справах про перегляд судових рішень у зв'язку із встановленням Європейським судом з прав людини порушення Україною міжнародних зобов'язань при вирішенні справ судом (станом на 01 жовтня 2024 року) (72 с.) — [зміст](zmist/848a4511f5a2c88d.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Daigest_VP_vukl_obstav.pdf)
+
+**Кримінальна юрисдикція і кримінальний процес**
+- Дайджест судової практики Великої Палати Верховного Суду щодо конкуренції кримінальної юрисдикції з іншими судовими юрисдикціями (105 с.) — [зміст](zmist/44287d5cc7cf3601.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Didest_VP_VS.pdf)
+- Дайджест судової практики Великої Палати Верховного Суду у кримінальних провадженнях (справах) за 2018 рік (29 с.) — [зміст](zmist/7ca6ef09c006368b.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/dajd_vs_2018.pdf)
+
+**Земельні правовідносини**
+- Дайджест судової практики Великої Палати Верховного Суду в земельних спорах за участю органів Держгеокадастру (01.03.2018 – 23.11.2020) (81 с.) — [зміст](zmist/ad544084382d7807.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Daidzhest_VP_VS.pdf)
+- Дайджест судової практики Великої Палати Верховного Суду у справах зі спорів, що виникають із земельних відносин (застосування норм матеріального права) (77 с.) — [зміст](zmist/ebd915a0295d6aed.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/dajdjest_VP_zemelni_spory_2018_2019.pdf)
+- Дайджест судової практики Великої Палати Верховного Суду у справах зі спорів, що виникають із земельних відносин за 2018 рік (110 с.) — [зміст](zmist/a36449149dd9f9f7.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Zemelnyi_2018.pdf)
+
+**Інші дайджести**
+- Дайджест правових позицій Великої Палати Верховного Суду у справах, у яких ВП ВС відступила від висновків щодо застосування норм права у подібних правовідносинах, викладених в раніше ухвалених рішеннях ВСУ або ВП ВС, чи підтвердила їх (2018 - 2020 роки) (111 с.) — [зміст](zmist/60f19667b39fa168.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Daidjest_vidstupiv.pdf)
+- Позачерговий дайджест судової практики Великої Палати Верховного Суду №3 (Відступ від правової позиції Великої Палати щодо визначення юрисдикції спорів з державним реєстратором) (69 с.) — [зміст](zmist/6ab540ac18c74d9b.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Dajdjest_2018_12_10.pdf)
+
+### Міжюрисдикційні дайджести судової практики Верховного Суду (18)
+
+Короткий зміст кожного: [tematychni/02_Міжюрисдикційні_дайджести_судової_практики_Верховн.md](tematychni/02_Міжюрисдикційні_дайджести_судової_практики_Верховн.md)
+
+**Договірні та господарські правовідносини**
+- Дайджест судової практики Верховного Суду щодо застосування форс-мажорних обставин як підстави для звільнення від відповідальності за порушення зобов’язань (2018 рік – травень 2025 року) (72 с.) — [зміст](zmist/3739ffea26b8bb3b.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Daigest_VS_fors_mazhor.pdf)
+- Дайджест судової практики Верховного Суду у справах, пов’язаних із виконанням кредитних зобов’язань (59 с.) — [зміст](zmist/24a67de138201a00.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Digest_credit.pdf)
+- Дайджест судової практики Верховного Суду у справах, пов'язаних зі страховими правовідносинами (40 с.) — [зміст](zmist/7600a0b86ce00d81.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Dajdjest.pdf)
+
+**Судовий процес та виконавче провадження**
+- Дайджест судової практики Верховного Суду щодо заміни сторони у виконавчому провадженні (2018 – червень 2025 року) (54 с.) — [зміст](zmist/54d27f252ddc2e04.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Daigest_vukon_provadg_zamina_storon_2018_2025.pdf)
+- Дайджест судової практики Верховного Суду щодо особливостей правового статусу прокурора в судовому процесі (2018 рік - жовтень 2024 року) (92 с.) — [зміст](zmist/d162e93f443d1986.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Daigest_prokyroru_2018_2024.pdf)
+- Дайджест судової практики Верховного Суду у спорах, що виникають на стадії виконання судових рішень (01.03.2018 – 15.07.2019) (107 с.) — [зміст](zmist/8c0f2ccee66a98b3.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Daidjest_VP_11_2019_1.pdf)
+
+**Адміністративні правовідносини**
+- Дайджест судової практики Верховного Суду у спорах щодо громадянства (2018 – 2024 роки) (31 с.) — [зміст](zmist/ce8798c43dbec590.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Dajidges_VS_gromadyanstvo_2018_2024.pdf)
+- Дайджест судової практики Верховного Суду у справах про доступ до публічної інформації (75 с.) — [зміст](zmist/8df6ded654601011.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Daidgest_pybl_info_VS.pdf)
+
+**Інші дайджести**
+- Дайджест судової практики Верховного Суду у справах, пов'язаних з війною (лютий 2022 рік - вересень 2024 року) (159 с.) — [зміст](zmist/bcd2d59796e4ad2f.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Daigest_sud_prakt_VS_spravi_vijna.pdf)
+- Дайджест судової практики Верховного Суду щодо вирішення спорів у сфері публічних закупівель (131 с.) — [зміст](zmist/21393aca506dc8a2.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Daidgest_publ_zakypivli.pdf)
+- Дайджест судової практики Верховного Суду у справах, пов’язаних із визнанням арбітражних угод, визнанням та наданням дозволу на виконання рішень міжнародного комерційного арбітражу (січень 2018 року - червень 2023 року) (238 с.) — [зміст](zmist/ee14731f8540ef8e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Supreme_Court_Digest_On_Arbitration_2023_UA.pdf)
+- Дайджест практики Верховного Суду у справах, пов’язаних з наданням житлово-комунальних послуг (2018–2020 рр.) (113 с.) — [зміст](zmist/6aed62ddc721b642.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Daidzhest_2018_2020.pdf)
+- Дайджест судової практики Верховного Суду у справах зі спорів, що виникають із трудових відносин (17.01.2018 - 02.01.2020) (286 с.) — [зміст](zmist/56ff4ea1d260b49c.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Dajdzhest_trudovi_vidnosyny.pdf)
+
+**Цивільні правовідносини**
+- Дайджест судової практики Верховного Суду щодо відшкодування шкоди, завданої громадянинові незаконними діями органів, що здійснюють оперативно-розшукову діяльність, органів досудового розслідування, прокуратури та суду (2018 рік - жовтень 2023 року) (58 с.) — [зміст](zmist/71ec4d1e0b5832e4.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Daijest_vidshk_skoda_nezak_dii_2018_2023_fin.pdf)
+- Дайджест судової практики Верховного Суду у справах, пов’язаних із спадкуванням часток у статутному капіталі (акцій, паїв) юридичних осіб (січень 2018 року - вересень 2023 року) (36 с.) — [зміст](zmist/25f749996cbfdf0c.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Daijest_spadkuvannia_chastok_2018_2023.pdf)
+- Дайджест судової практики Верховного Суду у справах, пов'язаних із поверненням майна, набутого або збереженого без достатньої правової підстави (стаття 1212 ЦК України) (57 с.) — [зміст](zmist/220999e41bca75e5.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Daidgest_maino_st1212.pdf)
+
+**Екологічні та земельні правовідносини**
+- Дайджест практики Верховного Суду у справах із договору оренди землі (2018 - 2021 роки) (353 с.) — [зміст](zmist/797ff0f0611bf9b0.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Daijest_orenda_zemli_2018_2021.pdf)
+- Дайджест судової практики Верховного Суду у спорах, що виникають у сфері захисту довкілля та екологічних прав (134 с.) — [зміст](zmist/b64fdc7c6ba7e1c7.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Daidjest_Ekologia.pdf)
+
+### Касаційний адміністративний суд (84)
+
+Короткий зміст кожного: [tematychni/03_Касаційний_адміністративний_суд.md](tematychni/03_Касаційний_адміністративний_суд.md)
+
+**Справи у податкових спорах**
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо розрахункових операцій (жовтень 2024 року – серпень 2026 року) (20 с.) — [зміст](zmist/f705a7409f678cf9.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Ohliad_KAS_RRO_10_2024_08_2026.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо міжнародного оподаткування (березень 2018 року – січень 2026 року) (65 с.) — [зміст](zmist/d9ea66175395b64d.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Ohliad_mizhnarodne_opodatkuvannia.pdf)
+- Огляд ключових правових позицій Верховного Суду щодо оподаткування та публічної фінансової політики (2018 рік – липень 2025 року) (37 с.) — [зміст](zmist/9ca5b81d1c4811c4.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Ohliad_kliuchovi_pozytsii.pdf)
+- Огляд судової практики Верховного Суду щодо оподаткування постачальників електронних комунікаційних послуг на спрощеній системі оподаткування (за період із вересня 2019 року до травня 2025 року) (11 с.) — [зміст](zmist/6f4494e3d0ded991.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Ohliad_pod_provaidery_KAS%20(1).pdf)
+- Огляд судової практики Верховного Суду щодо оподаткування в умовах воєнного стану (лютий 2022 року – червень 2025 року) (27 с.) — [зміст](zmist/1bbeb7c1d9330713.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Ohliad_pod_voiennyi_stan.pdf)
+- Огляд ключових правових позицій Верховного Суду щодо оподаткування та публічної фінансової політики (2018 рік - вересень 2024 року) (38 с.) — [зміст](zmist/e72cf2011f4e5782.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Ohliad_kliuchovi_pozytsii_opodatk_2018_2024.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо трансфертного ціноутворення (2018 рік - серпень 2023 року) (14 с.) — [зміст](zmist/74a22e581258a4d9.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Ohliad_transfertne_tsinoutvorennia(2018-serpen_2023).pdf)
+- Огляд ключових правових позицій Верховного Суду щодо оподаткування та публічної фінансової політики (2018 рік - липень 2023 року) (32 с.) — [зміст](zmist/c1c74e7e00b5a104.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Ohliad_kliuchovi_pozytsii_opodatk_fin_pol_2018_2023.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо оцінки реальності господарських операцій (вересень 2018 року - червень 2023 року) (34 с.) — [зміст](zmist/5f671c0b66f9f772.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Ohliad_otsinka_realnosti_KAS.pdf)
+- Огляд судової практики Верховного Суду щодо застосування преюдиції з питань оподаткування та реалізації публічної фінансової політики (33 с.) — [зміст](zmist/2ee5f83858c89a48.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Ohliad_preiudytsiia.pdf)
+- Огляд ключових правових позицій Верховного Суду щодо оподаткування та публічної фінансової політики (2022 рік) (41 с.) — [зміст](zmist/d510c583827b0598.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/2022_11_11_Ohliad_kliuchovi_pozytsii.pdf)
+- Огляд судової практики Верховного Суду щодо оподаткування в умовах воєнного стану (33 с.) — [зміст](zmist/7a9878fec50221a0.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Ohliad_pod_voiennyi_stan.pdf)
+- Огляд ключових правових позицій Верховного Суду щодо оподаткування та публічної фінансової політики (39 с.) — [зміст](zmist/b8861dbdc60a8f8c.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KAS_2021_12_24.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо трансфертного ціноутворення (за 2021 рік) (34 с.) — [зміст](zmist/344116359fb69c51.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_transfertne_tsinoutvorennia%20(1)%20(1).pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду що адміністративного арешту коштів і майна (2021 рік) (20 с.) — [зміст](zmist/fd4a116674123dad.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ohliad_pod_aresht.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо облікової політики (38 с.) — [зміст](zmist/f3478189da9da17d.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ohliad_oblikova_polityka.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо бенефіціарних власників доходу (20 с.) — [зміст](zmist/fc8b9b6da0fe7c42.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ohliad_KAS.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо реєстрації податкових накладних / розрахунків коригувань (30 с.) — [зміст](zmist/c62953a2198e9b91.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ohliad_nakladni.pdf)
+- Огляд судової практики Верховного Суду у сфері трансфертного ціноутворення та міжнародного оподаткування (28 с.) — [зміст](zmist/48f56f952e6162e7.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ohliad_transfertne_tsinoutvorennia_1.pdf)
+
+**Застосування положень Кодексу адміністративного судочинства України**
+- Огляд судової практики Верховного Суду щодо витрат на професійну правничу допомогу в адміністративному судочинстві (січень 2018 року – травень 2026 року) (31 с.) — [зміст](zmist/0203a8788444ef0b.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KAS_pravn_dopomoga_2018_05_2026.pdf)
+- Огляд судової практики Верховного Суду щодо застосування процесуальних строків в адміністративному судочинстві (75 с.) — [зміст](zmist/1b5ec013785c2056.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_zastosyvanna_strokiv_admin.pdf)
+- Дайджест "Кодекс адміністративного судочинства України в судових рішеннях Верховного Суду" (з нагоди 20-річчя ухвалення Кодексу адміністративного судочинства України) (555 с.) — [зміст](zmist/86a0e1a567963b25.md) · [PDF](https://court.gov.ua/storage/portal/supreme/%D0%94%D0%B0%D0%B9%D0%B4%D0%B6%D0%B5%D1%81%D1%82_%D0%9A%D0%90%D0%A1%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8%202025%20%D1%80%D0%BE%D0%BA%D1%83%20(1).pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у справах, у яких вирішувалося питання щодо застосування заходів забезпечення позову (01 січня 2018 року - 31 січня 2023 року) (70 с.) — [зміст](zmist/9c1d14532bd4e1c4.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_zabezp_pozov.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у спорах, що виникають під час здійснення виконавчого провадження (1 січня 2021 року - 1 жовтня 2022 року) (65 с.) — [зміст](zmist/6c8ea5a8b4277692.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KAS_vuk_provadg.pdf)
+- Зразкові справи (аналітичний огляд) (2020) (32 с.) — [зміст](zmist/30d2ded874080920.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Zrazkovi_spravi_1.pdf)
+- Зразкові справи (аналітичний огляд) (21 с.) — [зміст](zmist/b47bf086232786a2.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Zrazkovi_spravi.pdf)
+
+**Справи в сфері публічної служби**
+- Огляд судової практики Верховного Суду у справах щодо державної служби (проходження державної служби) (2019 рік – березень 2026 року) (36 с.) — [зміст](zmist/bb7915645d138d6f.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_Prohod_derzh_slyzhbu_2019_03_2026_1.pdf)
+- Огляд судової практики КАС ВС у справах щодо військової служби: прийняття на службу, проходження служби, звільнення зі служби за 2019 – 2025 роки (42 с.) — [зміст](zmist/4a2b37462bd3e926.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KAS_VS_viiskova_slygba.pdf)
+- Огляд судової практики Верховного Суду у справах щодо державної служби (прийняття на державну службу) (лютий 2019 року – квітень 2025 року) (35 с.) — [зміст](zmist/3bd3f0c6c0b53d5c.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_VS_derzh_sluzhba_pryiniattia.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у спорах щодо соціального захисту і пенсійного забезпечення військовослужбовців та членів їх сімей (2019 рік - червень 2024 року) (52 с.) — [зміст](zmist/61f3d1fc4b01d3ba.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KAS_viiskov_sim_zahist.pdf)
+
+**Справи у спорах в сфері національної безпеки та оборони України**
+- Огляд судової практики КАС ВС у справах щодо військової служби: прийняття на службу, проходження служби, звільнення зі служби за 2019 – 2025 роки (42 с.) — [зміст](zmist/4a2b37462bd3e926.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KAS_VS_viiskova_slygba.pdf)
+- Огляд судової практики Верховного Суду щодо оподаткування в умовах воєнного стану (лютий 2022 року – червень 2025 року) (27 с.) — [зміст](zmist/1bbeb7c1d9330713.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Ohliad_pod_voiennyi_stan.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у спорах щодо соціального захисту і пенсійного забезпечення військовослужбовців та членів їх сімей (2019 рік - червень 2024 року) (52 с.) — [зміст](zmist/61f3d1fc4b01d3ba.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KAS_viiskov_sim_zahist.pdf)
+- Огляд судової практики Верховного Суду щодо оподаткування в умовах воєнного стану (33 с.) — [зміст](zmist/7a9878fec50221a0.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Ohliad_pod_voiennyi_stan.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду (вирішення спорів, пов'язаних із пільгами, гарантіями та компенсаціями військовослужбовцям, військовозобов'язаним або резервістам) (54 с.) — [зміст](zmist/35e8da0bc151c601.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Ogljad_2019_10_09.pdf)
+
+**Справи у спорах щодо реалізації державної політики у сфері економіки та публічної фінансової політики**
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо міжнародного оподаткування (березень 2018 року – січень 2026 року) (65 с.) — [зміст](zmist/d9ea66175395b64d.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Ohliad_mizhnarodne_opodatkuvannia.pdf)
+- Огляд ключових правових позицій Верховного Суду щодо оподаткування та публічної фінансової політики (2018 рік – липень 2025 року) (37 с.) — [зміст](zmist/9ca5b81d1c4811c4.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Ohliad_kliuchovi_pozytsii.pdf)
+- Огляд ключових правових позицій Верховного Суду щодо оподаткування та публічної фінансової політики (2018 рік - вересень 2024 року) (38 с.) — [зміст](zmist/e72cf2011f4e5782.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Ohliad_kliuchovi_pozytsii_opodatk_2018_2024.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо трансфертного ціноутворення (2018 рік - серпень 2023 року) (14 с.) — [зміст](zmist/74a22e581258a4d9.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Ohliad_transfertne_tsinoutvorennia(2018-serpen_2023).pdf)
+- Огляд ключових правових позицій Верховного Суду щодо оподаткування та публічної фінансової політики (2018 рік - липень 2023 року) (32 с.) — [зміст](zmist/c1c74e7e00b5a104.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Ohliad_kliuchovi_pozytsii_opodatk_fin_pol_2018_2023.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо фінансової відповідальності (2018 рік - лютий 2023 року) (77 с.) — [зміст](zmist/d6349c045edba62e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Ohliad_fin_vidpovidalnist.pdf)
+- Огляд судової практики Верховного Суду щодо застосування преюдиції з питань оподаткування та реалізації публічної фінансової політики (33 с.) — [зміст](zmist/2ee5f83858c89a48.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Ohliad_preiudytsiia.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у спорах, пов'язаних зі здійсненням державного фінансового контролю (1 січня 2020 року - 1 вересня 2022 року) (56 с.) — [зміст](zmist/5128c16dca6997c7.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KAS_derj_fin_kontr_2022_2022.pdf)
+- Огляд ключових правових позицій Верховного Суду щодо оподаткування та публічної фінансової політики (2022 рік) (41 с.) — [зміст](zmist/d510c583827b0598.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/2022_11_11_Ohliad_kliuchovi_pozytsii.pdf)
+- Огляд ключових правових позицій Верховного Суду щодо оподаткування та публічної фінансової політики (39 с.) — [зміст](zmist/b8861dbdc60a8f8c.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KAS_2021_12_24.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо трансфертного ціноутворення (за 2021 рік) (34 с.) — [зміст](zmist/344116359fb69c51.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_transfertne_tsinoutvorennia%20(1)%20(1).pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо облікової політики (38 с.) — [зміст](zmist/f3478189da9da17d.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ohliad_oblikova_polityka.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо бенефіціарних власників доходу (20 с.) — [зміст](zmist/fc8b9b6da0fe7c42.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ohliad_KAS.pdf)
+- Огляд судової практики Верховного Суду у сфері трансфертного ціноутворення та міжнародного оподаткування (28 с.) — [зміст](zmist/48f56f952e6162e7.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ohliad_transfertne_tsinoutvorennia_1.pdf)
+- Огляд правових позицій щодо податків, зборів та інших обов’язкових платежів (67 с.) — [зміст](zmist/c33a894ce719651e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Ogljad_KAS_VS.pdf)
+
+**Справи щодо захисту політичних (крім виборчих) та громадянських прав**
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо перебування іноземців та осіб без громадянства на території України (2022 рік – 2025 рік) (27 с.) — [зміст](zmist/9b90376b676924c8.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KAS_perebyvannya_inozemtci.pdf)
+- Огляд судової практики Верховного Суду з питань застосування положень Закону України "Про звернення громадян" (січень 2018 року - вересень 2023 року) (27 с.) — [зміст](zmist/b54d36e66cc34b00.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_VS_zvernen_2018_2023.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у справах з приводу затримання іноземців або осіб без громадянства, примусового повернення, видворення та реадмісії (січень 2018 - жовтень 2021 року) (62 с.) — [зміст](zmist/431bf98d9ff56f46.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KAS_2022_01_19.pdf)
+- Огляд судової практики Верховного Суду у спорах щодо вирішення питання про визнання біженцем або особою, що потребує додаткового захисту (01.01.2018 - 01.03.2021) (66 с.) — [зміст](zmist/f4aa2e83d0e6cc44.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_bigenci_2018_2021.pdf)
+- Огляд судової практики Верховного Суду у спорах, що виникають із правовідносин у сфері захисту соціальних прав внутрішньо переміщених осіб та практики щодо застосування положень Європейської соціальної хартії (переглянутої) від 3 травня 1996 року (січень 2018 року - жовтень 2020 року) (53 с.) — [зміст](zmist/37652b73c374187b.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogliad_VS.pdf)
+- Огляд судової практики у справах щодо захисту прав, свобод та інтересів громадян України, які стали вимушеними переселенцями (2020) (28 с.) — [зміст](zmist/a9dd3bd3a8de0b05.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_KAS_2020_OOS.pdf)
+- Огляд судової практики Верховного Суду у спорах щодо забезпечення права на доступ до публічної інформації (34 с.) — [зміст](zmist/ccde8537179c32fb.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Ogljad_VS.pdf)
+
+**Справи щодо забезпечення громадського порядку та безпеки**
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо перебування іноземців та осіб без громадянства на території України (2022 рік – 2025 рік) (27 с.) — [зміст](zmist/9b90376b676924c8.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KAS_perebyvannya_inozemtci.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у справах з приводу затримання іноземців або осіб без громадянства, примусового повернення, видворення та реадмісії (січень 2018 - жовтень 2021 року) (62 с.) — [зміст](zmist/431bf98d9ff56f46.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KAS_2022_01_19.pdf)
+- Огляд судової практики Верховного Суду у спорах щодо вирішення питання про визнання біженцем або особою, що потребує додаткового захисту (01.01.2018 - 01.03.2021) (66 с.) — [зміст](zmist/f4aa2e83d0e6cc44.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_bigenci_2018_2021.pdf)
+
+**Справи у спорах в сфері містобудівної діяльності та землекористування**
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо розгляду справ у спорах, пов’язаних з примусовим відчуженням нерухомого майна для суспільних потреб чи з мотивів суспільної необхідності (березень 2018 року – червень 2025 року) (23 с.) — [зміст](zmist/fd7e97a2636ae80f.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KAS_vidchygenna_majna.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у справах щодо захисту права на користування надрами в Україні (2019 рік - червень 2024 року) (48 с.) — [зміст](zmist/d59ea135edcc03f2.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_KAS_korist_nadra.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у спорах, що виникають у сфері містобудування та архітектурної діяльності (210 с.) — [зміст](zmist/f4017dac64674d0e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KAS_mistobuduv_2.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у спорах у сфері розміщення зовнішньої реклами за січень 2018 року - листопад 2021 року (39 с.) — [зміст](zmist/68010812e0849ced.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/2022_05_27_oglyad_KAS_reclama.pdf)
+
+**Справи у спорах в сфері землекористування**
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо розгляду справ у спорах, пов’язаних з примусовим відчуженням нерухомого майна для суспільних потреб чи з мотивів суспільної необхідності (березень 2018 року – червень 2025 року) (23 с.) — [зміст](zmist/fd7e97a2636ae80f.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KAS_vidchygenna_majna.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у справах щодо захисту права на користування надрами в Україні (2019 рік - червень 2024 року) (48 с.) — [зміст](zmist/d59ea135edcc03f2.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_KAS_korist_nadra.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у спорах, що виникають у сфері містобудування та архітектурної діяльності (210 с.) — [зміст](zmist/f4017dac64674d0e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KAS_mistobuduv_2.pdf)
+
+**Спори в сфері публічної житлової політики**
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо розгляду справ у спорах, пов’язаних з примусовим відчуженням нерухомого майна для суспільних потреб чи з мотивів суспільної необхідності (березень 2018 року – червень 2025 року) (23 с.) — [зміст](zmist/fd7e97a2636ae80f.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KAS_vidchygenna_majna.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у спорах, що виникають у сфері містобудування та архітектурної діяльності (210 с.) — [зміст](zmist/f4017dac64674d0e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KAS_mistobuduv_2.pdf)
+
+**Справи у спорах у сфері зайнятості населення та соціального захисту громадян**
+- Огляд судової практики Верховного Суду у спорах щодо розгляду справ у сфері захисту прав громадян, які постраждали внаслідок Чорнобильської катастрофи (2018-2024 роки) (46 с.) — [зміст](zmist/7394c56b25a1a219.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_VS_ChernobylNPP_2018_2024.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у спорах щодо соціального захисту і пенсійного забезпечення військовослужбовців та членів їх сімей (2019 рік - червень 2024 року) (52 с.) — [зміст](zmist/61f3d1fc4b01d3ba.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KAS_viiskov_sim_zahist.pdf)
+- Огляд судової практики Верховного Суду у справах зі спорів за участю уповноважених органів Фонду соціального страхування України (01.02.2018 - 01.06.2022) (62 с.) — [зміст](zmist/1f1115f117ecb180.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_soc_strah_KAS.pdf)
+- Огляд судової практики Верховного Суду щодо розгляду справ у сфері захисту прав громадян, які постраждали внаслідок Чорнобильської катастрофи (2018-2020 роки) (45 с.) — [зміст](zmist/f10fb296a04f5fa5.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogliad.pdf)
+- Огляд судової практики Верховного Суду у спорах, що виникають із правовідносин у сфері захисту соціальних прав внутрішньо переміщених осіб та практики щодо застосування положень Європейської соціальної хартії (переглянутої) від 3 травня 1996 року (січень 2018 року - жовтень 2020 року) (53 с.) — [зміст](zmist/37652b73c374187b.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogliad_VS.pdf)
+- Огляд судової практики у справах щодо захисту прав, свобод та інтересів громадян України, які стали вимушеними переселенцями (2020) (28 с.) — [зміст](zmist/a9dd3bd3a8de0b05.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_KAS_2020_OOS.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду (вирішення спорів, пов'язаних із пільгами, гарантіями та компенсаціями військовослужбовцям, військовозобов'язаним або резервістам) (54 с.) — [зміст](zmist/35e8da0bc151c601.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Ogljad_2019_10_09.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду (Судова палата з розгляду справ щодо захисту соціальних прав) (20 с.) — [зміст](zmist/e1f9e9053cc21105.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_KAS_VS_2019_3.pdf)
+
+**Справи у спорах в сфері митної політики**
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо митної справи (83 с.) — [зміст](zmist/f2c4fad26ca946d5.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Ohliad_mytna_sprava.pdf)
+- Огляд судової практики Верховного Суду у сфері митної справи (59 с.) — [зміст](zmist/9f6b2a2e2634f8f3.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ohliad_mytna_sprava.pdf)
+- Огляд ключових правових позицій Верховного Суду у сфері оподаткування та митної справи (92 с.) — [зміст](zmist/458345850889e5d0.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ohliad_kliuchovi_pozytsii.pdf)
+
+**Справи у спорах в сфері охорони культурної спадщини**
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у спорах, що виникають у сфері містобудування та архітектурної діяльності (210 с.) — [зміст](zmist/f4017dac64674d0e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KAS_mistobuduv_2.pdf)
+
+**Справи зі спорів з приводу реалізації державної політики у сфері освіти, науки, культури та спорту**
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у спорах, що виникають у сфері містобудування та архітектурної діяльності (210 с.) — [зміст](zmist/f4017dac64674d0e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KAS_mistobuduv_2.pdf)
+
+**Справи щодо примусового виконання судових рішень і рішень інших органів**
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у спорах, що виникають під час здійснення виконавчого провадження (1 січня 2021 року - 1 жовтня 2022 року) (65 с.) — [зміст](zmist/6c8ea5a8b4277692.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KAS_vuk_provadg.pdf)
+
+**Справи у спорах з приводу реалізації публічної політики у сфері праці**
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у справах зі спорів за участю органів Державної служби України з питань праці (55 с.) — [зміст](zmist/ec82eede0b2c76a0.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_KAS_Derjprac.pdf)
+
+### Касаційний господарський суд (96)
+
+Короткий зміст кожного: [tematychni/04_Касаційний_господарський_суд.md](tematychni/04_Касаційний_господарський_суд.md)
+
+- Огляд судової практики Верховного Суду у справах щодо речових прав на чуже майно в земельних відносинах, зокрема земельного сервітуту (актуальна практика) (2018 рік – серпень 2026 року) (21 с.) — [зміст](zmist/f9ea6adc2f487b93.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KGS_zem_servitut.pdf)
+
+**Земельні правовідносини та правовідносини, пов'язані із правом власності**
+- Огляд судової практики Верховного Суду у справах щодо речових прав на чуже майно в земельних відносинах, зокрема земельного сервітуту (актуальна практика) (2018 рік – серпень 2026 року) (21 с.) — [зміст](zmist/f9ea6adc2f487b93.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KGS_zem_servitut.pdf)
+- Огляд КГС ВС "Вирішення спорів у земельних відносинах та щодо права власності. Актуальна судова практика Верховного Суду" (Рішення, внесені до ЄДРСР за період з 2018 до квітня 2026) (45 с.) — [зміст](zmist/91913b2ffaafcef0.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KGS_Vurish_sporiv_zemeln_vidnos.pdf)
+- Огляд практики Верховного Суду щодо розгляду спорів, пов'язаних з приватизаційними правовідносинами та орендою державного і комунального майна (січень 2018 року - січень 2022 року) (52 с.) — [зміст](zmist/70f6a3a3e937e78e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_pruvatuz_orenda_2018_2022.pdf)
+- Огляд практики застосування Верховним Судом положень Закону України "Про державну реєстрацію речових прав на нерухоме майно та їх обтяжень" (січень 2018 року - серпень 2022 року) (28 с.) — [зміст](zmist/c21b184d9011daa1.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_ZU_reesrt_rech_prav.pdf)
+- Огляд практики Верховного Суду у складі судової палати для розгляду справ щодо земельних відносин та права власності Касаційного господарського суду (2018 - 2022 роки) (15 с.) — [зміст](zmist/e7f85149165e51b4.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KGS_zem_pal_2018_2022.pdf)
+- Огляд практики Верховного Суду у справах щодо права користування чужою земельною ділянкою: сервітут, емфітевзис, суперфіцій (23 с.) — [зміст](zmist/55a56e8ce92b55a2.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_zemlya.pdf)
+- Огляд судової практики розгляду Касаційним господарським судом у складі Верховного Суду справ у спорах, що виникають із земельних відносин (за період з 01.01.2018 по 01.11.2018) (66 с.) — [зміст](zmist/0aa02917b46f6c4c.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_KGS_VS_zeml.pdf)
+- Огляд судової практики розгляду Касаційним господарським судом у складі Верховного Суду справ у спорах щодо права власності (за період з 01.01.2018 по 01.11.2018) (69 с.) — [зміст](zmist/0db6757a1849656c.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyd_vlasn.pdf)
+
+**Застосування норм процесуального права**
+- Огляд за результатами аналізу судової практики та судової статистики постановлення ухвал про відмову у відкритті касаційного провадження Касаційним господарським судом у складі Верховного Суду (1 січня 2026 року – 30 червня 2026 року) (69 с.) — [зміст](zmist/daffd74524fb6cb3.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KGS_Analiz_vidmov_01_06_2026.pdf)
+- Огляд судової практики Касаційного господарського суду у складі Верховного Суду щодо окремих питань застосування положень Господарського процесуального кодексу України (лютий 2022 року - червень 2026 року) (197 с.) — [зміст](zmist/ac5f8a5e1a762299.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KGS_zastosGPK_02_2022_06_2026.pdf)
+- Огляд судової практики Верховного Суду щодо забезпечення позову в господарському та цивільному судочинстві (2018 рік – вересень 2025 року) (57 с.) — [зміст](zmist/59eba83a2f37b763.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_VS_zabezp_pozov_2018_2025_03_11_2025.pdf)
+- Огляд за результатами аналізу судової практики та судової статистики постановлення ухвал про відмову у відкритті касаційного провадження Касаційного господарського суду у складі Верховного Суду (01 січня 2024 року – 31 серпня 2025 року) (72 с.) — [зміст](zmist/bb1fe3de67e3b9d5.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KGS_Analiz_vidmov_2024_2025.pdf)
+- Огляд судової практики Касаційного господарського суду у складі Верховного Суду щодо окремих питань застосування положень Господарського процесуального кодексу України (лютий 2022 року - грудень 2024 року) (121 с.) — [зміст](zmist/673bcb479062d2b6.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KGS_okr_pit_zastos_GPK_02_2022_12_2024.pdf)
+- Огляд судової практики Верховного Суду щодо судових витрат у господарському та цивільному судочинстві (2018 рік - серпень 2024 року) (75 с.) — [зміст](zmist/e724bec878e855fb.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KGS_KCS_sud_vutrat_2018_08_2024.pdf)
+- Огляд за результатами аналізу судової практики та судової статистики постановлення ухвал про відмову у відкритті касаційного провадження Касаційним господарським судом у складі Верховного Суду (01.01.2022 - 30.06.2024) (43 с.) — [зміст](zmist/0c37f0f01bc3885a.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KGS_uhv_vidm_2022_2024.pdf)
+- Огляд судової практики Касаційного господарського суду у складі Верховного Суду щодо вручення за кордоном документів у господарських справах (81 с.) — [зміст](zmist/6e81971a007aa332.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KGS_2023.pdf)
+- Огляд практики розгляду Верховним Судом справ за заявами про видачу судового наказу, якщо заявником та боржником є юридична особа або фізична особа-підприємець (січень 2021 року - жовтень 2022 року) (18 с.) — [зміст](zmist/5e58c205d6eede5a.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KGS_sud_nakaz_2021_2022.pdf)
+- Огляд судової практики Касаційного господарського суду у складі Верховного Суду щодо окремих питань застосування положень Господарського процесуального кодексу України (січень 2021 року - січень 2022 року) (32 с.) — [зміст](zmist/30889f0b9613424f.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_GPK_2021.pdf)
+- Огляд практики застосування Верховним Судом Закону України "Про виконавче провадження" у господарських справах (січень 2021 року - червень 2022 року) (121 с.) — [зміст](zmist/225dc23026086d33.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_Vukon_provad_2021_06_2022.pdf)
+- Огляд практики розгляду Верховним Судом справ про оскарження рішень третейських судів та видачу наказів на примусове виконання рішень третейських судів, утворених відповідно до Закону України "Про третейські суди", якщо такі рішення ухвалено у спорах, віднесених до юрисдикції господарських судів за грудень 2021 року - травень 2022 року (32 с.) — [зміст](zmist/f46936d110cb7fd7.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_tret_sud_2021_2022.pdf)
+- Огляд практики розгляду Верховним Судом справ про оскарження рішень третейських судів та видачу наказів на примусове виконання рішень третейських судів, утворених відповідно до Закону України "Про третейські суди" , якщо такі рішення ухвалені у спорах, віднесених до юрисдикції господарських судів за березень - листопад 2021 року (52 с.) — [зміст](zmist/386fe439c68c76f5.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/2022_06_03_Oglyad_tret_sud.pdf)
+- Огляд практики застосування Верховним Судом Закону України "Про судовий збір" у господарських справах (за лютий 2021 року - червень 2021 року) (36 с.) — [зміст](zmist/3de316f67f87a410.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_February2021_June2021.pdf)
+- Огляд практики застосування Верховним Судом Закону України "Про судовий збір" у господарських справах (за травень 2020 року - січень 2021 року) (40 с.) — [зміст](zmist/6ecb1f2ec8427a5a.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_May_2020_January_2021.pdf)
+- Огляд судової практики Верховного Суду щодо представництва інтересів учасників справи адвокатом та самопредставництва в господарському процесі (за січень 2018 року - березень 2021 року) (32 с.) — [зміст](zmist/434fae935ac4b763.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_2021_07_16.pdf)
+- Огляд судової практики Касаційного господарського суду у складі Верховного Суду щодо окремих питань застосування положень ГПК України за 2019 рік (70 с.) — [зміст](zmist/52348df9093469be.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_gpk_2019.pdf)
+- Огляд судової практики Касаційного господарського суду у складі Верховного Суду щодо окремих питань застосування положень ГПК України за 2020 рік (47 с.) — [зміст](zmist/f8437c6e4f42143f.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_gpk_2020.pdf)
+- Огляд практики розгляду Верховним Судом справ про оскарження рішень третейських судів та видачу наказів на примусове виконання рішень третейських судів, утворених відповідно до Закону України «Про третейські суди», якщо такі рішення ухвалені у спорах, віднесених до юрисдикції господарських судів (34 с.) — [зміст](zmist/54a689b6af1187b5.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_tret_sudy_2021_07_06.pdf)
+- Огляд практики застосування Верховним Судом Закону України "Про виконавче провадження" у господарських справах (червень - грудень 2020 року) (100 с.) — [зміст](zmist/9abe15f09ca5abc9.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_vik_prov_Gosr_spr.pdf)
+- Огляд практики розгляду Верховним Судом справ про оскарження рішень третейських судів та видачу наказів на примусове виконання рішень третейських судів, утворених відповідно до Закону України «Про третейські суди», якщо такі рішення ухвалені у спорах, віднесених до юрисдикції господарських судів (травень 2019 - червень 2020) (19 с.) — [зміст](zmist/bb95bb465af09f50.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogljad.doc.pdf)
+- Огляд практики застосування Верховним Судом Закону України "Про виконавче провадження" у господарських справах (липень 2019 року - травень 2020 року) (59 с.) — [зміст](zmist/352519b2b5a28b80.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogljad_KGS_1.pdf)
+- Огляд судової практики КГС ВС щодо забезпечення виконання зобов’язань (січень 2018 року - грудень 2019 року) (64 с.) — [зміст](zmist/fd16163cce2d67b2.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogljad_KGS.pdf)
+- Огляд практики застосування Верховним Судом Закону України "Про судовий збір" у господарських справах (жовтень 2019 року – квітень 2020 року) (32 с.) — [зміст](zmist/6391247d24bee2e9.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Ogljad_KGS_10_2019_04_2020.pdf)
+- Огляд судової практики розгляду Верховним Судом справ за заявами про видачу судового наказу, якщо заявником та боржником є юридична особа або фізична особа – підприємець (період січень – вересень 2019 року) (16 с.) — [зміст](zmist/e372cf6d14cb76c6.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Ogljad_KGS.pdf)
+- Огляд застосування господарськими судами Закону України «Про виконавче провадження» (період березень 2018 року – червень 2019 року) (36 с.) — [зміст](zmist/581d1e570a528d2c.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_KGS_vuk_prov.pdf)
+- Огляд судової практики розгляду Верховним Судом справ щодо оскарження рішень третейських судів та про видачу наказів на примусове виконання рішень третейських судів (01.01.2018 – 31.05.2019) (27 с.) — [зміст](zmist/2252d0b95b53e1a9.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Ogljad_rishen_tret.pdf)
+- Огляд практики застосування суддями Касаційного господарського суду у складі Верховного Суду законодавства, що визначає особливості правового статусу прокурора в господарському процесі (за період з 01.01.2018 по 06.11.2018) (32 с.) — [зміст](zmist/cf102adc46233ea6.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyd_prok.pdf)
+
+**Правовідносини, пов'язані із захистом прав інтелектуальної власності‚ а також пов’язані з антимонопольним та конкурентним законодавством**
+- Огляд судової практики Касаційного господарського суду у складі Верховного Суду у справах щодо захисту прав інтелектуальної власності у контексті практики Суду справедливості Європейського Союзу (40 с.) — [зміст](zmist/781c4ea03b8894bb.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KGS_zahust_prav_IntVlasn.pdf)
+- Огляд судової практики Касаційного господарського суду у складі Верховного Суду про застосування висновків експерта у спорах щодо прав інтелектуальної власності (2018 рік – червень 2025 року) (23 с.) — [зміст](zmist/304f14a512d98b89.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_zastos_vusnov_ekspert_intelekt_vlasnist.pdf)
+- Огляд практики Верховного Суду у спорах щодо захисту прав інтелектуальної власності (окремі питання) (січень 2019 року - березень 2021 року) (56 с.) — [зміст](zmist/791923fb8312b85b.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/intel_vlasnist_27_05_2021.pdf)
+
+**Корпоративні правовідносини та правовідносини щодо цінних паперів**
+- Огляд ключових висновків Верховного Суду у вирішенні корпоративних спорів (Рішення, внесені до ЄДРСР за період з 2018 до квітня 2026) (128 с.) — [зміст](zmist/3e52096887f6863a.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_VS_korporat_sporu.pdf)
+- Огляд судової практики Верховного Суду у справах за позовами Фонду гарантування вкладів фізичних осіб до пов’язаних з банком осіб про відшкодування шкоди (січень 2018 року – лютий 2026 року) (73 с.) — [зміст](zmist/38ed21a321beee48.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KGS_fond_vidshkodyvannya.pdf)
+- Огляд судової практики Верховного Суду у спорах про відшкодування збитків, заподіяних юридичній особі діями (бездіяльністю) її посадової особи (2018 рік – серпень 2025 року) (74 с.) — [зміст](zmist/63c17ecf74f179bc.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KGS_vidshkod_zbutku_posadova_osoba_2.pdf)
+- Огляд судової практики Касаційного господарського суду у складі Верховного Суду щодо захисту права учасника (акціонера, члена) на отримання інформації про діяльність юридичної особи та права вимагати проведення аудиту фінансової звітності товариства (23 с.) — [зміст](zmist/eedaeb8e5c48cbde.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KGS_pravo_inform_audit.pdf)
+- Огляд судової практики Верховного Суду в господарських справах за участю сільськогосподарських кооперативів (2018 - 2023 роки) (34 с.) — [зміст](zmist/83f3ab09a71975e2.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KGS_kooperativi_1.pdf)
+- Огляд судової практики Касаційного господарського суду у складі Верховного Суду щодо застосування позовної давності у корпоративних спорах (2018 рік - вересень 2023 року) (17 с.) — [зміст](zmist/f47017fcd746aaad.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_pozovna_davnist_KGS.pdf)
+- Правові висновки палат Верховного Суду щодо вирішення корпоративних спорів та захисту корпоративних прав у 2022 році (37 с.) — [зміст](zmist/8b3863c9c9476f31.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Prav_vusn_vur_korp_sporiv2022.pdf)
+- Огляд ключових правових позицій Верховного Суду у вирішенні корпоративних спорів та спорів щодо цінних паперів у 2022 році (32 с.) — [зміст](zmist/c81d6dd4fe3c9e12.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KGS_2023_02_10%20(1).pdf)
+- Огляд за результатами вивчення практики розгляду справ щодо корпоративних спорів та корпоративних прав Верховним Судом (Рішення, внесені до ЄДРСР за період з 01.01.2021 до 31.12.2021) (245 с.) — [зміст](zmist/3fc3ea42519baf23.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_korpor_spor_2021.pdf)
+- Огляд правових позицій КГС ВС у спорах, що виникають з правочинів щодо акцій, часток, паїв, інших корпоративних прав у юридичній особі (01.01.2021 - 01.06.2022) (41 с.) — [зміст](zmist/5d4cbc722d42f296.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_KGS_akcii_chastku_paji.pdf)
+- Довідка за результатами аналізу Закону України "Про акціонерні товариства" № 2493, прийнятого Верховною Радою України та переданого на підпис Президентові України (18 с.) — [зміст](zmist/e4a62b6277c06504.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Dovidka_Zakon.pdf)
+- Огляд правових позицій Касаційного господарського суду у складі Верховного Суду щодо забезпечення позову в корпоративних спорах (01.01.2021 - 01.06.2022) (36 с.) — [зміст](zmist/3c89b424304d9992.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/2022_08_10_Ogliad_KGS.pdf)
+- Огляд правових позицій Касаційного господарського суду у складі Верховного Суду щодо застосування належних та ефективних способів захисту корпоративних прав (01.01.2021 - 01.06.2022) (34 с.) — [зміст](zmist/3bc8f5790606b4cc.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/2022_08_09_KGS.pdf)
+- Огляд за результатами вивчення судової практики вирішення КГС ВС спорів, пов'язаних з обігом цінних паперів та реалізацією прав, які підтверджуються цінними паперами (2021 рік) (73 с.) — [зміст](zmist/cd30d94a9a906dc4.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_cinni_paperu_2021.pdf)
+- Огляд за результатами вивчення судової практики вирішення КГС ВС спорів, пов'язаних з обігом цінних паперів та реалізацією прав, які підтверджуються цінними паперами (2018-2020 роки) (97 с.) — [зміст](zmist/0b813ef9e9293e3e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogliad_30_04_2021.pdf)
+- Огляд за результатами вивчення практики розгляду Верховним Судом справ щодо корпоративних спорів, корпоративних прав та цінних паперів за 2020 рік (155 с.) — [зміст](zmist/145221ff9f4f4a7e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogliad_korporatyv_KGS__2020.pdf)
+- Дайджест судової практики Касаційного господарського суду у складі Верховного Суду у справах, що виникають із корпоративних відносин (за 2018 рік – 15 липня 2019 року) (174 с.) — [зміст](zmist/31504b221c0da3f2.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Dajest_korporat_vidnosunu_1.pdf)
+- Огляд за результатами вивчення судової практики розгляду господарськими судами справ щодо корпоративних спорів, корпоративних прав та цінних паперів (01.01.2018 – 30.11.2018) (101 с.) — [зміст](zmist/ee713f94af1f47c2.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_korpor_spori.pdf)
+
+**Інші справи, віднесених до юрисдикції господарського суду**
+- Огляд судової практики Верховного Суду з вирішення господарських спорів в умовах воєнного стану (червень 2022 року - грудень 2025 року) (118 с.) — [зміст](zmist/4a14158904bb20a9.md) · [PDF](https://court.gov.ua/storage/portal/supreme/voen_stan_KGS_12_2025.pdf)
+- Огляд судової практики Касаційного господарського суду у складі Верховного Суду щодо спорів у сфері лізингових правовідносин (Рішення, внесені до ЄДРСР за період з 2018 до 2022 років) (42 с.) — [зміст](zmist/35b2c3963971a9c2.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KGS_lizing.pdf)
+- Огляд за результатами вивчення судової практики Касаційного господарського суду у складі Верховного Суду щодо вирішення спорів у сфері зовнішньоекономічної діяльності (процедурні питання) (Рішення, внесені до ЄДРСР за період з 2019 до 2022 років) (15 с.) — [зміст](zmist/0446d449a241cfbf.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KGS_ZED.pdf)
+- Огляд практики розгляду Верховним Судом справ у спорах щодо недоговірних зобов’язань, віднесених до юрисдикції господарських судів за вересень – грудень 2021 року (47 с.) — [зміст](zmist/96084b2f7b6739eb.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/2022_07_12_Ogliad_KGS_09_12_2021.pdf)
+- Огляд за результатами вивчення судової практики вирішення КГС ВС спорів, що виникають у сфері захисту довкілля та екологічних прав (Рішення, внесені до ЄДРСР за період з 2019 до 2021 років) (34 с.) — [зміст](zmist/0dff3280ffcf40d9.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_dovkillya_ekolog_prava_2021_11_17.pdf)
+- Огляд практики розгляду Верховним Судом справ у спорах щодо недоговірних зобов'язань, якщо такі рішення ухвалені у спорах, віднесених до юрисдикції господарських судів (липень 2020 року – серпень 2021 року) (89 с.) — [зміст](zmist/a1c1152bb1a72e14.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KGS_2021_11_02.pdf)
+- Огляд практики щодо розгляду Верховним Судом справ у сфері страхування, якщо такі рішення ухвалені у спорах, віднесених до юрисдикції господарських судів (січень 2020 – квітень 2021 року) (50 с.) — [зміст](zmist/24f1539e34d39601.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_strahuvannya_2020_2021.pdf)
+- Огляд за результатами вивчення судової практики вирішення КГС ВС спорів, що виникають із виконання договорів застави (іпотеки), поруки, гарантії (Рішення, внесені до ЄДРСР за 2019 рік – перше півріччя 2020 року) (75 с.) — [зміст](zmist/1ecaecfe2df32378.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogliad_KGS_ip.pdf)
+- Огляд судової практики КГС ВС щодо забезпечення виконання зобов’язань (січень 2018 року - грудень 2019 року) (64 с.) — [зміст](zmist/fd16163cce2d67b2.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogljad_KGS.pdf)
+- Огляд за результатами вивчення судової практики вирішення господарськими судами спорів, що виникли з договорів страхування (період 01.01.2018 - 30.06.2019) (98 с.) — [зміст](zmist/0e202f2289a1413d.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Ogljad_KGS_2018_2019.pdf)
+- Огляд практики застосування суддями КГС ВС рішень ЄСПЛ при прийнятті постанов за 2018 рік (58 с.) — [зміст](zmist/206ecb88851979a4.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/oglyad_prakt_kgs_1.pdf)
+- Довідка за результатами вивчення судової практики вирішення спорів, пов’язаних із застосуванням банківського законодавства (01.01.2018 – 30.11.2018) (116 с.) — [зміст](zmist/1a74412214648961.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Dovidka_banki_2.pdf)
+
+**Правове регулювання неплатоспроможності**
+- Огляд КГС ВС "Банкрутство в Україні. Ключові судові рішення Верховного Суду. Цікаві факти" (84 с.) — [зміст](zmist/842a00e0914f8118.md) · [PDF](https://court.gov.ua/storage/portal/supreme/prezent2026/WEB-Overview_bankruptcy_in_Ukraine.pdf)
+- Розгляд в межах провадження у справі про банкрутство спорів, які виникають у трудових правовідносинах, а також щодо оплати праці, соціального захисту та пенсійного забезпечення працівників боржника (2018 - 2022 рр.) (33 с.) — [зміст](zmist/48d77c804c3238e8.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_Bankr_trud_spir_oplata_praci_pens_zabezpech.pdf)
+- Дайджест правових позицій Касаційного господарського суду у складі Верховного Суду щодо застосування положень Кодексу України з процедур банкрутства (34 с.) — [зміст](zmist/6777546ff7992bf5.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Daigest_KGS_bankr.pdf)
+- Дайджест правових позицій Касаційного господарського суду у складі Верховного Суду щодо застосування положень Кодексу України з процедур банкрутства (вересень - жовтень 2022 року) (33 с.) — [зміст](zmist/4796b975d1cb42db.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Daidgest_KGS_KUPB.pdf)
+- Огляд правових позицій Верховного Суду щодо застосування положень Кодексу України з процедур банкрутства (липень - серпень 2022 року) (33 с.) — [зміст](zmist/5f806aac5c98bc36.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/2022_11_09_Ogliad_KGS_07_08_2022.pdf)
+- Огляд правових позицій Касаційного господарського суду у складі Верховного Суду щодо застосування положень Кодексу України з процедур банкрутства (квітень - червень 2022 року) (41 с.) — [зміст](zmist/d384d7569f7211f3.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_KGS_bankr_04_06_2022.pdf)
+- Огляд правових позицій Верховного Суду щодо застосування положень Кодексу України з процедур банкрутства (січень - лютий 2022 року) (22 с.) — [зміст](zmist/89c1a3659734a167.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Ogliad_bankrytstvo_01_02_2022.pdf)
+- Огляд практики застосування Верховним Судом норм про субсидіарну відповідальність у справах про банкрутство (актуальна судова практика) за липень - грудень 2021 року (33 с.) — [зміст](zmist/4893b3bbeac668df.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/2022_05_24_KGS_oglyad_subs_vidp_07_12_2021.pdf)
+- Огляд правових позицій Верховного Суду щодо застосування положень Кодексу України з процедур банкрутства (жовтень - грудень 2021 року) (35 с.) — [зміст](zmist/787c7dd003f0b519.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Prav_poz_10_12_2021_bankrut.pdf)
+- Огляд правових позицій Верховного Суду щодо застосування положень Кодексу України з процедур банкрутства (за липень - вересень 2021 року) (38 с.) — [зміст](zmist/130e6069f09ca206.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KGS_2021_12_01.pdf)
+- Огляд практики застосування Верховним Судом норм про субсидіарну відповідальність у справах про банкрутство (актуальна судова практика) за травень 2020 року - червень 2021 року (64 с.) — [зміст](zmist/a7b60667717d166f.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_05_2020_06_2021.pdf)
+- Огляд постанов Касаційного господарського суду у складі Верховного Суду, прийнятих у справах про банкрутство державних підприємств та підприємств, у статутному капіталі яких частка державної власності перевищує 50 відсотків (за листопад 2020 року – червень 2021 року) (30 с.) — [зміст](zmist/9fc1d859c30e4fb7.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_bankrutstvo_%2001_11_30_06_2021-.pdf)
+- Огляд правових позицій Верховного Суду щодо застосування положень Кодексу України з процедур банкрутства (за другий квартал 2021 року) (30 с.) — [зміст](zmist/610ac7802cc3fc0a.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_2021_07_29.pdf)
+- Дайджест актуальних висновків Верховного Суду про застосування положень Кодексу України з процедур банкрутства (січень - березень 2021 року) (65 с.) — [зміст](zmist/8b32149a8659cf78.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Dajagest_bankr_01_03_2021.pdf)
+- Огляд правових висновків ВС у складі судової палати для розгляду справ про банкрутство КГС щодо застосування норм права у процедурах банкрутства за 2020 рік (12 с.) — [зміст](zmist/6e884bc30f0d512b.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogliad_KGS_bankrutstvo_2020.pdf)
+- Огляд постанов КГС ВС, прийнятих у справах про банкрутство державних підприємств та підприємств, у статутному капіталі яких частка державної власності перевищує 50 відсотків (2018 - 2020) (44 с.) — [зміст](zmist/af015c7c3429c5c6.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KGS_bankr_2018_2020.pdf)
+- Огляд практики застосування Верховним Судом норм про позовну давність у справах про банкрутство (жовтень 2018 року - травень 2020 року) (27 с.) — [зміст](zmist/7e1c4402ad2517aa.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KGS.pdf)
+- Огляд практики застосування Верховним Судом норм про субсидіарну відповідальність у справах про банкрутство (актуальна судова практика) (січень 2018 року - квітень 2020 року) (23 с.) — [зміст](zmist/a0abbf4812d3ca89.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogljad_KGS_02_07_2020.pdf)
+- Аналіз особливостей касаційного оскарження судових рішень у справах про банкрутство після введення в дію Кодексу України з процедури банкрутства (11 с.) — [зміст](zmist/a61b33e248d9523f.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Analiz_bankrutstvo.pdf)
+- Огляд рішень ЄСПЛ у справах про банкрутство за період 13.02.2005 - 01.01.2020 рр (24 с.) — [зміст](zmist/60fd1b3a0fe542c7.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_ESPL_bankrotstvo.pdf)
+- Правові висновки судової палати для розгляду справ про банкрутство КГС ВС (24 с.) — [зміст](zmist/9b0bf9587a7d3715.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Pravovi_bankrutstvo_2019.pdf)
+- Огляд правових висновків Верховного Суду щодо субсидіарної відповідальності за доведення до банкрутства (30 с.) — [зміст](zmist/2763ed47cd5885a3.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Ogljad_KGS_VS.pdf)
+- Дайджест судової практики Касаційного господарського суду у складі Верховного Суду у справах про банкрутство (14 с.) — [зміст](zmist/62f0780b0119ec1e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/dajdzhest_18_06_15__07_2019.pdf)
+- Дайджест судової практики Касаційного господарського суду у складі Верховного Суду у справах про банкрутство (12 с.) — [зміст](zmist/76857c9ed55c7925.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Dajdzhest_KGS_VS_2019.pdf)
+- Застосування позовної давності у справах про банкрутство та інші правові висновки Верховного Суду у справах про банкрутство за квітень 2019 року (18 с.) — [зміст](zmist/3378132160fe4349.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Dajest_bankrutstvo_04_2018.pdf)
+- Правові висновки Верховного Суду у справах про банкрутство за листопад – грудень 2018 року (19 с.) — [зміст](zmist/81a3b15d89b344e9.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Bankrytstvo_11_12_2018.pdf)
+
+### Касаційний кримінальний суд (38)
+
+Короткий зміст кожного: [tematychni/05_Касаційний_кримінальний_суд.md](tematychni/05_Касаційний_кримінальний_суд.md)
+
+**Кримінальний кодекс / Загальна частина КК України / Розділ XII. Покарання та його види / Призначення покарання та звільнення від його відбування**
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду про звільнення від кримінальної відповідальності (актуальна практика) (38 с.) — [зміст](zmist/276df9d25350087a.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_Zvilnen_krum_vidpov.pdf)
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду щодо застосування норм кримінального закону про покарання (20 с.) — [зміст](zmist/a62167dfc0ebcb4e.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_VS_pro_pokaranna_aktyalna_praktuka.pdf)
+- Огляд судової практики Верховного Суду щодо призначення покарання та звільнення від його відбування (2018 рік – квітень 2024 року) (17 с.) — [зміст](zmist/d69872aa5a7acaa0.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_pryznachennia_pokarannia_ta_zvilnennia_vid_ioho_vidbuvannia.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ III. Досудове розслідування / Строки досудового розслідування**
+- Огляд судової практики Верховного Суду про обчислення строку досудового розслідування (актуальна практика) (31 с.) — [зміст](zmist/89aff3403bf9703d.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_VS_Obchusl_strok_dosyd_roslid.pdf)
+
+**Кримінальний кодекс / Особлива частина КК України / Розділ XVII. Кримінальні правопорушення у сфері службової діяльності та професійної діяльності, пов'язаної з наданням публічних послуг / Корупційні кримінальні правопорушення**
+- Тематичний огляд судової практики Касаційного кримінального суду у складі Верховного Суду у кримінальних провадженнях щодо корупційних та пов'язаних з корупцією кримінальних правопорушень (2025 рік) (96 с.) — [зміст](zmist/33957fd4cfbd8980.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_koryp_pravopor_2025.pdf)
+- Огляд судової практики Верховного Суду у кримінальних провадженнях щодо корупційних та пов’язаних з корупцією кримінальних правопорушень (2023 рік) (68 с.) — [зміст](zmist/dfb99bf0f3210ea4.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_KKS_korupc.pdf)
+- Огляд судової практики Верховного Суду у кримінальних провадженнях щодо корупційних та пов'язаних з корупцією кримінальних правопорушень (2022 рік) (61 с.) — [зміст](zmist/3969b14a51658247.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_VS_koryp_pravoporush.pdf)
+- Огляд судової практики Верховного Суду у кримінальних провадженнях щодо корупційних та пов’язаних з корупцією кримінальних правопорушень (рішення за 2024 рік) (74 с.) — [зміст](zmist/6f0bdd541e3da1ee.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_VS_korypc_pravopor.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ I. Загальні положення / Провокація злочину**
+- Тематичний огляд судової практики Касаційного кримінального суду у складі Верховного Суду у кримінальних провадженнях щодо корупційних та пов'язаних з корупцією кримінальних правопорушень (2025 рік) (96 с.) — [зміст](zmist/33957fd4cfbd8980.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_koryp_pravopor_2025.pdf)
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду щодо провокації злочину (актуальна практика) (2018 - 2025 роки) (67 с.) — [зміст](zmist/72dab187c30c6ee3.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_provok_zloch.pdf)
+- Огляд судової практики Верховного Суду у кримінальних провадженнях щодо корупційних та пов’язаних з корупцією кримінальних правопорушень (2023 рік) (68 с.) — [зміст](zmist/dfb99bf0f3210ea4.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_KKS_korupc.pdf)
+- Огляд судової практики Верховного Суду у кримінальних провадженнях щодо корупційних та пов'язаних з корупцією кримінальних правопорушень (2022 рік) (61 с.) — [зміст](zmist/3969b14a51658247.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_VS_koryp_pravoporush.pdf)
+- Огляд судової практики Верховного Суду у кримінальних провадженнях щодо корупційних та пов’язаних з корупцією кримінальних правопорушень (рішення за 2024 рік) (74 с.) — [зміст](zmist/6f0bdd541e3da1ee.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_VS_korypc_pravopor.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ I. Загальні положення / Цивільний позов у кримінальному провадженні**
+- Огляд судової практики Верховного Суду щодо цивільного позову в кримінальному провадженні (39 с.) — [зміст](zmist/502e4a95343c1bd9.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_civ_pozov.pdf)
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду щодо вирішення цивільного позову у кримінальному провадженні за період з 2018 року по лютий 2022 року (100 с.) — [зміст](zmist/21aa252867aa6c19.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/2022_05_25_Oglyad_KKS_civ_pozov.pdf)
+
+**Кримінальний кодекс / Особлива частина КК України / Розділ XVII. Кримінальні правопорушення у сфері службової діяльності та професійної діяльності, пов'язаної з наданням публічних послуг / Провокація злочину**
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду щодо провокації злочину (актуальна практика) (2018 - 2025 роки) (67 с.) — [зміст](zmist/72dab187c30c6ee3.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_provok_zloch.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ II. Заходи забезпечення кримінального провадження / Затримання особи**
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду щодо затримання особи (актуальна практика) (29 с.) — [зміст](zmist/1db80b9ccf4de5e2.md) · [PDF](https://court.gov.ua/storage/portal/supreme/Oglyad_KKS_2026_01_05.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ I. Загальні положення / Практика застосування кримінального та кримінального процесуального права**
+- Огляд рішень Великої Палати Верховного Суду, об’єднаної палати і палат Касаційного кримінального суду у складі Верховного Суду, які містять правові висновки про застосування норм кримінального та кримінального процесуального права (2018 – 2025 роки) (98 с.) — [зміст](zmist/3287faa8f235773a.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_VP_KKS_2018_2025_16_12_24.pdf)
+
+**Огляд рішень ВП ВС, палат та ОП ККС щодо застосування КК та КПК**
+- Огляд рішень Великої Палати Верховного Суду, об’єднаної палати і палат Касаційного кримінального суду у складі Верховного Суду, які містять правові висновки про застосування норм кримінального та кримінального процесуального права (2018 – 2025 роки) (98 с.) — [зміст](zmist/3287faa8f235773a.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_VP_KKS_2018_2025_16_12_24.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ IV. Судове провадження у першій інстанції / Дослідження доказів**
+- Огляд судової практики Верховного Суду щодо визначення обсягу доказів, що підлягають дослідженню, та порядку їх дослідження (ст. 349 КПК України) (37 с.) — [зміст](zmist/471c119e067d1c31.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_st_349.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ I. Загальні положення / Суд присяжних**
+- Огляд судової практики Верховного Суду про розгляд кримінального провадження судом присяжних (актуальна практика) (26 с.) — [зміст](zmist/5c2accd9fc0985e9.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_prusiagni.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ I. Загальні положення / Процесуальні витрати**
+- Огляд судової практики Верховного Суду щодо процесуальних витрат у кримінальному провадженні (актуальна практика) (31 с.) — [зміст](zmist/f3e2bacded8fd137.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_proc_vutratu__1_2018_07_2025.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ III. Досудове розслідування / Відкриття матеріалів іншій стороні**
+- Огляд судової практики Верховного Суду про відкриття матеріалів іншій стороні (актуальна практика) (40 с.) — [зміст](zmist/5aeecaca0acfae75.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_VS_vidkr_mater_inshii_storoni.pdf)
+
+**Кримінальний кодекс / Особлива частина КК України / Розділ VIII. Кримінальні правопорушення проти довкілля / Кримінальні правопорушення проти довкілля**
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду у провадженнях щодо кримінальних правопорушень проти довкілля (2018 - 2024 роки) (31 с.) — [зміст](zmist/8c0590369453c5b2.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_dovkillya_2018_2024.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ III. Досудове розслідування / Освідування та експертиза**
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду щодо проведення освідування особи та відібрання зразків для експертизи (2018 рік - липень 2024 року) (27 с.) — [зміст](zmist/f8431b151a22c482.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KKS_osvid_zrazki_eksp_2018_07_2024.pdf)
+
+**Кримінальний кодекс / Особлива частина КК України / Розділ XX. Кримінальні правопорушення проти миру, безпеки людства та міжнародного правопорядку / Кримінальні правопорушення, пов'язані з війною**
+- Огляд судової практики Верховного Суду щодо кримінальних правопорушень, пов'язаних з війною (2022 рік - березень 2024 року) (44 с.) — [зміст](zmist/75a6d118daffb268.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_VS_war_2022_2024.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ III. Досудове розслідування / Спеціальне кримінальне провадження (in absentia)**
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду щодо здійснення спеціальної процедури кримінального провадження (досудового розслідування та судового розгляду) за відсутності обвинуваченого (in absentia) (актуальна практика) (2018 рік - серпень 2022 року) (25 с.) — [зміст](zmist/a9f4a321cbcf7ca5.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/2022_11_10_KKS_2018_08_2022.pdf)
+
+**Кримінальний кодекс / Загальна частина КК України / Розділ XIV. Інші заходи кримінально-правового характеру / Спеціальна конфіскація**
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду щодо застосування спеціальної конфіскації майна як заходу кримінально-правового характеру (24 с.) — [зміст](zmist/bfe552d916bb35be.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KKS_2022_01_11.pdf)
+
+**Кримінальний кодекс / Особлива частина КК України / Розділ IX. Кримінальні правопорушення проти громадської безпеки / Терористичні кримінальні правопорушення**
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду у кримінальних провадженнях щодо кримінальних правопорушень терористичної спрямованості (з 2018 року по серпень 2021 року) (31 с.) — [зміст](zmist/a6e9d27a0e8605dc.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KKS_06_12_2021.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ V. Перегляд судових рішень / Перегляд за нововиявленими обставинами**
+- Аналіз судової практики Касаційного кримінального суду у складі Верховного Суду щодо перегляду кримінальних проваджень за нововиявленими обставинами (за 2018 рік - липень 2021 року) (57 с.) — [зміст](zmist/d38f3bd5f496347a.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Analiz_KKS_VS_2018_July_2021.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ I. Загальні положення / Недопустимість доказів**
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду щодо визнання доказів недопустимими (з 2018 року по червень 2021 року) (77 с.) — [зміст](zmist/9711e752d1ce9872.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_2021_07_19.pdf)
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду щодо недопустимості доказів, отриманих внаслідок істотного порушення прав та свобод людини (2018 рік - жовтень 2020 року) (71 с.) — [зміст](zmist/fc248bdc4675c15c.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogljad_KKS_VS.pdf)
+
+**Кримінальний кодекс / Особлива частина КК України / Розділ XI. Кримінальні правопорушення проти безпеки руху та експлуатації транспорту / Порушення правил безпеки дорожнього руху**
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду у кримінальних провадженнях щодо порушення правил безпеки дорожнього руху або експлуатації транспорту особами, які керують транспортними засобами (стаття 286 Кримінального кодексу України) (45 с.) — [зміст](zmist/aa5f986109b4227b.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KKS_DTP.pdf)
+
+**Кримінальний кодекс / Особлива частина КК України / Розділ XIII. Кримінальні правопорушення у сфері обігу наркотичних засобів та інші проти здоров'я населення / Кримінальні правопорушення у сфері обігу наркотичних засобів**
+- Огляд судової практики ККС ВС у провадженнях щодо злочинів у сфері обігу наркотичних засобів, психотропних речовин, їх аналогів або прекурсорів та інших злочинів проти здоров’я населення (2018 - травень 2020) (48 с.) — [зміст](zmist/bc834c1f1826ba31.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogljad_KKS_02_07_2020.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ III. Досудове розслідування / Оскарження ухвал слідчих суддів**
+- Огляд судової практики Верховного Суду щодо перегляду ухвал слідчих суддів (01.01.2018 - 01.06.2020) (79 с.) — [зміст](zmist/c52dbafca926a603.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Ogljad_KKS_01_01_2018_01_06_2020.pdf)
+
+**Кримінальний кодекс / Особлива частина КК України / Розділ XVII. Кримінальні правопорушення у сфері службової діяльності та професійної діяльності, пов'язаної з наданням публічних послуг / Документи як предмет кримінального правопорушення**
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду щодо оцінки документів як предметів складів злочинів, передбачених статтями 357, 358, 366 КК (період 01.01.2018 - 01.01.2020) (29 с.) — [зміст](zmist/e2d0a33f604391c7.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_KKS_dokyment.pdf)
+
+**Кримінальний кодекс / Особлива частина КК України / Розділ VI. Кримінальні правопорушення проти власності / Кримінальні правопорушення проти власності**
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду у провадженнях про злочини проти власності період (01.01.2018-01.08.2019) (52 с.) — [зміст](zmist/3b5b0ba114433014.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Ogljad_KKS.pdf)
+
+**Кримінальний процесуальний кодекс / Розділ I. Загальні положення / Право на захист**
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду щодо забезпечення права на захист у кримінальних провадженнях (справах) (період 15.01.2018 – 01.06.2019) (38 с.) — [зміст](zmist/a80471110e801608.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_KKS_2.pdf)
+
+### Касаційний цивільний суд (42)
+
+Короткий зміст кожного: [tematychni/06_Касаційний_цивільний_суд.md](tematychni/06_Касаційний_цивільний_суд.md)
+
+**Застосування норм процесуального права**
+- Огляд судової практики розгляду заяв про зобов’язання подати звіт про виконання судового рішення та розгляд звіту про виконання судового рішення (статті 453-1–453-4 ЦПК України) (53 с.) — [зміст](zmist/e2da627939a21b8f.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_sud_Zvit.pdf)
+- Огляд судової практики Верховного Суду щодо забезпечення позову в господарському та цивільному судочинстві (2018 рік – вересень 2025 року) (57 с.) — [зміст](zmist/59eba83a2f37b763.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_VS_zabezp_pozov_2018_2025_03_11_2025.pdf)
+- Огляд судової практики КЦС ВС щодо окремих питань застосування положень Цивільного процесуального кодексу України (січень 2024 року – березень 2025 року) (116 с.) — [зміст](zmist/572e32d4eed03d4b.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KCS_zastos_CPK_01_2024_03_2025.pdf)
+- Огляд судової практики Верховного Суду щодо судових витрат у господарському та цивільному судочинстві (2018 рік - серпень 2024 року) (75 с.) — [зміст](zmist/e724bec878e855fb.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KGS_KCS_sud_vutrat_2018_08_2024.pdf)
+- Огляд практики Касаційного цивільного суду у складі Верховного Суду у справах щодо оскарження рішень третейських судів та надання дозволу на примусове виконання рішень третейських судів (2018 - 2022 роки) (120 с.) — [зміст](zmist/efd70d4fb645fd68.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_KCS_tret_sud.pdf)
+- Огляд практики розгляду Верховним Судом справ про оскарження рішень третейських судів та видачу наказів на примусове виконання рішень третейських судів, утворених відповідно до Закону України "Про третейські суди", якщо такі рішення ухвалено у спорах, віднесених до юрисдикції господарських судів за грудень 2021 року - травень 2022 року (32 с.) — [зміст](zmist/f46936d110cb7fd7.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_tret_sud_2021_2022.pdf)
+- Огляд практики розгляду Верховним Судом справ про оскарження рішень третейських судів та видачу наказів на примусове виконання рішень третейських судів, утворених відповідно до Закону України "Про третейські суди" , якщо такі рішення ухвалені у спорах, віднесених до юрисдикції господарських судів за березень - листопад 2021 року (52 с.) — [зміст](zmist/386fe439c68c76f5.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/2022_06_03_Oglyad_tret_sud.pdf)
+- Огляд практики розгляду Верховним Судом справ про оскарження рішень третейських судів та видачу наказів на примусове виконання рішень третейських судів, утворених відповідно до Закону України «Про третейські суди», якщо такі рішення ухвалені у спорах, віднесених до юрисдикції господарських судів (34 с.) — [зміст](zmist/54a689b6af1187b5.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_tret_sudy_2021_07_06.pdf)
+- Огляд практики розгляду Верховним Судом справ про оскарження рішень третейських судів та видачу наказів на примусове виконання рішень третейських судів, утворених відповідно до Закону України «Про третейські суди», якщо такі рішення ухвалені у спорах, віднесених до юрисдикції господарських судів (травень 2019 - червень 2020) (19 с.) — [зміст](zmist/bb95bb465af09f50.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogljad.doc.pdf)
+- Огляд судової практики розгляду Верховним Судом справ щодо оскарження рішень третейських судів та про видачу наказів на примусове виконання рішень третейських судів (01.01.2018 – 31.05.2019) (27 с.) — [зміст](zmist/2252d0b95b53e1a9.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Ogljad_rishen_tret.pdf)
+
+**Трудові правовідносини**
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду щодо застосування норм трудового законодавства в умовах воєнного стану (актуальна практика) (2023 рік – квітень 2026 року) (56 с.) — [зміст](zmist/325ccf8fd9b4282e.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KCS_tryd_zakonodav_voen_stan.pdf)
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду щодо розірвання трудового договору з ініціативи роботодавця на підставі п. 4 ч. 1 ст. 40 КЗпП України (2023 рік – квітень 2026 року) (36 с.) — [зміст](zmist/7ea9bb9fb941b582.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KCS_Rozirv_tryd_dogovory.pdf)
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду щодо застосування законодавства України про колективні договори і угоди (2018 рік - травень 2024 року) (50 с.) — [зміст](zmist/1731984fb1b826c7.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KCS_kolekt_dogov_ygodu_2018_05_2024.pdf)
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду у справах про відшкодування матеріальної шкоди, заподіяної працівником підприємству, установі, організації (2018 рік - липень 2023 року) (27 с.) — [зміст](zmist/228c6adefa0b89bf.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KCS_mater_shkoda.pdf)
+
+**Сімейні правовідносини**
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду щодо цивільно-правових аспектів поділу спільної сумісної власності подружжя та захисту майнових прав (частина І) (2022 рік – січень 2026 року) (49 с.) — [зміст](zmist/8a74f30fd33c4a04.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KCS_podil_vlasn_Ichast.pdf)
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду у спорах щодо визначення місця проживання дитини (грудень 2023 року – січень 2026 року) (42 с.) — [зміст](zmist/382e6ffbf44bb6e1.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KCS_mistse_prochyvannia_dutunu.pdf)
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду щодо вирішення спорів про участь у вихованні дитини (2018 рік - вересень 2022 року) (80 с.) — [зміст](zmist/a5573bc9146d2f16.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KCS_vuh_dutunu.pdf)
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду у справах зі спорів щодо визначення місця проживання дитини та відібрання дитини без позбавлення батьківських прав (2018 рік - липень 2022 року) (89 с.) — [зміст](zmist/244ef282f66199c6.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/2022_09_27_Ogliad_KCS_2.pdf)
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду у справах зі спорів щодо позбавлення / поновлення батьківських прав, оспорювання батьківства (2019 рік - липень 2022 року) (66 с.) — [зміст](zmist/a6e56c1cda41f3f1.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_KCS_batkivstvo.pdf)
+- Огляд практики Касаційного цивільного суду у складі Верховного Суду щодо видачі обмежувального припису (37 с.) — [зміст](zmist/8dbe4752daa65480.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogliad_KCS_1.pdf)
+- Огляд практики Касаційного цивільного суду у складі Верховного Суду у справах зі спорів, що виникають між особами, які проживають однією сім'єю, але не перебувають у шлюбі (37 с.) — [зміст](zmist/14d0e6e875085da3.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KCS_podr_1.pdf)
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду щодо розгляду справ у спорах, що виникають із розподілу майна подружжя (48 с.) — [зміст](zmist/916db78d42d27377.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_podil_majna.pdf)
+- Огляд практики Касаційного цивільного суду у складі Верховного Суду у справах щодо призначення, зміни, стягнення аліментів (22 с.) — [зміст](zmist/7e3239fac68567f0.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_alimentu.pdf)
+
+**Спадкові правовідносини**
+- Огляд практики Верховного Суду у сфері визнання спадщини відумерлою (34 с.) — [зміст](zmist/3b21117eeb500f80.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_VS_Spadsuna_.pdf)
+- Огляд практики Касаційного цивільного суду у складі Верховного Суду щодо розгляду справ у спорах, що виникають із спадкових правовідносин (2018 рік - лютий 2023 року) (170 с.) — [зміст](zmist/7264a114b4107130.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_spadkovi_pravovidnos_14_03_2023.pdf)
+- Огляд практики Касаційного цивільного суду у складі Верховного Суду щодо розгляду справ у спорах, що виникають із спадкових правовідносин (45 с.) — [зміст](zmist/25051d4d30367757.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/ogljad_KCS.pdf)
+
+**Окреме провадження**
+- Огляд судової практики розгляду цивільних справ про встановлення фактів, що мають юридичне значення, під час дії воєнного стану (коментований) (136 с.) — [зміст](zmist/84cd148c8706d453.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KCS_fakt_voen_stan.pdf)
+
+**Договірні/ недоговірні  правовідносини**
+- Огляд судової практики Верховного Суду щодо застосування доктрини contra proferentem (слова договору тлумачаться проти того, хто їх написав) (2018 рік - 31 січня 2025 року) (38 с.) — [зміст](zmist/39dbf053112a03fa.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_contra_proferentem_2018_2025.pdf)
+- Огляд судової практики Верховного Суду щодо застосування принципу доброї совісті та доктрини venire contra factum proprium у цивільних спорах (34 с.) — [зміст](zmist/a6d3c8c87326b5de.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_KCS_dobra_sovist.pdf)
+- Огляд судової практики Верховного Суду щодо оспорювання фраудаторних правочинів (правочинів, вчинених боржником на шкоду кредитору) у цивільних спорах (38 с.) — [зміст](zmist/afbda2de6c5dcc27.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Tematychnyi_ohliad_fraudatorni_pravochyny_21_02_2024.pdf)
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду щодо вирішення спорів, пов'язаних з укладенням, розірванням та визнанням недійсним договору дарування (56 с.) — [зміст](zmist/1c80d486b585ba7c.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/2022_09_06_Oglyad_KCS_daruv.pdf)
+- Огляд судової практики Касаційного цивільного суду у справах, що виникають із договорів найму (оренди) житлових та нежитлових приміщень (47 с.) — [зміст](zmist/1ad965690577aa8a.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/2021_11_25_Oglyad_civ_naim.pdf)
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду у справах щодо іпотеки (січень 2018 - червень 2021) (84 с.) — [зміст](zmist/f309c6f69dbeb545.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_ipoteka_%2012_July_2021_1.pdf)
+- Огляд практики Касаційного цивільного суду у складі Верховного Суду у справах щодо визнання односторонніх правочинів недійсними (43 с.) — [зміст](zmist/5a599830ed489a7e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/KCS_26_01_2021.pdf)
+
+**Оспорювання , визнання, надання дозволу на виконання рішень міжнародних арбітражів**
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду щодо застосування Закону України «Про міжнародне приватне право» (2018 рік – квітень 2025 року) (84 с.) — [зміст](zmist/5eb10dbcef287fe7.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KCS_MPP.pdf)
+- Огляд практики Касаційного цивільного суду у складі Верховного Суду у справах щодо надання дозволу на виконання рішень міжнародних комерційних арбітражних судів та їх оспорювання (35 с.) — [зміст](zmist/652865373fe6ff74.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_Mkas.pdf)
+
+**Скарги на рішення, дії або бездіяльність державного/приватного виконавця чи іншої посадової особи ДВС**
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду щодо розгляду скарг на рішення, дії або бездіяльність приватного/державного виконавця чи іншої посадової особи державної виконавчої служби під час виконання судових рішень у цивільних справах (110 с.) — [зміст](zmist/d32b227dc6e5c8d5.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/2022_05_13_Oglyad_KCS_sud_rish_1.pdf)
+
+**Житлові правовідносини**
+- Дайджест практики Верховного Суду у справах, пов’язаних з наданням житлово-комунальних послуг (2018–2020 рр.) (113 с.) — [зміст](zmist/6aed62ddc721b642.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Daidzhest_2018_2020.pdf)
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду у справах зі спорів, що виникають у сфері надання житлово-комунальних послуг (38 с.) — [зміст](zmist/3ee2027ad375a79d.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Ogljad_KCS_10_06_2020.pdf)
+- Огляд практики Касаційного цивільного суду у складі Верховного Суду у справах щодо виселення та вселення (42 с.) — [зміст](zmist/6d70ebeb80eaccf6.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_KCS_viselennya.pdf)
+
+**Захист прав споживачів та туристичні послуги**
+- Огляд практики Касаційного цивільного суду у складі Верховного Суду, щодо розгляду справ у спорах про захист прав споживачів туристичних послуг (39 с.) — [зміст](zmist/7a48dd007c3478ff.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogljad_KCS.pdf)
+
+**Земельні правовідносини**
+- Огляд практики Верховного Суду у справах щодо права користування чужою земельною ділянкою: сервітут, емфітевзис, суперфіцій (23 с.) — [зміст](zmist/55a56e8ce92b55a2.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_zemlya.pdf)
+
+### Огляди рішень Європейського суду з прав людини (33)
+
+Короткий зміст кожного: [tematychni/07_Огляди_рішень_Європейського_суду_з_прав_людини.md](tematychni/07_Огляди_рішень_Європейського_суду_з_прав_людини.md)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Консультативні висновки**
+- Консультативні висновки згідно із Протоколом № 16 до Конвенції (1 с.) — [зміст](zmist/man-bf2da917-93f0-47ab-ba46-04aff8d06d00.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-bf2da917-93f0-47ab-ba46-04aff8d06d00)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Умови прийнятності**
+- Стаття 35 ЄКПЛ (Умови прийнятності) (1 с.) — [зміст](zmist/man-f9622869-753d-4bb9-8be9-f0f6df4d5809.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-f9622869-753d-4bb9-8be9-f0f6df4d5809)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Межі застосування обмежень прав**
+- Стаття 18 ЄКПЛ (Межі застосування обмежень прав) (1 с.) — [зміст](zmist/man-a2fb9d26-c868-40ae-a54f-b54e06b0521b.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-a2fb9d26-c868-40ae-a54f-b54e06b0521b)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Заборона дискримінації**
+- Стаття 14 (Заборона дискримінації) (2 с.) — [зміст](zmist/man-abeba5fa-4557-4208-9bad-5da4de374fcc.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-abeba5fa-4557-4208-9bad-5da4de374fcc)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Право на ефективний засіб правового захисту**
+- Стаття 13 (Право на ефективний засіб правового захисту) (1 с.) — [зміст](zmist/man-78800158-c62a-4658-aa8e-55de9eb5c4d6.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-78800158-c62a-4658-aa8e-55de9eb5c4d6)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Свобода зібрань та об'єднання**
+- Стаття 11 (Свобода зібрань та об'єднання) (2 с.) — [зміст](zmist/man-3333f320-4dcc-40ad-bf08-712eb6b19b92.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-3333f320-4dcc-40ad-bf08-712eb6b19b92)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Свобода вираження поглядів**
+- Стаття 10 (Свобода вираження поглядів) (8 с.) — [зміст](zmist/man-75e3ab8d-b142-43e6-b69a-a809c9ed16be.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-75e3ab8d-b142-43e6-b69a-a809c9ed16be)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Свобода думки, совісті і релігії**
+- Стаття 9 (Свобода думки, совісті і релігії) (1 с.) — [зміст](zmist/man-330d4594-a3f4-4a11-a506-06106ad9446e.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-330d4594-a3f4-4a11-a506-06106ad9446e)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Право не бути притягненим до суду або покараним двічі**
+- Стаття 4 Протоколу № 7 (Право не бути притягненим до суду або покараним двічі) (1 с.) — [зміст](zmist/man-8951a33e-bc94-4d0a-86ad-0c627844b809.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-8951a33e-bc94-4d0a-86ad-0c627844b809)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Право на повагу до приватного і сімейного життя**
+- Стаття 8 (Право на повагу до приватного і сімейного життя) (12 с.) — [зміст](zmist/man-439285d0-4277-4fb9-a83d-eb546e8bd78c.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-439285d0-4277-4fb9-a83d-eb546e8bd78c)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Ніякого покарання без закону**
+- Стаття 7 (Ніякого покарання без закону) (2 с.) — [зміст](zmist/man-d3cad975-f469-4f7f-82d8-8a63e8b13059.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-d3cad975-f469-4f7f-82d8-8a63e8b13059)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Право на справедливий суд**
+- Стаття 6 (Право на справедливий суд) (18 с.) — [зміст](zmist/man-404fb98c-88c9-4dbe-833e-dc37838ab671.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-404fb98c-88c9-4dbe-833e-dc37838ab671)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Право на свободу та особисту недоторканність**
+- Стаття 5 (Право на свободу та особисту недоторканність) (2 с.) — [зміст](zmist/man-a4c74f85-0ff7-4b1c-9423-a4714e09706a.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-a4c74f85-0ff7-4b1c-9423-a4714e09706a)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Заборона рабства і примусової праці**
+- Стаття 4 (Заборона рабства і примусової праці) (1 с.) — [зміст](zmist/man-b3ea00ef-9937-4649-92da-bca0c0b7fdf6.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-b3ea00ef-9937-4649-92da-bca0c0b7fdf6)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Право на вільні вибори**
+- Стаття 3 Першого протоколу (Право на вільні вибори) (1 с.) — [зміст](zmist/man-6ee8344e-74b4-41ca-a5e1-c1f3faa1bcf0.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-6ee8344e-74b4-41ca-a5e1-c1f3faa1bcf0)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Заборона катування**
+- Стаття 3 (Заборона катування) (2 с.) — [зміст](zmist/man-211036c7-f439-4d3d-bfc4-258f2c7549fb.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-211036c7-f439-4d3d-bfc4-258f2c7549fb)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Право на оскарження у кримінальних справах**
+- Стаття 2 Протоколу № 7 (Право на оскарження в кримінальних справах) (1 с.) — [зміст](zmist/man-633adab7-cb2d-416e-85f4-ddfeceb3396e.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-633adab7-cb2d-416e-85f4-ddfeceb3396e)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Свобода пересування**
+- Стаття 2 Протоколу № 4 (Свобода пересування) (1 с.) — [зміст](zmist/man-73b32ff0-6949-4f4a-b7a7-7597a5b5de1a.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-73b32ff0-6949-4f4a-b7a7-7597a5b5de1a)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Право на освіту**
+- Стаття 2 Першого протоколу (Право на освіту) (1 с.) — [зміст](zmist/man-ba4983fc-3c46-49ff-92fa-3cf9d2ab6c6d.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-ba4983fc-3c46-49ff-92fa-3cf9d2ab6c6d)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Право на життя**
+- Стаття 2 (Право на життя) (3 с.) — [зміст](zmist/man-3edb754b-4cfa-4df7-9250-48332ec8ce4c.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-3edb754b-4cfa-4df7-9250-48332ec8ce4c)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Загальна заборона дискримінації**
+- Стаття 1 Протоколу № 12 (Загальна заборона дискримінації) (1 с.) — [зміст](zmist/man-b3600bfa-ee20-46e5-b8d9-502fdf6ea069.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-b3600bfa-ee20-46e5-b8d9-502fdf6ea069)
+
+**Практика ЄСПЛ за статтями Конвенції про захист прав людини і основоположних свобод / Захист власності**
+- Стаття 1 Першого протоколу (Захист власності) (5 с.) — [зміст](zmist/man-cf8457d0-a2ff-4446-a928-228de45e5967.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-cf8457d0-a2ff-4446-a928-228de45e5967)
+
+**Практика ЄСПЛ за окремими темами / Права дитини та її найкращі інтереси**
+- Огляд рішень Європейського суду з прав людини щодо права дитини бути почутою та врахування її найкращих інтересів (84 с.) — [зміст](zmist/f19ef651e08fc6d4.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_ESPL_pravo_dutunu.pdf)
+- Огляд рішень Європейського Суду з прав людини, що стосуються дітей та забезпечення їхніх найкращих інтересів (за період 01.01.2019 року по 01.10 2019 року) (25 с.) — [зміст](zmist/d82e2faba0649acd.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_Ditu.pdf)
+
+**Практика ЄСПЛ за окремими темами / Право на повагу до приватного і сімейного життя**
+- Огляд рішень Європейського суду з прав людини за статтею 8 Конвенції про захист прав людини і основоположних свобод (кримінальний процесуальний аспект: обшук) (46 с.) — [зміст](zmist/f04d221c1846f51b.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/ogl_ESPL_obshuk.pdf)
+- Огляд рішень Європейського суду з прав людини щодо права на житло (01 січня 2019 року - 31 липня 2021 року) (83 с.) — [зміст](zmist/d276d440a4d444d3.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_YESPL_01_01_2019_31_07_2021.pdf)
+
+**Практика ЄСПЛ за окремими темами / Кримінальний процес та гарантії справедливого суду**
+- Огляд рішень Європейського суду з прав людини за статтею 8 Конвенції про захист прав людини і основоположних свобод (кримінальний процесуальний аспект: обшук) (46 с.) — [зміст](zmist/f04d221c1846f51b.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/ogl_ESPL_obshuk.pdf)
+- Огляд рішень Європейського суду з прав людини щодо судового розгляду за відсутності обвинуваченого (in absentia) (61 с.) — [зміст](zmist/a0f164e457fcfb18.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_ESPL_zaoch_sr.pdf)
+
+**Практика ЄСПЛ за окремими темами / Практика ЄСПЛ щодо України**
+- Огляд рішень Європейського суду з прав людини проти України (15 вересня 2022 року) (39 с.) — [зміст](zmist/2790261c89eb5863.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/2022_09_29_ESPL.pdf)
+
+**Практика ЄСПЛ за окремими темами / Соціально-економічні права та право власності**
+- Огляд рішень Європейського суду з прав людини щодо права на житло (01 січня 2019 року - 31 липня 2021 року) (83 с.) — [зміст](zmist/d276d440a4d444d3.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_YESPL_01_01_2019_31_07_2021.pdf)
+- Огляд рішень Європейського Суду з прав людини щодо відповідальності держави за борги державних підприємств (червень 2002 року - вересень 2019 року) (140 с.) — [зміст](zmist/dddecd65ae97ee1e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogliad_espl_2002_2019.pdf)
+- Огляд рішень ЄСПЛ у справах про банкрутство за період 13.02.2005 - 01.01.2020 рр (24 с.) — [зміст](zmist/60fd1b3a0fe542c7.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_ESPL_bankrotstvo.pdf)
+
+**Практика ЄСПЛ за окремими темами / Свобода вираження поглядів**
+- Огляд практики Європейського суду з прав людини у справах, які стосуються втручання у право на свободу вираження поглядів, закріплене у статті 10 Конвенції про захист прав людини і основоположних свобод (69 с.) — [зміст](zmist/e781298ea0e4505d.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Oglyad_st_10.pdf)
+
+### Без рубрики на сайті (33)
+
+Короткий зміст кожного: [tematychni/08_Без_рубрики_на_сайті.md](tematychni/08_Без_рубрики_на_сайті.md)
+
+**КАС**
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо податкових наслідків форс-мажору внаслідок збройної агресії (лютий 2023 року – серпень 2026 року) (30 с.) — [зміст](zmist/57f57a83f16310d7.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Ohliad_KAS_fors-mazhor.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду в адміністративних справах з питань праці (60 с.) — [зміст](zmist/79f7d293a09d7506.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_Derzhpraci_2018_2026.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо розгляду справ у сфері охорони культурної спадщини (47 с.) — [зміст](zmist/15c7a961c3ac54a4.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KAS_Ohorona_kylturn_spad.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо процедурних порушень під час призначення та проведення податкових перевірок (2018 рік – серпень 2026 року) (41 с.) — [зміст](zmist/f6c52af3b84c3074.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KAS_Proced_podatk_perevirku.pdf)
+- Збірник постатейних матеріалів до Кодексу адміністративного судочинства України: 2022 - 2025 роки (522 с.) — [зміст](zmist/d8a6281530c7c098.md) · [PDF](https://court.gov.ua/storage/portal/supreme/rizne/Zbirnuk_postat_2022_2025.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодозахисту інвесторів у податкових спорах (2019 рік - травень 2024 року) (14 с.) — [зміст](zmist/fe851f70eb09dd2e.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Ohliad_investory_2019_2024.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду у спорах щодо відшкодування витрат на житлово-комунальні послуги (25 с.) — [зміст](zmist/71bfed1bed9f4a9f.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_vidshkod_vutrat_kom_posl.pdf)
+- Огляд судової практики Касаційного адміністративного суду у складі Верховного Суду щодо трансферного ціноутворення (2020 рік - червень 2023 року) (35 с.) — [зміст](zmist/6c45fae2d942e311.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Ohliad_transfertne_tsinoutvorennia_2020_06_2023.pdf)
+- Огляд судової практики Верховного Суду в адміністративних справах щодо соціального захисту сімей з дітьми в публічно-правових спорах (20 с.) — [зміст](zmist/f478d292342c380f.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Oglyad_KAS_2023_06_19.pdf)
+- Огляд судової практики об’єднаної палати Касаційного адміністративного суду у складі Верховного Суду (39 с.) — [зміст](zmist/e5359cc4338934e1.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/Ohliad_obiednana_palata.pdf)
+
+**Велика Палата**
+- Дайджест судової практики Верховного Суду щодо електронних доказів (2028 рік - серпень 2026 року) (53 с.) — [зміст](zmist/7a32a1e9c5111605.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Daigest_elekr_dokazu.pdf)
+
+**ККС**
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду у провадженнях про кримінальні правопорушення, пов'язані з домашнім насильством (актуальна практика) (40 с.) — [зміст](zmist/e9d71e5761e64a90.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_domashnye_nasylstvo_2019_2026.pdf)
+- Огляд судової практики Верховного Суду щодо застосування статті 296 «Хуліганство» КК України (актуальна практика) (35 с.) — [зміст](zmist/11b07f1cb530c748.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_st_296_hyliganstvo_2026.pdf)
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду щодо особливостей апеляційного оскарження ухвал слідчих суддів (70 с.) — [зміст](zmist/4499c34d292c1308.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_apel_oskarzh_uhval_slidch_suddiv.pdf)
+- Збірник тематичних оглядів судової практики Касаційного кримінального суду у складі Верховного Суду № 1 (314 с.) — [зміст](zmist/3b3a9aad0dc2f244.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Zbirnik_02_10_2026.pdf)
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду щодо проведення огляду та обшуку (актуальна практика) (67 с.) — [зміст](zmist/1ae50320b39aa4b3.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KKS_%20oglyad_obshuk_2020_2026.pdf)
+
+**КЦС**
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду щодо участі у вихованні та спілкуванні з дітьми, які тимчасово проживають за межами України (рішення за період із 2024 року до серпня 2026 року) (23 с.) — [зміст](zmist/ec0f6291f6606064.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KCS_spilk_vuhov_ditu_2024_08_2026.pdf)
+- Огляд судової практики щодо вирішення цивільних спорів, пов’язаних із реалізацією прав і гарантій військовослужбовців, ветеранів війни та членів їх сімей (коментований) (97 с.) — [зміст](zmist/061d518787fb4a1d.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KCS_Tcuv_sporu_viiskovosl_veteranu_viinu.pdf)
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду щодо цивільно-правових аспектів поділу спільної сумісної власності подружжя та захисту майнових прав (частина ІІ) (54 с.) — [зміст](zmist/b966f660f0151d98.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KCS_Podil_mina_podr_2_chast.pdf)
+- Огляд практики Касаційного цивільного суду у складі Верховного Суду щодо спорів у справах за участю осіб з інвалідністю (51 с.) — [зміст](zmist/4302d1afdfa0da21.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KCS_inval.pdf)
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду у справах зі спорів, що виникають у сфері охорони здоров'я (лютий 2018 року - липень 2021 року) (62 с.) — [зміст](zmist/19be98d966314c15.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/2021_12_ohorona_zdor.pdf)
+- Огляд судової практики Касаційного цивільного суду у складі Верховного Суду у справах про захист гідності, честі та ділової репутації (55 с.) — [зміст](zmist/181eb77a1d2b3753.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Ogliad_KCS.pdf)
+
+**ЄСПЛ**
+- Огляд практики Європейського суду з прав людини щодо земельних та пов’язаних із ними майнових спорів (79 с.) — [зміст](zmist/832e0b0c1cffa449.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_ESPL_Zemeln_mainov_sporu.pdf)
+- Стаття 3 (Заборона катування) (2 с.) — [зміст](zmist/man-6d9db677-78bd-4075-abaf-a7fb3bb7d890.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-6d9db677-78bd-4075-abaf-a7fb3bb7d890)
+- Стаття 1 Першого протоколу (Захист власності) (5 с.) — [зміст](zmist/man-88702985-baad-4fe6-b860-c4be5a3d0834.md) · [PDF](https://lpd-api-prod.court.gov.ua/api/v1/digest/file/man-88702985-baad-4fe6-b860-c4be5a3d0834)
+
+**КГС**
+- Огляд судової практики Верховного Суду щодо протидії зловживанням правами у справах про банкрутство (неплатоспроможність) (актуальна практика) (2018 рік – червень 2026 року) (45 с.) — [зміст](zmist/8ac3d48b3fd70a84.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_Zlovzhiv_bankrutstvo.pdf)
+- Огляд судової практики Верховного Суду щодо доказів і доказування в господарському та цивільному судочинстві (2018 рік – вересень 2026 року) (44 с.) — [зміст](zmist/728e528d7ee21b63.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_VS_dokazu_dokazyvan_2018_09_2026.pdf)
+- Review of Case Law of the Commercial Cassation Court within the Supreme Court in Cases Concerning the Protection of Intellectual Property Rights in the Context of the Case Law of the Court of Justice of the European Union (41 с.) — [зміст](zmist/d0f8dce610caab59.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/Oglyad_KGS_zahust_prav_IntVlasn_angl.pdf)
+- Огляд судової практики Касаційного кримінального суду у складі Верховного Суду в провадженнях про кримінальні правопорушення у сфері господарської діяльності (94 с.) — [зміст](zmist/17f1af56fcf469a9.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/Oglyad_KKS_zloch_gosp_dijal_1.pdf)
+- Огляд практики застосування Верховним Судом Закону України «Про судовий збір» у господарських справах (червень 2021 року - травень 2022 року) (70 с.) — [зміст](zmist/6bdc6b9804ec18ad.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/ogliady/2022_10_05_Ogliad_KGS.pdf)
+- Огляд правових висновків ВС у складі судової палати для розгляду справ про банкрутсво КГС за липень - грудень 2021 року (62 с.) — [зміст](zmist/9a7b1b8415f864f0.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/sud_pract/Oglyad_KGS_bankrytstvo_07_12_2021.pdf)
+- Аналітична довідка за результатами вивчення судової практики Верховного Суду стосовно визнання недійсними правочинів боржника, щодо якого відкрито провадження у справі про банкрутство (лютий 2022 року) (11 с.) — [зміст](zmist/8aff51d803ed5f6c.md) · [PDF](https://supreme.court.gov.ua/userfiles/media/new_folder_for_uploads/supreme/Analitychna_dovidka_February_2022.pdf)
+
+**Суд ЄС**
+- Огляд практики Суду справедливості Європейського Союзу. Промислові зразки ЄС (59 с.) — [зміст](zmist/22b0bf2a7045857f.md) · [PDF](https://court.gov.ua/storage/portal/supreme/ogliady/fiche_thematique_comunity_designs.pdf)
+
+## Періодичні дайджести й огляди
+
+- **Велика Палата** — 79 (2026: 5, 2025: 7, 2024: 10, 2023: 8, 2022: 7, 2021: 8, 2020: 11, 2019: 18, 2018: 5) → [periodychni/VP.md](periodychni/VP.md)
+- **КАС** — 81 (2026: 11, 2025: 14, 2024: 14, 2023: 12, 2022: 11, 2021: 13, 2020: 6) → [periodychni/KAS.md](periodychni/KAS.md)
+- **КГС** — 75 (2026: 11, 2025: 13, 2024: 12, 2023: 13, 2022: 6, 2021: 10, 2020: 10) → [periodychni/KGS.md](periodychni/KGS.md)
+- **ККС** — 108 (2026: 10, 2025: 14, 2024: 14, 2023: 14, 2022: 10, 2021: 14, 2020: 14, 2019: 18) → [periodychni/KKS.md](periodychni/KKS.md)
+- **КЦС** — 95 (2026: 10, 2025: 15, 2024: 14, 2023: 16, 2022: 11, 2021: 15, 2020: 14) → [periodychni/KCS.md](periodychni/KCS.md)
+- **ЄСПЛ** — 136 (2026: 6, 2025: 12, 2024: 11, 2023: 11, 2022: 5, 2021: 11, 2020: 34, 2019: 46) → [periodychni/YESPL.md](periodychni/YESPL.md)
+- **Суд ЄС** — 18 (2025: 4, 2024: 9, 2023: 5) → [periodychni/SUD_YES.md](periodychni/SUD_YES.md)
