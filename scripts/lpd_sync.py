@@ -237,8 +237,25 @@ def fetch_heads(ids, limit, max_minutes=None, threads=2):
 
 # ---------- нормалізація ----------
 
+def load_palaty():
+    """Переліки ОП / палат / зразкових справ КАС і КГС з supreme.court.gov.ua (scripts/palaty_supreme.py)."""
+    p = os.path.join(DATA, 'palaty_supreme.csv')
+    exact, zr = {}, set()
+    if os.path.exists(p):
+        with open(p, encoding='utf-8-sig') as f:
+            for r in csv.DictReader(f):
+                for c in filter(None, r['spravy'].split('; ')):
+                    c = re.sub(r'\s', '', c).lower()
+                    if r['vyd'] == 'зразкова справа':
+                        zr.add(c)
+                    elif r['data']:
+                        exact[(c, r['data'])] = r['vyd']
+    return exact, zr
+
+
 def build(raw, heads):
     cats = {c['id']: c for c in raw['categories']}
+    pal_exact, pal_zr = load_palaty()
 
     def path(cid):
         p, n = [], 0
@@ -271,15 +288,20 @@ def build(raw, heads):
             cc = d.get('court_id')
             code = COURT_BY_LEGACY.get(cc, str(cc) if cc else None)
             h = heads.get(d['id'], {})
+            key = (re.sub(r'\s', '', d.get('caseNumber') or '').lower(), ddate(d))
+            sk = sklad_from_head(h['head']) if h.get('head') else None
+            sk_src = 'шапка рішення' if sk else None
+            if not sk and key in pal_exact:
+                sk, sk_src = {'ОП': 'ОП', 'палата': 'палата'}[pal_exact[key]], 'supreme.court.gov.ua'
             docs.append({'id': d['id'], 'doc_id': d.get('doc_id'), 'sprava': d.get('caseNumber'),
-                         'data': ddate(d),
-                         'sud': COURT_NAME.get(code, code), 'sklad': sklad_from_head(h['head']) if h.get('head') else None, 'provadzhennia': h.get('provadzhennia'),
+                         'data': ddate(d), 'zrazkova': key[0] in pal_zr and (COURT_NAME.get(code) in ('КАС', 'Велика Палата') or sk == 'ВП'),
+                         'sud': COURT_NAME.get(code, code), 'sklad': sk, 'sklad_dzherelo': sk_src, 'provadzhennia': h.get('provadzhennia'),
                          'edrsr': f"https://reyestr.court.gov.ua/Review/{d.get('doc_id')}" if d.get('doc_id') else None})
         tag = (r.get('tag') or {}).get('title')
         blob = title + ' ' + text
         # рівень
         sklady = {d['sklad'] for d in docs if d['sklad']}
-        if a & CAT_ZRAZKOVI or re.match(r'\s*Зразков\w+ справ', title):
+        if a & CAT_ZRAZKOVI or re.match(r'\s*Зразков\w+ справ', title) or any(d['zrazkova'] for d in docs):
             rank = 1
         elif tag == 'Велика Палата' or 'ВП' in sklady or any(d['sud'] == 'Велика Палата' for d in docs):
             rank = 2
@@ -392,13 +414,28 @@ def write_all(raw, rows, cats, path):
             x = docs.setdefault(d['id'], {**d, 'pozytsii': []})
             x['pozytsii'].append(r['id'])
     write_csv(os.path.join(DATA, 'rishennia.csv'), sorted(docs.values(), key=lambda x: x['data'] or '', reverse=True),
-              ['id', 'doc_id', 'sprava', 'data', 'sud', 'sklad', 'provadzhennia', 'edrsr', 'pozytsii'])
+              ['id', 'doc_id', 'sprava', 'data', 'sud', 'sklad', 'sklad_dzherelo', 'zrazkova', 'provadzhennia', 'edrsr', 'pozytsii'])
     # рубрикатор
     cnt = collections.Counter(c for r in rows for c in r['rubryky_id'])
     cat_rows = [{'id': c['id'], 'parentId': c['parentId'], 'nazva': c['title'].strip(), 'shliakh': ' / '.join(path(c['id'])), 'pozytsii_bezposerednio': cnt.get(c['id'], 0)}
                 for c in cats.values()]
     write_csv(os.path.join(DATA, 'rubryky.csv'), sorted(cat_rows, key=lambda x: x['shliakh']), ['id', 'parentId', 'nazva', 'shliakh', 'pozytsii_bezposerednio'])
     write_csv(os.path.join(DATA, 'yespl.csv'), raw['echr'], ['id', 'case_num', 'title', 'description', 'decided_date', 'doc_url'])
+    # звірка переліків supreme.court.gov.ua з базою
+    pp = os.path.join(DATA, 'palaty_supreme.csv')
+    if os.path.exists(pp):
+        by_case = collections.defaultdict(list)
+        for r in rows:
+            for d in r['rishennia']:
+                by_case[re.sub(r'\s', '', d['sprava'] or '').lower()].append((r, d))
+        zv = []
+        with open(pp, encoding='utf-8-sig') as f:
+            for x in csv.DictReader(f):
+                hits = [(r, d) for c in filter(None, x['spravy'].split('; ')) for (r, d) in by_case.get(re.sub(r'\s', '', c).lower(), [])]
+                same = [(r, d) for r, d in hits if d['data'] == x['data']] if x['vyd'] != 'зразкова справа' else hits
+                zv.append({**x, 'u_bazi': 'так' if same else ('лише № справи' if hits else 'ні'),
+                           'pozytsii': '; '.join(sorted({str(r['id']) for r, d in same}))})
+        write_csv(os.path.join(DATA, 'palaty_supreme_zvirka.csv'), zv, list(zv[0].keys()))
     v = vidstupy(rows)
     write_csv(os.path.join(DATA, 'vidstupy.csv'), v, ['id', 'riven', 'sud', 'poznachka', 'nazva', 'spravy_u_frahmenti', 'pozytsii_bazy_za_tsymy_spravamy', 'frahment', 'link'])
     # покажчики за пріоритетом
