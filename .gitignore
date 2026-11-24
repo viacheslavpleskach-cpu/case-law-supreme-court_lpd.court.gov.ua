@@ -2,3 +2,4 @@ cache/pdf/
 cache/raw_latest.json.gz
 __pycache__/
 *.part
+cache/pakety/

@@ -226,7 +226,7 @@ def main():
             with open(os.path.join(d, f'paket_{k // a.paket + 1:03d}.jsonl'), 'w', encoding='utf-8') as f:
                 for x in todo[k:k + a.paket]:
                     r = by[x['id']]
-                    f.write(json.dumps({'id': r['id'], 'riven': r['riven_nazva'], 'sud': r['sud'], 'rubryky': r['rubryky'],
+                    f.write(json.dumps({'id': r['id'], 'riven': r['riven_nazva'], 'sud': r['sud'], 'rubryky': [x[-160:] for x in r['rubryky'][:2]],
                                         'sprava': (r['rishennia'][0]['sprava'] if r['rishennia'] else None),
                                         'nazva': r['nazva'], 'tekst': r['tekst'], 'avto': {k2: x[k2] for k2 in ('yurysdyktsiia', 'typ', 'haluz')},
                                         'potribne_rezyume': x['slova'] > 200}, ensure_ascii=False) + '\n')
