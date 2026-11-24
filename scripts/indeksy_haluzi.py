@@ -9,6 +9,7 @@
 Запускається з scripts/storinka.py.
 """
 import collections, json, os
+from vidstup_zviazky import korotko
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, 'data')
@@ -43,7 +44,7 @@ def main():
             L = [f'# {code} {name}', '', f"Практика ВС вищих рівнів (зразкові справи, ВП, ОП, палати). Позицій: {len(items)} "
                  f"(основна галузь — {sum(1 for _, i in items if i == 0)}, друга — {sum(1 for _, i in items if i == 1)}). "
                  "Рядок: дата основного рішення · рівень · суд · справа (провадження) — назва позиції `#id`. "
-                 "⚠ від позиції відступлено; ↺ позиція містить відступ. Повний текст і резюме: `python3 scripts/poshuk.py --id <id>` "
+                 "⚠ від позиції відступлено (під рядком — постанова, якою відступлено); ↺ позиція містить відступ. Повний текст і резюме: `python3 scripts/poshuk.py --id <id>` "
                  "або сторінка https://viacheslavpleskach-cpu.github.io/case-law-supreme-court_lpd.court.gov.ua/", '']
             for t in TYP_ORDER:
                 sub = [(k, i) for k, i in items if k['typ'] == t]
@@ -66,6 +67,10 @@ def main():
                         dd = k.get('data') or ''
                         dd = f'{dd[8:10]}.{dd[5:7]}.{dd[:4]}' if dd else '—'
                         L.append(f"- {dd} · {RIVEN[r['riven']]}{sud} · № {d.get('sprava') or '—'}{pr} — {r['nazva'].strip()}{mk}{other} `#{r['id']}`")
+                        if k['chynnist'] == 'від неї відступлено':
+                            vu = r.get('vidstupleno_u') or []
+                            L.append('  - відступлено: ' + ('; '.join((f"[{korotko(x)}]({x['edrsr']})" if x.get('edrsr') else korotko(x)) for x in vu[:2])
+                                                          if vu else 'постанову не встановлено'))
                     L.append('')
             open(os.path.join(OUT, f'{code}.md'), 'w', encoding='utf-8').write('\n'.join(L) + '\n')
     R = ['# Індекси практики ВС за галузями права', '', "Автор: В'ячеслав Плескач. Зразкові справи, Велика Палата, об'єднані палати, палати — "

@@ -15,6 +15,8 @@
 """
 from zoneinfo import ZoneInfo
 import argparse, base64, collections, csv, datetime as dt, gzip, html, json, os, re, sys, time, urllib.request
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import vidstup_zviazky
 
 API = 'https://lpd-api-prod.court.gov.ua/api/v1'
 SITE = 'https://lpd.court.gov.ua'
@@ -377,7 +379,9 @@ def vidstupy(rows):
         linked = sorted({i for c in cases if c not in own for i in by_case.get(c, []) if i != r['id']})
         out.append({'id': r['id'], 'riven': r['riven_nazva'], 'sud': r['sud'], 'poznachka': r['poznachka'] or '(у тексті є «відступ»)',
                     'nazva': r['nazva'], 'spravy_u_frahmenti': '; '.join(cases), 'pozytsii_bazy_za_tsymy_spravamy': '; '.join(map(str, linked)),
-                    'frahment': re.sub(r'\s+', ' ', frag)[:700], 'link': r['link']})
+                    'frahment': re.sub(r'\s+', ' ', frag)[:700], 'link': r['link'],
+                    'vidstupleno_u': '; '.join(f"{vidstup_zviazky.korotko(x)}{' ' + x['edrsr'] if x.get('edrsr') else ''} [{x['dzherelo']}]"
+                                               for x in r.get('vidstupleno_u') or [])})
     return out
 
 
@@ -404,6 +408,11 @@ def md_list(rows, title, intro, group_key):
             mk = f" **[{r['poznachka']}]**" if r['poznachka'] else ''
             more = f" (+{len(r['rishennia']) - 1})" if len(r['rishennia']) > 1 else ''
             out.append(f"- [{r['nazva'] or '(без назви)'}]({r['link']}) — {req_}{more}{mk} `#{r['id']}`")
+            for x in (r.get('vidstupleno_u') or [])[:2]:
+                lk = f"[{vidstup_zviazky.korotko(x)}]({x['edrsr']})" if x.get('edrsr') else vidstup_zviazky.korotko(x)
+                out.append(f"  - відступлено: {lk}" + (f" — позиція `#{x['pozytsii'][0]}`" if x.get('pozytsii') else ''))
+            if (r.get('poznachka') or '').startswith('Змінено') and not r.get('vidstupleno_u'):
+                out.append('  - відступлено: постанову не встановлено (див. lpd.court.gov.ua)')
         out.append('')
     return '\n'.join(out)
 
@@ -459,14 +468,15 @@ def write_all(raw, rows, cats, path):
                            'pozytsii': '; '.join(sorted({str(r['id']) for r, d in same}))})
         write_csv(os.path.join(DATA, 'palaty_supreme_zvirka.csv'), zv, list(zv[0].keys()))
     v = vidstupy(rows)
-    write_csv(os.path.join(DATA, 'vidstupy.csv'), v, ['id', 'riven', 'sud', 'poznachka', 'nazva', 'spravy_u_frahmenti', 'pozytsii_bazy_za_tsymy_spravamy', 'frahment', 'link'])
+    write_csv(os.path.join(DATA, 'vidstupy.csv'), v, ['id', 'riven', 'sud', 'poznachka', 'nazva', 'vidstupleno_u', 'spravy_u_frahmenti', 'pozytsii_bazy_za_tsymy_spravamy', 'frahment', 'link'])
     # покажчики за пріоритетом
     by = collections.defaultdict(list)
     for r in rows:
         by[r['riven']].append(r)
     intro = ('Згенеровано скриптом `scripts/lpd_sync.py`. Пункт: назва позиції (посилання на lpd.court.gov.ua) — суд, дата і номер справи '
              'основного рішення; `#id` — номер позиції в базі. Позначки сайту: «З відступом» — нова позиція з відступом від попередньої практики; '
-             '«Змінено» — від цієї позиції вже відступлено.')
+             '«Змінено» — від цієї позиції вже відступлено; під нею — постанова, якою відступлено (посилання на ЄДРСР; «ймовірно» — '
+             'встановлено за згадкою справи в повному тексті постанови з відступом, без прямої вказівки на відступ поруч).')
     open(os.path.join(VIEWS, '1_zrazkovi_spravy.md'), 'w').write(md_list(by[1], 'Зразкові справи', intro, lambda r: r['sud'] or '—'))
     open(os.path.join(VIEWS, '2_velyka_palata.md'), 'w').write(md_list(by[2], 'Велика Палата Верховного Суду', intro, lambda r: top_rubric(r, 2)))
     open(os.path.join(VIEWS, '3_obiednani_palaty.md'), 'w').write(md_list(by[3], "Об'єднані палати касаційних судів", intro, lambda r: f"{r['sud']} — {top_rubric(r, 2)}"))
@@ -539,6 +549,9 @@ def main():
     else:
         heads = load_heads()
     rows, cats, path = build(raw, heads)
+    n, m = vidstup_zviazky.link_departures(rows, cache_dir=os.path.join(CACHE, 'povni_teksty'), online=not a.offline,
+                                           ruchni_path=os.path.join(DATA, 'vidstupy_ruchni.csv'), threads=min(max(a.docs_threads, 1), 3))
+    print(f'відступи: постанову, якою відступлено, встановлено для {n} з {m} позицій «Змінено»')
     stats = write_all(raw, rows, cats, path)
     ch = diff(rows)
     print(json.dumps({'statystyka': stats, 'zminy': {k: (len(v) if isinstance(v, list) else v) for k, v in (ch or {}).items()}}, ensure_ascii=False, indent=1))

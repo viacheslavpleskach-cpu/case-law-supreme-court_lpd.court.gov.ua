@@ -17,6 +17,7 @@
 Запит: слова через пробіл (усі мають бути), * у кінці — будь-яке закінчення, "лапки" — точна фраза.
 """
 import argparse, csv, gzip, json, os, re, shlex, sys
+from vidstup_zviazky import korotko
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -77,6 +78,10 @@ def show_id(a):
             print(f"  ТЕКСТ: {r['tekst']}")
             for d in r['rishennia']:
                 print(f"  рішення: {d.get('data')} № {d.get('sprava')} провадження {d.get('provadzhennia') or '—'} склад {d.get('sklad') or '—'} {d.get('edrsr') or ''}")
+            for x in r.get('vidstupleno_u') or []:
+                print(f"  ВІДСТУПЛЕНО: {korotko(x)} {x.get('edrsr') or ''} [{x['dzherelo']}]" + (f" — позиція #{x['pozytsii'][0]}" if x.get('pozytsii') else ''))
+            if (r.get('poznachka') or '').startswith('Змінено') and not r.get('vidstupleno_u'):
+                print('  ВІДСТУПЛЕНО: постанову не встановлено')
             print()
 
 

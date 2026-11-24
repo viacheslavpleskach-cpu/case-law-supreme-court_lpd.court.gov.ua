@@ -9,6 +9,7 @@
   python3 scripts/klasyfikatsiia.py && python3 scripts/excel_praktyka.py
 """
 import json, os
+from vidstup_zviazky import korotko
 from openpyxl import Workbook
 from openpyxl.comments import Comment
 from openpyxl.styles import Alignment, Font, PatternFill
@@ -39,7 +40,7 @@ def main():
     ws = wb.active
     ws.title = 'Позиції'
     head = ['Дата рішення', 'Рівень', 'Суд', 'Юрисдикція', 'Тип питання', 'Підтип', 'Галузь 1', 'Галузь 2', 'Чинність',
-            'Позиція (наведіть — текст / резюме)', 'Справа №', 'Провадження №', 'lpd', 'ЄДРСР', 'Перевірено', 'id']
+            'Позиція (наведіть — текст / резюме)', 'Справа №', 'Провадження №', 'lpd', 'ЄДРСР', 'Перевірено', 'id', 'Відступлено в постанові', 'ЄДРСР (відступ)']
     ws.append(head)
     for c in ws[1]:
         c.font = Font(bold=True, color='FFFFFF')
@@ -50,13 +51,15 @@ def main():
         h = k['haluz'] + ['', '']
         ws.append([k.get('data') or r['data_rishennia'] or '', R[r['riven']], r['sud'], k['yurysdyktsiia'], tx['typy'].get(k['typ'], k['typ']), k.get('pidtyp') or '',
                    hn.get(h[0], h[0]), hn.get(h[1], h[1]), k['chynnist'], r['nazva'], d.get('sprava') or '', d.get('provadzhennia') or '',
-                   r['link'], d.get('edrsr') or '', 'так' if k['dzherelo'] == 'перевірено' else '', r['id']])
+                   r['link'], d.get('edrsr') or '', 'так' if k['dzherelo'] == 'перевірено' else '', r['id'],
+                   '; '.join(korotko(x) for x in (r.get('vidstupleno_u') or [])[:2]) or ('не встановлено' if k['chynnist'] == 'від неї відступлено' else ''),
+                   ((r.get('vidstupleno_u') or [{}])[0].get('edrsr') or '')])
         row = ws.max_row
         note = (('РЕЗЮМЕ: ' + k['rezyume'] + '\n\nТЕКСТ ПОЗИЦІЇ: ') if k.get('rezyume') else '') + r['tekst']
         cm = Comment(note[:30000], "В'ячеслав Плескач")
         cm.width, cm.height = 520, min(60 + len(note) // 2, 600)
         ws.cell(row, 10).comment = cm
-        for col in (13, 14):
+        for col in (13, 14, 18):
             v = ws.cell(row, col).value
             if v:
                 ws.cell(row, col).hyperlink = v
@@ -65,7 +68,7 @@ def main():
         ws.row_dimensions[row].height = 30
         for c in ws[row]:
             c.alignment = Alignment(vertical='top', wrap_text=(c.column == 10))
-    widths = [11, 15, 12, 14, 16, 14, 26, 22, 16, 80, 16, 16, 9, 9, 10, 7]
+    widths = [11, 15, 12, 14, 16, 14, 26, 22, 16, 80, 16, 16, 9, 9, 10, 7, 30, 10]
     for i, w in enumerate(widths, 1):
         ws.column_dimensions[get_column_letter(i)].width = w
     ws.freeze_panes = 'B2'
@@ -75,7 +78,8 @@ def main():
     for line in ['Практика Верховного Суду: зразкові справи, Велика Палата, об\'єднані палати, палати',
                  'Укладач: В\'ячеслав Плескач. Джерело: lpd.court.gov.ua (неофіційна копія).',
                  'Текст позиції (і резюме — для позицій понад 200 слів) — у примітці до комірки «Позиція»: наведіть курсор.',
-                 'Класифікація (юрисдикція, тип, галузь) — автоматична; «Перевірено: так» — після ручної перевірки.', '',
+                 'Класифікація (юрисдикція, тип, галузь) — автоматична; «Перевірено: так» — після ручної перевірки.',
+                 '«Відступлено в постанові» — для позицій, від яких відступлено: постанова, якою здійснено відступ; «(ймовірно)» — встановлено за згадкою справи в повному тексті постанови з відступом.', '',
                  'Галузі:'] + [f'{c} — {n}' for g in tx['taksonomiia'].values() for c, n in g]:
         ws2.append([line])
     ws2.column_dimensions['A'].width = 110

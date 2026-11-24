@@ -3,7 +3,12 @@
  "novi": [
   15638
  ],
- "zmineni": [],
- "zmina_poznachky": [],
+ "zmineni": [
+  2552,
+  9874
+ ],
+ "zmina_poznachky": [
+  9874
+ ],
  "zniknuli": []
 }
