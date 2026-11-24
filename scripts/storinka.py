@@ -22,27 +22,44 @@ def main():
             pos[r['id']] = r
     tx = json.load(open(os.path.join(DATA, 'taksonomiia.json'), encoding='utf-8'))
     out = []
-    for l in open(os.path.join(DATA, 'klasyfikatsiia.jsonl'), encoding='utf-8'):
-        k = json.loads(l)
-        r = pos.get(k['id'])
+    kol_path = os.path.join(DATA, 'klasyfikatsiia_kolehii.jsonl')
+    pos5 = {}
+    if os.path.exists(kol_path):
+        for l in open(os.path.join(DATA, 'pozytsii.jsonl'), encoding='utf-8'):
+            r = json.loads(l)
+            if r['riven'] == 5:
+                pos5[r['id']] = r
+    src = [(json.loads(l), False) for l in open(os.path.join(DATA, 'klasyfikatsiia.jsonl'), encoding='utf-8')]
+    if pos5:
+        src += [(json.loads(l), True) for l in open(kol_path, encoding='utf-8')]
+    out5 = []
+    for k, is5 in src:
+        r = (pos5 if is5 else pos).get(k['id'])
         if not r:
             continue
-        out.append({
+        (out5 if is5 else out).append({
             'i': r['id'], 'd': k.get('data') or r['data_rishennia'] or '', 'ms': k.get('sprava') or '', 'r': r['riven'], 's': r['sud'] or '', 'y': k['yurysdyktsiia'],
             't': k['typ'], 'pt': k.get('pidtyp') or '', 'h': k['haluz'], 'c': k['chynnist'], 'n': r['nazva'], 'x': r['tekst'],
-            'z': k.get('rezyume') or '', 'p': r['poznachka'] or '', 'v': k['dzherelo'] == 'перевірено',
+            'z': k.get('rezyume') or '', 'p': r['poznachka'] or '', 'v': k['dzherelo'] == 'перевірено', 'nd': k.get('nadiinist') or '',
             'rb': r['rubryky'][:3],
             'ds': [[d.get('sprava') or '', d.get('data') or '', d.get('provadzhennia') or '', d.get('sklad') or '', d.get('doc_id') or ''] for d in r['rishennia']],
             'vu': [[x.get('sprava') or '', x.get('data') or '', x.get('sklad') or '', x.get('sud') or '', x.get('doc_id') or '',
                     x.get('nadiinist') or '', (x.get('pozytsii') or [''])[0]] for x in (r.get('vidstupleno_u') or [])[:2]],
         })
     out.sort(key=lambda x: (x['d'], x['i']), reverse=True)
+    out5.sort(key=lambda x: (x['d'], x['i']), reverse=True)
+    for x in out5:
+        x.pop('z', None)
+        x['rb'] = x['rb'][:2]
     os.makedirs(DOCS, exist_ok=True)
-    meta = {'onovleno': dt.datetime.now(ZoneInfo('Europe/Kyiv')).strftime('%d.%m.%Y'), 'taksonomiia': tx['taksonomiia'], 'typy': tx['typy']}
+    meta = {'onovleno': dt.datetime.now(ZoneInfo('Europe/Kyiv')).strftime('%d.%m.%Y'), 'taksonomiia': tx['taksonomiia'], 'typy': tx['typy'],
+            'kolehii': len(out5)}
+    if out5:
+        json.dump({'p': out5}, open(os.path.join(DOCS, 'dani_kolehii.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     json.dump({'meta': meta, 'p': out}, open(os.path.join(DOCS, 'dani.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     open(os.path.join(DOCS, 'index.html'), 'w', encoding='utf-8').write(HTML)
     open(os.path.join(DOCS, '.nojekyll'), 'w').write('')
-    print('позицій на сторінці:', len(out))
+    print('позицій на сторінці:', len(out), '; колегій (підвантаження за запитом):', len(out5))
     import indeksy_haluzi
     indeksy_haluzi.main()
 
@@ -79,7 +96,7 @@ summary::-webkit-details-marker{display:none}
 details[open] .title{-webkit-line-clamp:unset}
 .meta{grid-column:2;display:flex;gap:6px;flex-wrap:wrap;font-size:12px}
 .b{padding:1px 8px;border-radius:4px;background:var(--acc2);color:var(--acc)}
-.b.r1{background:#f6e7e7;color:var(--r1)}.b.r2{background:#e8eef5;color:var(--r2)}.b.r3{background:#e9f1e6;color:var(--r3)}.b.r4{background:#f5efe1;color:var(--r4)}
+.b.r5{background:#efeef8;color:#4b437a}.b.r1{background:#f6e7e7;color:var(--r1)}.b.r2{background:#e8eef5;color:var(--r2)}.b.r3{background:#e9f1e6;color:var(--r3)}.b.r4{background:#f5efe1;color:var(--r4)}
 .b.c1{background:#fbe9e9;color:var(--warn)}.b.c2{background:#fdf3e1;color:#8a5a00}
 .b.g{background:#f0efeb;color:#4a4945}
 .body{padding:0 14px 14px 112px;border-top:1px solid var(--line)}
@@ -110,11 +127,11 @@ mark{background:#fff2a8;padding:0 1px}
 </div>
 <div class="list" id="list"></div>
 <button class="more" id="more" hidden>Показати ще</button>
-<p class="note">Джерело — База правових позицій Верховного Суду (lpd.court.gov.ua). Класифікацію (юрисдикція, тип питання, галузь) виконано автоматично й перевірено вибірково; позначка «перевірено» — після ручної перевірки. Резюме — для позицій понад 200 слів; для коротших показано текст позиції. Укладач: В'ячеслав Плескач. Неофіційна копія; чинний текст — на lpd.court.gov.ua і в ЄДРСР.</p>
+<p class="note">Джерело — База правових позицій Верховного Суду (lpd.court.gov.ua). Класифікацію зразкових справ, ВП, ОП і палат перевірено вручну (позначка «перевірено»). Колегії суддів підвантажуються кнопкою «+ Колегії суддів»; їх розмічено автоматично (модель, навчена на перевірених позиціях вищих рівнів; «авто · висока / середня / низька» — надійність розмітки), резюме для них немає. Резюме — для позицій понад 200 слів; для коротших показано текст позиції. Укладач: В'ячеслав Плескач. Неофіційна копія; чинний текст — на lpd.court.gov.ua і в ЄДРСР.</p>
 </div>
 <script>
-const R={1:'Зразкова справа',2:'Велика Палата',3:"Об'єднана палата",4:'Палата'};
-let D=[],M={},HN={},shown=0,cur=[];const PAGE=60;
+const R={1:'Зразкова справа',2:'Велика Палата',3:"Об'єднана палата",4:'Палата',5:'Колегія суддів'};
+let D=[],M={},HN={},shown=0,cur=[],K5=false;const PAGE=60;
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fd=d=>d?d.slice(8,10)+'.'+d.slice(5,7)+'.'+d.slice(0,4):'';
@@ -136,7 +153,7 @@ function card(x,ps){
  const docs=x.ds.sort((a,b)=>(b[0]===x.ms&&b[1]===x.d)-(a[0]===x.ms&&a[1]===x.d)).map(d=>`<div${d[0]===x.ms&&d[1]===x.d?' style="font-weight:600"':''}>${esc(fd(d[1]))} · справа № ${esc(d[0])}${d[2]?' · провадження № '+esc(d[2]):''}${d[3]?' · '+esc(d[3]):''}${d[4]?` · <a href="https://reyestr.court.gov.ua/Review/${d[4]}" target="_blank" rel="noopener">ЄДРСР</a>`:''}</div>`).join('');
  const res=x.z?`<h4>Резюме</h4><p>${hl(x.z,ps)}</p><h4>Повний текст позиції</h4><p>${hl(x.x,ps)}</p>`:`<h4>Позиція</h4><p>${hl(x.x,ps)}</p>`;
  return `<details><summary><span class="date">${fd(x.d)}</span><span class="title">${hl(x.n,ps)}</span>
- <span class="meta"><span class="b r${x.r}">${R[x.r]}</span>${x.s!==R[x.r]?`<span class="b">${esc(x.s)}</span>`:`<span class="b">${esc(x.y)}</span>`}<span class="b">${esc(M.typy[x.t]||x.t)}${x.pt?': '+esc(x.pt):''}</span>${hs}${cb}${x.v?'<span class="b g">перевірено</span>':''}</span></summary>
+ <span class="meta"><span class="b r${x.r}">${R[x.r]}</span>${x.s!==R[x.r]?`<span class="b">${esc(x.s)}</span>`:`<span class="b">${esc(x.y)}</span>`}<span class="b">${esc(M.typy[x.t]||x.t)}${x.pt?': '+esc(x.pt):''}</span>${hs}${cb}${x.v?'<span class="b g">перевірено</span>':''}${x.r===5&&!x.v?`<span class="b g" title="Автоматична розмітка (модель): надійність ${esc(x.nd)}">авто · ${esc(x.nd)}</span>`:''}</span></summary>
  <div class="body">${res}${vub}<h4>Рішення</h4><div class="docs">${docs}</div><h4>Юрисдикція · рубрики lpd</h4><p class="note">${esc(x.y)} · ${esc(x.rb.join('; '))}</p>
  <p class="docs"><a href="https://lpd.court.gov.ua/legal-position/${x.i}" target="_blank" rel="noopener">Позиція на lpd.court.gov.ua (#${x.i})</a></p></div></details>`;
 }
@@ -149,8 +166,16 @@ fetch('dani.json').then(r=>r.json()).then(j=>{
  opt('yur',[...new Set(D.map(x=>x.y))].sort().map(v=>[v,v]));
  opt('typ',Object.entries(M.typy));
  for(const [g,l] of Object.entries(M.taksonomiia)){const og=document.createElement('optgroup');og.label=g;for(const [c,n] of l){HN[c]=n;const o=document.createElement('option');o.value=c;o.textContent=n+' ('+D.filter(x=>x.h.includes(c)).length+')';og.appendChild(o)}$('hal').appendChild(og)}
- $('rv').innerHTML=[1,2,3,4].map(k=>`<span class="chip on" data-k="${k}">${R[k]} (${D.filter(x=>x.r===k).length})</span>`).join('')+'<span class="count" id="cnt"></span>';
- $('rv').querySelectorAll('.chip').forEach(c=>c.onclick=()=>{const k=+c.dataset.k;rv.has(k)?rv.delete(k):rv.add(k);c.classList.toggle('on');apply()});
+ $('rv').innerHTML=[1,2,3,4].map(k=>`<span class="chip on" data-k="${k}">${R[k]} (${D.filter(x=>x.r===k).length})</span>`).join('')
+  +(M.kolehii?`<span class="chip" data-k="5" title="Колегії суддів: ${M.kolehii} позицій, автоматична розмітка; завантажуються лише після натискання">+ Колегії суддів (${M.kolehii}, авто)</span>`:'')+'<span class="count" id="cnt"></span>';
+ $('rv').querySelectorAll('.chip').forEach(c=>c.onclick=()=>{const k=+c.dataset.k;
+  if(k===5&&!K5){c.textContent='Колегії: завантаження…';fetch('dani_kolehii.json').then(r=>r.json()).then(j=>{K5=true;D=D.concat(j.p);D.sort((a,b)=>(b.d+b.i).localeCompare(a.d+a.i));
+   c.textContent=`Колегії суддів (${j.p.length}, авто)`;rv.add(5);c.classList.add('on');
+   for(const o of $('hal').querySelectorAll('option[value]')){if(o.value){o.textContent=(HN[o.value]||o.value)+' ('+D.filter(x=>x.h.includes(o.value)).length+')'}}
+   const ss=new Set([...$('sud').options].map(o=>o.value));opt('sud',[...new Set(j.p.map(x=>x.s))].filter(v=>v&&!ss.has(v)).sort().map(v=>[v,v]));
+   $('sub').innerHTML=`${D.length} позицій (з них колегій — ${j.p.length}, автоматична розмітка) · оновлено ${esc(M.onovleno)} · від нових до старих`;apply()})
+   .catch(e=>{c.textContent='Колегії: не вдалося завантажити'});return}
+  rv.has(k)?rv.delete(k):rv.add(k);c.classList.toggle('on');apply()});
  ['sud','yur','typ','hal','ch'].forEach(id=>$(id).onchange=apply);
  let t;$('q').oninput=()=>{clearTimeout(t);t=setTimeout(apply,250)};
  $('more').onclick=more;apply();

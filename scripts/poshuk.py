@@ -8,7 +8,8 @@
   python3 scripts/poshuk.py "строк* звернення" --riven 3 --sud КАС
   python3 scripts/poshuk.py --sprava 990SCGC/12/24
   python3 scripts/poshuk.py "відступ*" --rubryka "ВРП"
-  python3 scripts/poshuk.py "строк*" --haluz P03 --typ ПП          # галузь і тип (лише ЗС, ВП, ОП, палати)
+  python3 scripts/poshuk.py "строк*" --haluz P03 --typ ПП          # галузь і тип (колегії — автоматична розмітка)
+  python3 scripts/poshuk.py "строк*" --haluz P03 --riven 4         # лише ЗС, ВП, ОП, палати
   python3 scripts/poshuk.py --id 14875 13289                         # повний текст, резюме, класифікація
 Дайджести:
   python3 scripts/poshuk.py "електронн* доказ*" --dajdzhesty            # за змістом
@@ -54,11 +55,12 @@ def snippet(text, pats, w=160):
 
 def load_klas():
     k = {}
-    p = os.path.join(ROOT, 'data', 'klasyfikatsiia.jsonl')
-    if os.path.exists(p):
-        for l in open(p, encoding='utf-8'):
-            d = json.loads(l)
-            k[d['id']] = d
+    for fn in ('klasyfikatsiia.jsonl', 'klasyfikatsiia_kolehii.jsonl'):
+        p = os.path.join(ROOT, 'data', fn)
+        if os.path.exists(p):
+            for l in open(p, encoding='utf-8'):
+                d = json.loads(l)
+                k[d['id']] = d
     return k
 
 
@@ -71,6 +73,7 @@ def show_id(a):
             print(f"#{r['id']} {r['riven_nazva']} | {r['sud']} | {r['link']}")
             if k:
                 print(f"  юрисдикція: {k['yurysdyktsiia']} · тип: {k['typ']}{' / ' + k['pidtyp'] if k.get('pidtyp') else ''} · галузі: {', '.join(k['haluz'])} · {k['chynnist']}"
+                      + (f" · розмітка: {k['dzherelo']}" + (f", надійність {k['nadiinist']} ({k['ymovirnist']})" if k.get('ymovirnist') is not None else '') if r['riven'] == 5 else '')
                       + (f" · примітка: {k['prymitka']}" if k.get('prymitka') else ''))
             print(f"  НАЗВА: {r['nazva']}")
             if k.get('rezyume'):
@@ -87,12 +90,15 @@ def show_id(a):
 
 def search_positions(a, pats):
     n = 0
-    klas = load_klas() if (a.haluz or a.typ) else {}
+    klas = load_klas()
     for l in open(os.path.join(ROOT, 'data', 'pozytsii.jsonl'), encoding='utf-8'):
         r = json.loads(l)
-        if a.haluz or a.typ:
+        if a.bez_kolehii and r['riven'] == 5:
+            continue
+        if a.haluz or a.typ or a.pidtyp:
             k = klas.get(r['id'])
-            if not k or (a.haluz and a.haluz.upper() not in k['haluz']) or (a.typ and a.typ.upper() != k['typ'].upper()):
+            if not k or (a.haluz and a.haluz.upper() not in k['haluz']) or (a.typ and a.typ.upper() != k['typ'].upper()) \
+                    or (a.pidtyp and a.pidtyp.lower() not in (k.get('pidtyp') or '').lower()):
                 continue
         if a.riven and r['riven'] > a.riven:
             continue
@@ -111,6 +117,9 @@ def search_positions(a, pats):
         if n <= a.limit:
             d = r['rishennia'][0] if r['rishennia'] else {}
             mk = f" [{r['poznachka']}]" if r['poznachka'] else ''
+            k = klas.get(r['id'])
+            if k:
+                mk += f" · {k['typ']}{'/' + k['pidtyp'] if k.get('pidtyp') else ''} {','.join(k['haluz'])}" + (f" (авто, {k['nadiinist']})" if k.get('dzherelo', '').startswith('авто') and r['riven'] == 5 else '')
             print(f"#{r['id']} {r['riven_nazva']} | {r['sud']} | {d.get('data') or ''} № {d.get('sprava') or '—'}{mk}\n  {r['nazva']}\n  {snippet(r['tekst'], pats)}\n  {r['link']}  {d.get('edrsr') or ''}\n")
     print(f'Знайдено позицій: {n}' + (f' (показано {a.limit})' if n > a.limit else ''))
 
@@ -156,8 +165,10 @@ def main():
     ap.add_argument('--poznachka', action='store_true', help='лише «З відступом» / «Змінено»')
     ap.add_argument('--dajdzhesty', action='store_true')
     ap.add_argument('--tekst', action='store_true', help='шукати в повних текстах дайджестів')
-    ap.add_argument('--haluz', help='код галузі (C01…C14, P01…P09, K01, K02, S01, V01) — лише позиції вищих рівнів')
-    ap.add_argument('--typ', help='тип питання: Ю, ПП, МП, СС — лише позиції вищих рівнів')
+    ap.add_argument('--haluz', help='код галузі (C01…C14, P01…P09, K01, K02, S01, V01); для колегій — автоматична розмітка')
+    ap.add_argument('--typ', help='тип питання: Ю, ПП, МП, СС; для колегій — автоматична розмітка')
+    ap.add_argument('--pidtyp', help='підтип процесуального питання (частина назви, напр. «строки», «докази»)')
+    ap.add_argument('--bez-kolehii', action='store_true', help='не показувати колегії')
     ap.add_argument('--id', type=int, nargs='+', help='повний текст позиції(й) за номером')
     ap.add_argument('--limit', type=int, default=30)
     a = ap.parse_args()

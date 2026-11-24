@@ -16,6 +16,7 @@
 data/perevirka/*.jsonl (один JSON-рядок на позицію: id + виправлені поля) і має перевагу над автоматичною.
 
   python3 scripts/klasyfikatsiia.py            → data/klasyfikatsiia.jsonl, data/klasyfikatsiia_zvit.json
+                                                 і автоматична розмітка колегій (scripts/klasyfikatsiia_kolehii.py)
   python3 scripts/klasyfikatsiia.py --paket 60 → cache/paketу/*.jsonl — пакети для перевірки (ще не перевірені позиції)
 """
 import argparse, collections, glob, json, os, re
@@ -187,6 +188,7 @@ def load_perevirka():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--paket', type=int, default=0, help='розбити неперевірені позиції на пакети такого розміру')
+    ap.add_argument('--bez-kolehii', action='store_true', help='не оновлювати автоматичну розмітку колегій (klasyfikatsiia_kolehii.py)')
     a = ap.parse_args()
     rows = [json.loads(l) for l in open(os.path.join(DATA, 'pozytsii.jsonl'), encoding='utf-8')]
     top = [r for r in rows if r['riven'] <= 4]
@@ -218,6 +220,12 @@ def main():
           'chynnist': dict(collections.Counter(x['chynnist'] for x in out))}
     json.dump(zv, open(os.path.join(DATA, 'klasyfikatsiia_zvit.json'), 'w'), ensure_ascii=False, indent=1)
     print(json.dumps(zv, ensure_ascii=False, indent=1))
+    if not a.bez_kolehii and not a.paket:
+        try:
+            import klasyfikatsiia_kolehii
+            klasyfikatsiia_kolehii.main()
+        except ImportError as e:  # немає scikit-learn
+            print('колегії: розмітку не оновлено —', e, '(pip install --break-system-packages scikit-learn)')
     if a.paket:
         d = os.path.join(ROOT, 'cache', 'pakety')
         os.makedirs(d, exist_ok=True)
