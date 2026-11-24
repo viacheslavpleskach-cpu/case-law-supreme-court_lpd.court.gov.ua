@@ -175,19 +175,35 @@ def load_heads():
     return heads
 
 
+NAME = re.compile(r"[А-ЯІЇЄҐ][а-яіїєґʼ’'\-]+\s+[А-ЯІЇЄҐ]\.\s?[А-ЯІЇЄҐ]\.")
+
+
 def sklad_from_head(h):
+    """Склад суду за шапкою рішення: ВП / ОП / палата / колегія (None — не розпізнано)."""
     h = h[:2500]
+    h = re.sub(r'(?<=[а-яіїєґА-ЯІЇЄҐ])[oaeiрc](?=[а-яіїєґ])|(?<=[а-яіїєґ])[oaeic]', lambda m: 'оаеіс'['oaeic'.find(m.group(0))] if m.group(0) in 'oaeic' else m.group(0), h)
     if re.search(r'Велик\w*\s*Палат\w*\s+Верховного\s+Суду', h[:900]) or re.search(r'у\s+складі\s+Великої\s*Палати', h) \
             or re.search(r'[Пп]ровадження\s*№\s*1[1-4]\s?-\s?\d', h[:900]):
         return 'ВП'
-    if re.search(r"[Оо]б\W{0,3}\s?єднан\w*\s+[Пп]алат", h[:1500]):
+    if re.search(r"[Оо]б\W{0,3}\s?єднан\w*\s+[Пп]алат", h[:1500]) or re.search(r'[Пп]ровадження\s*№\s*\d{2}\s?-\s?\d+\s?(?:сво|кмо)', h[:900]):
         return 'ОП'
-    m = re.search(r'(?:у складі|колегією|Колегія)[^.]{0,200}', h)
+    m = re.search(r'(?:у складі|в складі|колегією|Колегія)[^.]{0,200}', h)
     s = m.group(0) if m else h[:1500]
-    if re.search(r'колегі\w*\s+(?:суддів|\S+\s+судової\s+палати)', s, re.I) or re.search(r'[Пп]ровадження\s*№\s*\d{2}\s?-\s?\d+\s?(?:св|км|ск|кс)\s?\d', h[:900]):
-        return 'колегія'
-    if re.search(r'палат\w*\s+(?:з|для)\s+розгляду|у\s+складі\s+(?:судової\s+)?палати|суддів\s+(?:судової\s+)?палати', s):
+    if re.search(r'\b\w+\s+судов\w+\s+палат\w*\s+касаційного|\w+ою\s+судовою\s+палатою|провадження\s*№\s*\d{2}\s?-\s?\d+\s?(?:свп|кмп)', h[:900], re.I) \
+            and not re.search(r'колег', h[:900], re.I):
         return 'палата'
+    if re.search(r'колег\w*[\s:]+(?:суддів|\S+\s+судової\s+палати)', s, re.I) or re.search(r'[Пп]ровадження\s*№\s*\d{2}\s?-\s?\d+\s?(?:св|км|ск|кс)\s?\d', h[:900]):
+        return 'колегія'
+    if re.search(r'палат\w*\s+(?:з|для)\s+розгляду|(?:у|в)\s+складі\s+(?:\S+\s+)?(?:[Сс]удової\s+)?[Пп]алати|суддів\s+(?:судової\s+)?[Пп]алати', s) \
+            or re.search(r'\b\w+ою\s+судовою\s+палатою|\w*ова\s+палата\s+Касаційного|[Сс]удов\w+\s+[Пп]алат\w*\s+(?:з|для)\s+розгляду', h[:900]) \
+            or re.search(r'[Пп]ровадження\s*№\s*\d{2}\s?-\s?\d+\s?свп', h[:900]):
+        return 'палата'
+    # «у складі суддів Касаційного … суду: А. – головуючого, Б., В.» / «судді-доповідача …» — рахуємо суддів
+    m = re.search(r'(?:у|в)\s+складі\s*:?\s*(?:суддів\s+|судді(?:-доповідача)?\s+)?(?:Касаційного\s+\S+\s+суду)?\s*:?(.{0,450})', h)
+    if m:
+        names = NAME.findall(m.group(1).split('розглянув')[0].split('за участю')[0].split('секретар')[0])
+        if 1 <= len(names) <= 3:
+            return 'колегія'
     return None
 
 
@@ -309,7 +325,7 @@ def build(raw, heads):
             rank = 3
         elif a & CAT_PALATA or 'палата' in sklady:
             rank = 4
-        elif a & CAT_OP_OR_PALATA:
+        elif a & CAT_OP_OR_PALATA and not sklady:
             rank = 3 if re.search(r"об.{0,3}єднан\w*\s+палат|\bОП\s+ККС", blob, re.I) else 4
         else:
             rank = 5
@@ -486,7 +502,15 @@ def diff(rows):
     today = dt.datetime.now(ZoneInfo('Europe/Kyiv')).date().isoformat()
     rec = {'data': today, 'novi': new, 'zmineni': changed, 'zmina_poznachky': marks, 'zniknuli': gone}
     if new or gone or changed:
-        json.dump(rec, open(os.path.join(CHANGES, f'{today}.json'), 'w'), ensure_ascii=False, indent=1)
+        fn = os.path.join(CHANGES, f'{today}.json')
+        if os.path.exists(fn):          # кілька запусків за день — об'єднати, а не перезаписати
+            old = json.load(open(fn))
+            for k in ('novi', 'zmineni', 'zmina_poznachky', 'zniknuli'):
+                rec[k] = sorted(set(old.get(k, [])) | set(rec[k]))
+            back = set(rec['novi']) & set(rec['zniknuli'])      # зникла й повернулася того самого дня
+            rec['novi'] = [i for i in rec['novi'] if i not in back]
+            rec['zniknuli'] = [i for i in rec['zniknuli'] if i not in back]
+        json.dump(rec, open(fn, 'w'), ensure_ascii=False, indent=1)
         with open(os.path.join(CHANGES, 'ZHURNAL.md'), 'a') as f:
             f.write(f'- {today}: нових {len(new)}, змінених {len(changed)} (з них змінено позначку {len(marks)}), зникли {len(gone)}\n')
     with gzip.open(snap, 'wt') as f:
