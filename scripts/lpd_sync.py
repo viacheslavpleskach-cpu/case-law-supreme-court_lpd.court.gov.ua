@@ -175,6 +175,12 @@ def load_heads():
     return heads
 
 
+def prov_from_head(h):
+    """№ провадження з шапки рішення («Провадження № 14-48цс22», «провадження № 61-2437св24», «К/9901/…»)."""
+    m = re.search(r'провадженн\w*\s*№\s*((?:\d{2}\s?-\s?\d+\s?[а-яіґ]+\s?\d{2})|(?:[КК]/\d{3,4}/\d+/\d{2}))', h[:1500], re.I)
+    return re.sub(r'\s', '', m.group(1)) if m else None
+
+
 NAME = re.compile(r"[А-ЯІЇЄҐ][а-яіїєґʼ’'\-]+\s+[А-ЯІЇЄҐ]\.\s?[А-ЯІЇЄҐ]\.")
 
 
@@ -311,7 +317,7 @@ def build(raw, heads):
                 sk, sk_src = {'ОП': 'ОП', 'палата': 'палата'}[pal_exact[key]], 'supreme.court.gov.ua'
             docs.append({'id': d['id'], 'doc_id': d.get('doc_id'), 'sprava': d.get('caseNumber'),
                          'data': ddate(d), 'zrazkova': key[0] in pal_zr and (COURT_NAME.get(code) in ('КАС', 'Велика Палата') or sk == 'ВП'),
-                         'sud': COURT_NAME.get(code, code), 'sklad': sk, 'sklad_dzherelo': sk_src, 'provadzhennia': h.get('provadzhennia'),
+                         'sud': COURT_NAME.get(code, code), 'sklad': sk, 'sklad_dzherelo': sk_src, 'provadzhennia': h.get('provadzhennia') or prov_from_head(h.get('head') or ''),
                          'edrsr': f"https://reyestr.court.gov.ua/Review/{d.get('doc_id')}" if d.get('doc_id') else None})
         tag = (r.get('tag') or {}).get('title')
         blob = title + ' ' + text
