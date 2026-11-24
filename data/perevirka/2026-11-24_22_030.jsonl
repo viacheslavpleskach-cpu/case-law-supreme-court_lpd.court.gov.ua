@@ -1,0 +1,40 @@
+{"id": 5732, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C01"], "rezyume": "", "prymitka": "галузь: загальне цивільне право (позовна давність), основним обрано зобов'язання"}
+{"id": 5734, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["P01"], "rezyume": "", "prymitka": ""}
+{"id": 5735, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C03", "P08"], "rezyume": "", "prymitka": "позиція поєднує спосіб захисту і закриття провадження (відсутність спору)"}
+{"id": 5736, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["P05", "C02"], "rezyume": "", "prymitka": ""}
+{"id": 5737, "yurysdyktsiia": "цивільна", "typ": "ПП", "pidtyp": "перегляд судових рішень", "haluz": ["C01"], "rezyume": "", "prymitka": "галузь матеріального спору з тексту позиції неочевидна"}
+{"id": 5738, "yurysdyktsiia": "цивільна", "typ": "ПП", "pidtyp": "перегляд судових рішень", "haluz": ["C01"], "rezyume": "", "prymitka": "галузь матеріального спору з тексту позиції неочевидна"}
+{"id": 5739, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C02"], "rezyume": "", "prymitka": ""}
+{"id": 5740, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C02"], "rezyume": "", "prymitka": ""}
+{"id": 6477, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C09", "P01"], "rezyume": "", "prymitka": ""}
+{"id": 6517, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C01"], "rezyume": "", "prymitka": ""}
+{"id": 6518, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C01", "C05"], "rezyume": "", "prymitka": ""}
+{"id": 6519, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["P08", "P05"], "rezyume": "", "prymitka": ""}
+{"id": 6520, "yurysdyktsiia": "кримінальна", "typ": "МП", "pidtyp": "", "haluz": ["K01", "K02"], "rezyume": "", "prymitka": ""}
+{"id": 6521, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C12", "C10"], "rezyume": "", "prymitka": ""}
+{"id": 6522, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C12", "C09"], "rezyume": "", "prymitka": ""}
+{"id": 6523, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C05", "C09"], "rezyume": "", "prymitka": ""}
+{"id": 6525, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C13", "C01"], "rezyume": "", "prymitka": ""}
+{"id": 6526, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["V01", "C07"], "rezyume": "", "prymitka": ""}
+{"id": 6527, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["V01", "C07"], "rezyume": "", "prymitka": ""}
+{"id": 6528, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C12", "C10"], "rezyume": "", "prymitka": ""}
+{"id": 6529, "yurysdyktsiia": "адміністративна", "typ": "МП", "pidtyp": "", "haluz": ["P03", "P02"], "rezyume": "", "prymitka": ""}
+{"id": 6530, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C02", "C01"], "rezyume": "", "prymitka": ""}
+{"id": 6531, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C02"], "rezyume": "", "prymitka": ""}
+{"id": 6532, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C02", "C01"], "rezyume": "", "prymitka": ""}
+{"id": 6619, "yurysdyktsiia": "цивільна", "typ": "Ю", "pidtyp": "", "haluz": ["C13", "C08"], "rezyume": "", "prymitka": ""}
+{"id": 6620, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C13", "C08"], "rezyume": "", "prymitka": ""}
+{"id": 6666, "yurysdyktsiia": "адміністративна", "typ": "ПП", "pidtyp": "судові витрати", "haluz": ["C05"], "rezyume": "", "prymitka": ""}
+{"id": 6667, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C03", "C08"], "rezyume": "", "prymitka": ""}
+{"id": 6668, "yurysdyktsiia": "господарська", "typ": "ПП", "pidtyp": "докази і доказування", "haluz": ["C13", "C01"], "rezyume": "", "prymitka": ""}
+{"id": 6669, "yurysdyktsiia": "господарська", "typ": "ПП", "pidtyp": "докази і доказування", "haluz": ["C01"], "rezyume": "", "prymitka": "позиція поєднує встановлення змісту іноземного права (процес) і принцип jura novit curia; галузь неочевидна"}
+{"id": 6670, "yurysdyktsiia": "господарська", "typ": "ПП", "pidtyp": "докази і доказування", "haluz": ["C01"], "rezyume": "", "prymitka": "галузь матеріального спору неочевидна"}
+{"id": 6671, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C05", "C01"], "rezyume": "", "prymitka": ""}
+{"id": 6672, "yurysdyktsiia": "господарська", "typ": "ПП", "pidtyp": "докази і доказування", "haluz": ["C09"], "rezyume": "", "prymitka": "галузь: захист ділової репутації (немає окремого коду)"}
+{"id": 6673, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C09"], "rezyume": "", "prymitka": "галузь: захист ділової репутації (немає окремого коду)"}
+{"id": 6674, "yurysdyktsiia": "цивільна", "typ": "ПП", "pidtyp": "перегляд судових рішень", "haluz": ["C01"], "rezyume": "", "prymitka": "галузь матеріального спору з тексту позиції неочевидна"}
+{"id": 6675, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C13", "C02"], "rezyume": "", "prymitka": ""}
+{"id": 6676, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C13", "C02"], "rezyume": "", "prymitka": ""}
+{"id": 6677, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C13", "C02"], "rezyume": "", "prymitka": ""}
+{"id": 6678, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C02", "C13"], "rezyume": "", "prymitka": ""}
+{"id": 6679, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C02", "C13"], "rezyume": "", "prymitka": ""}
