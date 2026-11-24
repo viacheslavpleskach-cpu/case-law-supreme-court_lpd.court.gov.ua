@@ -550,7 +550,8 @@ def main():
         heads = load_heads()
     rows, cats, path = build(raw, heads)
     n, m = vidstup_zviazky.link_departures(rows, cache_dir=os.path.join(CACHE, 'povni_teksty'), online=not a.offline,
-                                           ruchni_path=os.path.join(DATA, 'vidstupy_ruchni.csv'), threads=min(max(a.docs_threads, 1), 3))
+                                           ruchni_path=os.path.join(DATA, 'vidstupy_ruchni.csv'), threads=min(max(a.docs_threads, 1), 3),
+                                           ranks=RANKS, rishennia_ruchni_path=os.path.join(DATA, 'rishennia_ruchni.csv'))
     print(f'відступи: постанову, якою відступлено, встановлено для {n} з {m} позицій «Змінено»')
     stats = write_all(raw, rows, cats, path)
     ch = diff(rows)

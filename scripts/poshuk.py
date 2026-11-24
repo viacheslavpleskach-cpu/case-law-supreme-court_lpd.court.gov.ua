@@ -80,7 +80,7 @@ def show_id(a):
                 print(f"  РЕЗЮМЕ: {k['rezyume']}")
             print(f"  ТЕКСТ: {r['tekst']}")
             for d in r['rishennia']:
-                print(f"  рішення: {d.get('data')} № {d.get('sprava')} провадження {d.get('provadzhennia') or '—'} склад {d.get('sklad') or '—'} {d.get('edrsr') or ''}")
+                print(f"  рішення: {d.get('data')} № {d.get('sprava')} провадження {d.get('provadzhennia') or '—'} склад {d.get('sklad') or '—'} {d.get('edrsr') or ''}" + (' — постанова, якою відступлено від позиції' if d.get('vidstup') else ''))
             for x in r.get('vidstupleno_u') or []:
                 print(f"  ВІДСТУПЛЕНО: {korotko(x)} {x.get('edrsr') or ''} [{x['dzherelo']}]" + (f" — позиція #{x['pozytsii'][0]}" if x.get('pozytsii') else ''))
             if (r.get('poznachka') or '').startswith('Змінено') and not r.get('vidstupleno_u'):

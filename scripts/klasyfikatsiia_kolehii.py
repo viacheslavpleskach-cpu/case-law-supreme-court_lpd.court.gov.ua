@@ -125,6 +125,10 @@ def main(otsinka=False, log=print):
     ppd = mp.predict(Xk) if mp is not None else [''] * len(kol)
     ch = list(mh.classes_)
     ruchni = load_ruchni()
+    per = K.load_perevirka()  # позиції, що перейшли з вищих рівнів до колегій, зберігають ручну перевірку
+    for i, p in per.items():
+        if i not in ruchni:
+            ruchni[i] = p
     out = []
     for i, r in enumerate(kol):
         order = ph[i].argsort()[::-1]

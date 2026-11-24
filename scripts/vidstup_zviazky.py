@@ -110,7 +110,53 @@ def load_ruchni(path):
 
 # ---------- основне ----------
 
-def link_departures(rows, cache_dir=None, online=True, ruchni_path=None, threads=3, log=print):
+LEVEL = {'ВП': 2, 'ОП': 3, 'палата': 4, 'колегія': 5}
+
+
+def load_rishennia_ruchni(path):
+    """data/rishennia_ruchni.csv (id;sprava;data;prymitka): рішення, з якого виведено позицію «Змінено»,
+    якщо lpd прив'язав до неї лише постанову, якою відступлено."""
+    return load_ruchni(path)
+
+
+def fix_own_departures(rows, by_case, ranks, rishennia_ruchni_path=None, log=print):
+    """lpd часто прив'язує до старої позиції «Змінено» і саму постанову, якою відступлено, та переносить позицію
+    в рубрику ОП / палати. Така постанова позначається d['vidstup'] = True, ставиться в кінець переліку рішень,
+    а рівень позиції визначається за рештою рішень (якщо склад суду в них відомий)."""
+    ruchni = load_rishennia_ruchni(rishennia_ruchni_path)
+    changed = []
+    for r in rows:
+        if not (r.get('poznachka') or '').startswith('Змінено'):
+            continue
+        dep = {(norm(x['sprava']), x['data']) for x in r.get('vidstupleno_u') or []}
+        for d in r['rishennia']:
+            if (norm(d.get('sprava')), d.get('data')) in dep:
+                d['vidstup'] = True
+        rest = [d for d in r['rishennia'] if not d.get('vidstup')]
+        if not rest and r['id'] in ruchni:
+            for x in ruchni[r['id']]:
+                hits = [d for _, d in by_case.get(norm(x['sprava']), []) if not x.get('data') or d.get('data') == x['data']]
+                if hits:
+                    nd = {k: v for k, v in hits[0].items() if k != 'vidstup'}
+                    nd['dodano'] = 'ручне уточнення: ' + (x.get('prymitka') or '')
+                    rest.append(nd)
+            r['rishennia'] = rest + [d for d in r['rishennia'] if d.get('vidstup')]
+        if any(d.get('vidstup') for d in r['rishennia']):
+            r['rishennia'] = rest + [d for d in r['rishennia'] if d.get('vidstup')]
+        if r['riven'] in (2, 3, 4) and rest and all(d.get('sklad') for d in rest) and not any(d.get('zrazkova') for d in rest):
+            new = min(LEVEL.get(d['sklad'], 5) for d in rest)
+            if new > r['riven']:
+                changed.append((r['id'], r['riven_nazva'], ranks[new]))
+                r['riven'], r['riven_nazva'] = new, ranks[new]
+        if rest:
+            r['data_rishennia'] = max([d['data'] for d in rest if d.get('data')], default=r.get('data_rishennia'))
+    if changed:
+        log('відступи: рівень уточнено за рішеннями без постанови, якою відступлено: ' +
+            '; '.join(f'#{i} {a} → {b}' for i, a, b in changed))
+    return changed
+
+
+def link_departures(rows, cache_dir=None, online=True, ruchni_path=None, threads=3, log=print, ranks=None, rishennia_ruchni_path=None):
     by_case = collections.defaultdict(list)
     for r in rows:
         for d in r['rishennia']:
@@ -255,6 +301,8 @@ def link_departures(rows, cache_dir=None, online=True, ruchni_path=None, threads
     for r in mod:
         r['vidstupleno_u'].sort(key=lambda x: (not x['doc_id'], NADIINIST.get(x['nadiinist'], 2),
                                                RANK.get(x['sklad'] or '', 3), x['data'] or ''))
+    if ranks:
+        fix_own_departures(rows, by_case, ranks, rishennia_ruchni_path, log)
     return sum(1 for r in mod if r['vidstupleno_u']), len(mod)
 
 

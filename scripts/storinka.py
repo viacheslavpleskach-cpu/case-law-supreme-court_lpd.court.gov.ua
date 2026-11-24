@@ -42,7 +42,8 @@ def main():
             't': k['typ'], 'pt': k.get('pidtyp') or '', 'h': k['haluz'], 'c': k['chynnist'], 'n': r['nazva'], 'x': r['tekst'],
             'z': k.get('rezyume') or '', 'p': r['poznachka'] or '', 'v': k['dzherelo'] == 'перевірено', 'nd': k.get('nadiinist') or '',
             'rb': r['rubryky'][:3],
-            'ds': [[d.get('sprava') or '', d.get('data') or '', d.get('provadzhennia') or '', d.get('sklad') or '', d.get('doc_id') or ''] for d in r['rishennia']],
+            'ds': [[d.get('sprava') or '', d.get('data') or '', d.get('provadzhennia') or '', d.get('sklad') or '', d.get('doc_id') or '', 1 if d.get('vidstup') else 0]
+                   for d in r['rishennia']],
             'vu': [[x.get('sprava') or '', x.get('data') or '', x.get('sklad') or '', x.get('sud') or '', x.get('doc_id') or '',
                     x.get('nadiinist') or '', (x.get('pozytsii') or [''])[0]] for x in (r.get('vidstupleno_u') or [])[:2]],
         })
@@ -150,7 +151,7 @@ function card(x,ps){
  const vu=(x.vu||[]).map(v=>`<div>${esc(v[2]==='палата'?'палата':v[2])}${v[3]&&v[3]!=='Велика Палата'&&v[2]!=='ВП'?' '+esc(v[3]):''} · ${esc(fd(v[1]))} · справа № ${esc(v[0])}${v[4]?` · <a href="https://reyestr.court.gov.ua/Review/${v[4]}" target="_blank" rel="noopener">ЄДРСР</a>`:''}${v[6]?` · <a href="https://lpd.court.gov.ua/legal-position/${v[6]}" target="_blank" rel="noopener">позиція #${v[6]}</a>`:''}${v[5]==='ймовірно'?' <span class="note">(ймовірно: справу згадано в постанові з відступом)</span>':''}</div>`).join('');
  const vub=x.c==='від неї відступлено'?`<h4>Відступлено в постанові</h4><div class="docs">${vu||'<div class="note">Постанову не встановлено — див. lpd.court.gov.ua</div>'}</div>`:'';
  const cb=x.c==='від неї відступлено'?`<span class="b c1">від неї відступлено${x.vu&&x.vu[0]?' · '+esc(fd(x.vu[0][1]))+' № '+esc(x.vu[0][0]):''}</span>`:x.c==='містить відступ'?'<span class="b c2">містить відступ</span>':'';
- const docs=x.ds.sort((a,b)=>(b[0]===x.ms&&b[1]===x.d)-(a[0]===x.ms&&a[1]===x.d)).map(d=>`<div${d[0]===x.ms&&d[1]===x.d?' style="font-weight:600"':''}>${esc(fd(d[1]))} · справа № ${esc(d[0])}${d[2]?' · провадження № '+esc(d[2]):''}${d[3]?' · '+esc(d[3]):''}${d[4]?` · <a href="https://reyestr.court.gov.ua/Review/${d[4]}" target="_blank" rel="noopener">ЄДРСР</a>`:''}</div>`).join('');
+ const docs=x.ds.sort((a,b)=>(b[0]===x.ms&&b[1]===x.d)-(a[0]===x.ms&&a[1]===x.d)).map(d=>`<div${d[0]===x.ms&&d[1]===x.d?' style="font-weight:600"':''}>${esc(fd(d[1]))} · справа № ${esc(d[0])}${d[2]?' · провадження № '+esc(d[2]):''}${d[3]?' · '+esc(d[3]):''}${d[4]?` · <a href="https://reyestr.court.gov.ua/Review/${d[4]}" target="_blank" rel="noopener">ЄДРСР</a>`:''}${d[5]?' <span class="note">— постанова, якою відступлено від позиції</span>':''}</div>`).join('');
  const res=x.z?`<h4>Резюме</h4><p>${hl(x.z,ps)}</p><h4>Повний текст позиції</h4><p>${hl(x.x,ps)}</p>`:`<h4>Позиція</h4><p>${hl(x.x,ps)}</p>`;
  return `<details><summary><span class="date">${fd(x.d)}</span><span class="title">${hl(x.n,ps)}</span>
  <span class="meta"><span class="b r${x.r}">${R[x.r]}</span>${x.s!==R[x.r]?`<span class="b">${esc(x.s)}</span>`:`<span class="b">${esc(x.y)}</span>`}<span class="b">${esc(M.typy[x.t]||x.t)}${x.pt?': '+esc(x.pt):''}</span>${hs}${cb}${x.v?'<span class="b g">перевірено</span>':''}${x.r===5&&!x.v?`<span class="b g" title="Автоматична розмітка (модель): надійність ${esc(x.nd)}">авто · ${esc(x.nd)}</span>`:''}</span></summary>

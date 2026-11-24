@@ -168,7 +168,7 @@ def chynnist(r):
 
 def osnovne_rishennia(r):
     """Рішення, з якого виведено позицію відповідного рівня: ВП / ОП / палата; інакше — найновіше."""
-    docs = sorted(r['rishennia'], key=lambda d: d.get('data') or '', reverse=True)
+    docs = sorted([d for d in r['rishennia'] if not d.get('vidstup')] or r['rishennia'], key=lambda d: d.get('data') or '', reverse=True)
     want = {2: 'ВП', 3: 'ОП', 4: 'палата'}.get(r['riven'])
     c = [d for d in docs if want and d.get('sklad') == want]
     return (c or docs or [{}])[0]
