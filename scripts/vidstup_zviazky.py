@@ -315,3 +315,129 @@ def korotko(v):
     head = ' '.join(x for x in (sk, sud) if x)
     s = f"{head} {dd} № {v.get('sprava')}".strip()
     return s + (' (ймовірно)' if v.get('nadiinist') == 'ймовірно' else '')
+
+
+# ---------- позиції «З відступом»: від яких постанов відступлено ----------
+
+END = re.compile(r'(?<![№\d])\.\s+(?=[А-ЯІЇЄҐ][а-яіїєґʼ’`\']{3,}\s)')
+NEG = re.compile(r'(?:не\s+вбача\w*|не\s+знаход\w*|відсутн\w+|немає|нема)\s+(?:\w+\s+){0,3}підстав\w*\s+(?:\w+\s+){0,2}(?:для\s+)?відступ', re.I)
+
+
+VID2 = re.compile(r'відступ|конкретиз|уточн\w*\s+(?:свою\s+|правов\w+\s+)?(?:висновок|позиці|правов)|відійш', re.I)
+VID_STRICT = re.compile(r'відступ\w*\s+(?:\w+\s+){0,2}від\s+(?:\S+\s+){0,8}?(?:висновк|позиці|підход|практик)', re.I)
+
+
+def windows(t, size=650, pat=VID2):
+    """Фрагменти від слова «відступ…» (також «конкретизує», «уточнено висновок») до кінця речення (не довше size);
+    заперечення («не вбачає підстав для відступу») — пропускаються."""
+    t = re.sub(r'\s+', ' ', t or '')
+    out = []
+    for m in pat.finditer(t):
+        pre = t[max(0, m.start() - 120):m.end() + 20]
+        if NEG.search(pre):
+            continue
+        seg = t[m.start():m.start() + size]
+        e = END.search(seg, 40)
+        out.append((t[max(0, m.start() - 250):m.start()], seg[:e.start() + 1] if e else seg))
+    return out
+
+
+def link_indented(rows, cache_dir=None, online=True, threads=3, log=print):
+    """r['vidstupleno_vid'] для позицій «З відступом»: постанови, від висновків яких відступлено.
+    Джерела: (1) позиції «Змінено», для яких цю позицію встановлено як ту, що відступила (найнадійніше);
+    (2) текст позиції — справи, названі після «відступ…» і ухвалені раніше за постанову з відступом;
+    (3) якщо нічого не знайдено — повний текст постанови ВП / ОП / палати (кеш), «ймовірно»."""
+    by_case = collections.defaultdict(list)
+    byid = {r['id']: r for r in rows}
+    for r in rows:
+        for d in r['rishennia']:
+            if d.get('sprava'):
+                by_case[norm(d['sprava'])].append((r, d))
+
+    def resolve(case, date, before, dzherelo, nadiinist):
+        hits = by_case.get(case, [])
+        use = [(r, d) for r, d in hits if date and d.get('data') == date]
+        if not use and not date:
+            cand = sorted([(r, d) for r, d in hits if (d.get('data') or '') < before], key=lambda x: x[1].get('data') or '')
+            use = [x for x in cand if x[1].get('data') == cand[-1][1].get('data')] if cand else []
+        d0 = use[0][1] if use else {}
+        return {'sprava': d0.get('sprava') or case, 'data': d0.get('data') or date, 'sud': d0.get('sud'), 'sklad': d0.get('sklad'),
+                'doc_id': d0.get('doc_id'), 'edrsr': d0.get('edrsr'), 'pozytsii': sorted({r['id'] for r, d in use}),
+                'dzherelo': dzherelo, 'nadiinist': nadiinist}
+
+    rev = collections.defaultdict(list)
+    for m in rows:
+        for x in m.get('vidstupleno_u') or []:
+            for p in x.get('pozytsii') or []:
+                rev[p].append((m, x))
+
+    def from_text(t, own_dep, d_dep, dzherelo, nd, strict=False, lvl=5):
+        res = {}
+        for pre, seg in windows(t, pat=VID_STRICT if strict else VID2):
+            for mm in CASE.finditer(seg):
+                if strict and mm.start() > 450:
+                    break
+                c = norm(mm.group(1))
+                dt = date_near(pre + seg, len(pre) + mm.start()) or ''
+                if c in own_dep and (not dt or dt == d_dep):
+                    continue
+                if dt and dt >= d_dep:
+                    continue
+                if strict:
+                    v = resolve(c, dt, d_dep, dzherelo, nd)
+                    if v['sklad'] and LEVEL.get(v['sklad'], 5) < lvl:  # нижчий склад не відступає від вищого (ОП — від ВП)
+                        continue
+                key = (c, dt)
+                if key not in res:
+                    res[key] = resolve(c, dt, d_dep, dzherelo, nd)
+        return res
+
+    ind = [r for r in rows if (r.get('poznachka') or '').startswith('З відступом')]
+    need_full = []
+    for r in ind:
+        docs = [d for d in r['rishennia'] if not d.get('vidstup')]
+        dep = [d for d in docs if d.get('sklad') in RANK or d.get('zrazkova')] or docs
+        d_dep = max([d['data'] for d in dep if d.get('data')], default='9999')
+        own_dep = {norm(d['sprava']) for d in dep if d.get('sprava') and d.get('data') == d_dep}
+        found = collections.OrderedDict()
+        for m, x in rev.get(r['id'], []):
+            md = [d for d in m['rishennia'] if not d.get('vidstup')] or m['rishennia']
+            for d in sorted(md, key=lambda d: d.get('data') or '', reverse=True)[:1]:
+                found.setdefault((norm(d.get('sprava')), d.get('data')),
+                                 {'sprava': d.get('sprava'), 'data': d.get('data'), 'sud': d.get('sud'), 'sklad': d.get('sklad'),
+                                  'doc_id': d.get('doc_id'), 'edrsr': d.get('edrsr'), 'pozytsii': [m['id']],
+                                  'dzherelo': f"позиція #{m['id']} «Змінено»", 'nadiinist': 'підтверджено'})
+        for k, v in from_text(r['tekst'], own_dep, d_dep, 'текст позиції', 'підтверджено').items():
+            if not any(k[0] == f[0] and (not k[1] or not f[1] or k[1] == f[1]) for f in found):
+                found[k] = v
+        r['vidstupleno_vid'] = list(found.values())
+        if not found:
+            need_full.append((r, dep, own_dep, d_dep))
+
+    if need_full and cache_dir:
+        miss = [d for r, dep, _, _ in need_full for d in dep if d.get('sklad') in RANK or d.get('zrazkova')]
+        miss = [d for d in miss if not os.path.exists(os.path.join(cache_dir, f"{d['id']}.txt.gz"))]
+        if miss and online:
+            log(f'відступи: завантажую повні тексти {len(miss)} постанов')
+            with cf.ThreadPoolExecutor(max(1, min(threads, 3))) as ex:
+                list(ex.map(lambda d: fulltext(d, cache_dir, True), miss))
+        for r, dep, own_dep, d_dep in need_full:
+            res = {}
+            for d in dep:
+                if not (d.get('sklad') in RANK or d.get('zrazkova')):
+                    continue
+                t = fulltext(d, cache_dir, False) or ''
+                lvl = 1 if d.get('zrazkova') else LEVEL.get(d.get('sklad'), 5)
+                res.update(from_text(t, own_dep, d_dep, 'повний текст постанови', 'ймовірно', strict=True, lvl=lvl))
+            r['vidstupleno_vid'] = list(res.values())[:6]
+    for r in ind:
+        dated = {norm(x['sprava']) for x in r['vidstupleno_vid'] if x.get('data')}
+        r['vidstupleno_vid'] = [x for x in r['vidstupleno_vid'] if x.get('data') or norm(x['sprava']) not in dated]
+        r['vidstupleno_vid'].sort(key=lambda x: (NADIINIST.get(x['nadiinist'], 2), x['data'] or ''), reverse=False)
+        own = {(norm(d.get('sprava')), d.get('data')) for d in r['rishennia']}
+        for d in r['rishennia']:
+            if any((norm(x['sprava']), x['data']) == (norm(d.get('sprava')), d.get('data')) for x in r['vidstupleno_vid']):
+                d['vidstup_vid'] = True  # lpd прив'язав до нової позиції й постанову, від якої відступлено
+    n = sum(1 for r in ind if r['vidstupleno_vid'])
+    log(f'відступи: постанови, від яких відступлено, встановлено для {n} з {len(ind)} позицій «З відступом»')
+    return n, len(ind)

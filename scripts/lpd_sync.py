@@ -381,7 +381,9 @@ def vidstupy(rows):
                     'nazva': r['nazva'], 'spravy_u_frahmenti': '; '.join(cases), 'pozytsii_bazy_za_tsymy_spravamy': '; '.join(map(str, linked)),
                     'frahment': re.sub(r'\s+', ' ', frag)[:700], 'link': r['link'],
                     'vidstupleno_u': '; '.join(f"{vidstup_zviazky.korotko(x)}{' ' + x['edrsr'] if x.get('edrsr') else ''} [{x['dzherelo']}]"
-                                               for x in r.get('vidstupleno_u') or [])})
+                                               for x in r.get('vidstupleno_u') or []),
+                    'vidstupleno_vid': '; '.join(f"{vidstup_zviazky.korotko(x)}{' ' + x['edrsr'] if x.get('edrsr') else ''} [{x['dzherelo']}]"
+                                                 for x in r.get('vidstupleno_vid') or [])})
     return out
 
 
@@ -413,6 +415,10 @@ def md_list(rows, title, intro, group_key):
                 out.append(f"  - відступлено: {lk}" + (f" — позиція `#{x['pozytsii'][0]}`" if x.get('pozytsii') else ''))
             if (r.get('poznachka') or '').startswith('Змінено') and not r.get('vidstupleno_u'):
                 out.append('  - відступлено: постанову не встановлено (див. lpd.court.gov.ua)')
+            vv = r.get('vidstupleno_vid') or []
+            if vv:
+                out.append('  - відступлено від: ' + '; '.join((f"[{vidstup_zviazky.korotko(x)}]({x['edrsr']})" if x.get('edrsr') else vidstup_zviazky.korotko(x))
+                                                           for x in vv[:4]) + (f' та ще {len(vv) - 4}' if len(vv) > 4 else ''))
         out.append('')
     return '\n'.join(out)
 
@@ -468,7 +474,7 @@ def write_all(raw, rows, cats, path):
                            'pozytsii': '; '.join(sorted({str(r['id']) for r, d in same}))})
         write_csv(os.path.join(DATA, 'palaty_supreme_zvirka.csv'), zv, list(zv[0].keys()))
     v = vidstupy(rows)
-    write_csv(os.path.join(DATA, 'vidstupy.csv'), v, ['id', 'riven', 'sud', 'poznachka', 'nazva', 'vidstupleno_u', 'spravy_u_frahmenti', 'pozytsii_bazy_za_tsymy_spravamy', 'frahment', 'link'])
+    write_csv(os.path.join(DATA, 'vidstupy.csv'), v, ['id', 'riven', 'sud', 'poznachka', 'nazva', 'vidstupleno_u', 'vidstupleno_vid', 'spravy_u_frahmenti', 'pozytsii_bazy_za_tsymy_spravamy', 'frahment', 'link'])
     # покажчики за пріоритетом
     by = collections.defaultdict(list)
     for r in rows:
@@ -553,6 +559,8 @@ def main():
                                            ruchni_path=os.path.join(DATA, 'vidstupy_ruchni.csv'), threads=min(max(a.docs_threads, 1), 3),
                                            ranks=RANKS, rishennia_ruchni_path=os.path.join(DATA, 'rishennia_ruchni.csv'))
     print(f'відступи: постанову, якою відступлено, встановлено для {n} з {m} позицій «Змінено»')
+    vidstup_zviazky.link_indented(rows, cache_dir=os.path.join(CACHE, 'povni_teksty'), online=not a.offline,
+                                  threads=min(max(a.docs_threads, 1), 3))
     stats = write_all(raw, rows, cats, path)
     ch = diff(rows)
     print(json.dumps({'statystyka': stats, 'zminy': {k: (len(v) if isinstance(v, list) else v) for k, v in (ch or {}).items()}}, ensure_ascii=False, indent=1))

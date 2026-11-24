@@ -44,7 +44,7 @@ def main():
             L = [f'# {code} {name}', '', f"Практика ВС вищих рівнів (зразкові справи, ВП, ОП, палати). Позицій: {len(items)} "
                  f"(основна галузь — {sum(1 for _, i in items if i == 0)}, друга — {sum(1 for _, i in items if i == 1)}). "
                  "Рядок: дата основного рішення · рівень · суд · справа (провадження) — назва позиції `#id`. "
-                 "⚠ від позиції відступлено (під рядком — постанова, якою відступлено); ↺ позиція містить відступ. Повний текст і резюме: `python3 scripts/poshuk.py --id <id>` "
+                 "⚠ від позиції відступлено (під рядком — постанова, якою відступлено); ↺ позиція містить відступ (під рядком — постанови, від висновків яких відступлено). Повний текст і резюме: `python3 scripts/poshuk.py --id <id>` "
                  "або сторінка https://viacheslavpleskach-cpu.github.io/case-law-supreme-court_lpd.court.gov.ua/", '']
             for t in TYP_ORDER:
                 sub = [(k, i) for k, i in items if k['typ'] == t]
@@ -71,6 +71,10 @@ def main():
                             vu = r.get('vidstupleno_u') or []
                             L.append('  - відступлено: ' + ('; '.join((f"[{korotko(x)}]({x['edrsr']})" if x.get('edrsr') else korotko(x)) for x in vu[:2])
                                                           if vu else 'постанову не встановлено'))
+                        if k['chynnist'] == 'містить відступ' and r.get('vidstupleno_vid'):
+                            vv = r['vidstupleno_vid']
+                            L.append('  - відступлено від: ' + '; '.join((f"[{korotko(x)}]({x['edrsr']})" if x.get('edrsr') else korotko(x)) for x in vv[:4])
+                                     + (f' та ще {len(vv) - 4}' if len(vv) > 4 else ''))
                     L.append('')
             open(os.path.join(OUT, f'{code}.md'), 'w', encoding='utf-8').write('\n'.join(L) + '\n')
     R = ['# Індекси практики ВС за галузями права', '', "Автор: В'ячеслав Плескач. Зразкові справи, Велика Палата, об'єднані палати, палати — "
@@ -152,6 +156,10 @@ def kolehii(tx, hn):
                             vu = r.get('vidstupleno_u') or []
                             L.append('  - відступлено: ' + ('; '.join((f"[{korotko(x)}]({x['edrsr']})" if x.get('edrsr') else korotko(x)) for x in vu[:2])
                                                           if vu else 'постанову не встановлено'))
+                        if k['chynnist'] == 'містить відступ' and r.get('vidstupleno_vid'):
+                            vv = r['vidstupleno_vid']
+                            L.append('  - відступлено від: ' + '; '.join((f"[{korotko(x)}]({x['edrsr']})" if x.get('edrsr') else korotko(x)) for x in vv[:4])
+                                     + (f' та ще {len(vv) - 4}' if len(vv) > 4 else ''))
                     L.append('')
             open(os.path.join(out, f'{code}.md'), 'w', encoding='utf-8').write('\n'.join(L) + '\n')
     open(os.path.join(out, 'README.md'), 'w', encoding='utf-8').write('\n'.join(R) + '\n')
