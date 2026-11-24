@@ -8,6 +8,8 @@
   python3 scripts/poshuk.py "строк* звернення" --riven 3 --sud КАС
   python3 scripts/poshuk.py --sprava 990SCGC/12/24
   python3 scripts/poshuk.py "відступ*" --rubryka "ВРП"
+  python3 scripts/poshuk.py "строк*" --haluz P03 --typ ПП          # галузь і тип (лише ЗС, ВП, ОП, палати)
+  python3 scripts/poshuk.py --id 14875 13289                         # повний текст, резюме, класифікація
 Дайджести:
   python3 scripts/poshuk.py "електронн* доказ*" --dajdzhesty            # за змістом
   python3 scripts/poshuk.py "дисциплінарн* відповідальн* судд*" --dajdzhesty --tekst   # повний текст, зі сторінками
@@ -17,6 +19,14 @@
 import argparse, csv, gzip, json, os, re, shlex, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+HOMO = str.maketrans('АВСЕНІКМОРТХаесіорху', 'ABCEHIKMOPTXaecIopxy')
+
+
+def norm_case(s):
+    """№ справи без пробілів і з латиницею замість схожих кириличних літер (у lpd трапляється «990SСGС»)."""
+    return (s or '').replace(' ', '').translate(HOMO).upper()
 
 
 def patterns(q):
@@ -41,17 +51,51 @@ def snippet(text, pats, w=160):
     return ('…' if s else '') + text[s:m.end() + w].replace('\n', ' ') + '…'
 
 
-def search_positions(a, pats):
-    n = 0
+def load_klas():
+    k = {}
+    p = os.path.join(ROOT, 'data', 'klasyfikatsiia.jsonl')
+    if os.path.exists(p):
+        for l in open(p, encoding='utf-8'):
+            d = json.loads(l)
+            k[d['id']] = d
+    return k
+
+
+def show_id(a):
+    klas = load_klas()
     for l in open(os.path.join(ROOT, 'data', 'pozytsii.jsonl'), encoding='utf-8'):
         r = json.loads(l)
+        if r['id'] in a.id:
+            k = klas.get(r['id'], {})
+            print(f"#{r['id']} {r['riven_nazva']} | {r['sud']} | {r['link']}")
+            if k:
+                print(f"  юрисдикція: {k['yurysdyktsiia']} · тип: {k['typ']}{' / ' + k['pidtyp'] if k.get('pidtyp') else ''} · галузі: {', '.join(k['haluz'])} · {k['chynnist']}"
+                      + (f" · примітка: {k['prymitka']}" if k.get('prymitka') else ''))
+            print(f"  НАЗВА: {r['nazva']}")
+            if k.get('rezyume'):
+                print(f"  РЕЗЮМЕ: {k['rezyume']}")
+            print(f"  ТЕКСТ: {r['tekst']}")
+            for d in r['rishennia']:
+                print(f"  рішення: {d.get('data')} № {d.get('sprava')} провадження {d.get('provadzhennia') or '—'} склад {d.get('sklad') or '—'} {d.get('edrsr') or ''}")
+            print()
+
+
+def search_positions(a, pats):
+    n = 0
+    klas = load_klas() if (a.haluz or a.typ) else {}
+    for l in open(os.path.join(ROOT, 'data', 'pozytsii.jsonl'), encoding='utf-8'):
+        r = json.loads(l)
+        if a.haluz or a.typ:
+            k = klas.get(r['id'])
+            if not k or (a.haluz and a.haluz.upper() not in k['haluz']) or (a.typ and a.typ.upper() != k['typ'].upper()):
+                continue
         if a.riven and r['riven'] > a.riven:
             continue
         if a.sud and (r['sud'] or '').lower() != a.sud.lower():
             continue
         if a.rubryka and not any(a.rubryka.lower() in x.lower() for x in r['rubryky']):
             continue
-        if a.sprava and not any(a.sprava.replace(' ', '') == (d.get('sprava') or '').replace(' ', '') for d in r['rishennia']):
+        if a.sprava and not any(norm_case(a.sprava) == norm_case(d.get('sprava')) for d in r['rishennia']):
             continue
         if a.poznachka and not r['poznachka']:
             continue
@@ -107,8 +151,13 @@ def main():
     ap.add_argument('--poznachka', action='store_true', help='лише «З відступом» / «Змінено»')
     ap.add_argument('--dajdzhesty', action='store_true')
     ap.add_argument('--tekst', action='store_true', help='шукати в повних текстах дайджестів')
+    ap.add_argument('--haluz', help='код галузі (C01…C14, P01…P09, K01, K02, S01, V01) — лише позиції вищих рівнів')
+    ap.add_argument('--typ', help='тип питання: Ю, ПП, МП, СС — лише позиції вищих рівнів')
+    ap.add_argument('--id', type=int, nargs='+', help='повний текст позиції(й) за номером')
     ap.add_argument('--limit', type=int, default=30)
     a = ap.parse_args()
+    if a.id:
+        return show_id(a)
     pats = patterns(a.zapyt)
     (search_digests if a.dajdzhesty else search_positions)(a, pats)
 

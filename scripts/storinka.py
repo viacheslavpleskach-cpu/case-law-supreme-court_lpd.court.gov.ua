@@ -5,7 +5,8 @@
 
   python3 scripts/klasyfikatsiia.py && python3 scripts/storinka.py
 """
-import json, os, datetime as dt
+import json, os, sys, datetime as dt
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from zoneinfo import ZoneInfo
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -40,6 +41,8 @@ def main():
     open(os.path.join(DOCS, 'index.html'), 'w', encoding='utf-8').write(HTML)
     open(os.path.join(DOCS, '.nojekyll'), 'w').write('')
     print('позицій на сторінці:', len(out))
+    import indeksy_haluzi
+    indeksy_haluzi.main()
 
 
 HTML = r'''<!DOCTYPE html>
