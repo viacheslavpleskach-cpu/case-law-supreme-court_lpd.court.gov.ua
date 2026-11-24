@@ -1,0 +1,40 @@
+{"id": 4705, "yurysdyktsiia": "адміністративна", "typ": "МП", "pidtyp": "", "haluz": ["P01", "P02"], "rezyume": "", "prymitka": ""}
+{"id": 4706, "yurysdyktsiia": "адміністративна", "typ": "МП", "pidtyp": "", "haluz": ["P02", "P01"], "rezyume": "", "prymitka": ""}
+{"id": 4707, "yurysdyktsiia": "адміністративна", "typ": "МП", "pidtyp": "", "haluz": ["S01", "P08"], "rezyume": "", "prymitka": "галузь: спір щодо адвокатського свідоцтва (адвокатура) для судді"}
+{"id": 4708, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C04", "P01"], "rezyume": "", "prymitka": ""}
+{"id": 4709, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C13", "C01"], "rezyume": "", "prymitka": ""}
+{"id": 4710, "yurysdyktsiia": "господарська", "typ": "ПП", "pidtyp": "підсудність і склад суду", "haluz": ["C01", "C02"], "rezyume": "", "prymitka": "територіальна підсудність, а не розмежування юрисдикцій"}
+{"id": 4711, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C05"], "rezyume": "", "prymitka": ""}
+{"id": 4712, "yurysdyktsiia": "господарська", "typ": "ПП", "pidtyp": "учасники і представництво", "haluz": ["V01"], "rezyume": "", "prymitka": "процесуальне правонаступництво у виконавчому провадженні"}
+{"id": 4713, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C05"], "rezyume": "", "prymitka": ""}
+{"id": 4714, "yurysdyktsiia": "цивільна", "typ": "Ю", "pidtyp": "", "haluz": ["P02", "C09"], "rezyume": "", "prymitka": ""}
+{"id": 4715, "yurysdyktsiia": "цивільна", "typ": "Ю", "pidtyp": "", "haluz": ["C01"], "rezyume": "", "prymitka": ""}
+{"id": 4716, "yurysdyktsiia": "цивільна", "typ": "Ю", "pidtyp": "", "haluz": ["C03", "C06"], "rezyume": "", "prymitka": ""}
+{"id": 4717, "yurysdyktsiia": "цивільна", "typ": "Ю", "pidtyp": "", "haluz": ["C04"], "rezyume": "", "prymitka": ""}
+{"id": 4718, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C13", "P06"], "rezyume": "", "prymitka": ""}
+{"id": 4719, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C02", "C13"], "rezyume": "", "prymitka": ""}
+{"id": 4720, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C02", "C13"], "rezyume": "", "prymitka": ""}
+{"id": 5024, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C05", "C08"], "rezyume": "", "prymitka": ""}
+{"id": 5025, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C05", "C02"], "rezyume": "", "prymitka": ""}
+{"id": 5034, "yurysdyktsiia": "адміністративна", "typ": "МП", "pidtyp": "", "haluz": ["P08", "P03"], "rezyume": "", "prymitka": "галузь: доступ до адвокатської професії; прямого коду для адвокатури немає"}
+{"id": 5035, "yurysdyktsiia": "адміністративна", "typ": "ПП", "pidtyp": "доступ до суду і строки", "haluz": ["P08"], "rezyume": "", "prymitka": "галузь матеріального спору з тексту неочевидна"}
+{"id": 5036, "yurysdyktsiia": "адміністративна", "typ": "ПП", "pidtyp": "перегляд судових рішень", "haluz": ["P08"], "rezyume": "", "prymitka": "галузь матеріального спору з тексту неочевидна"}
+{"id": 5037, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C13", "P06"], "rezyume": "", "prymitka": ""}
+{"id": 5038, "yurysdyktsiia": "адміністративна", "typ": "Ю", "pidtyp": "", "haluz": ["C06"], "rezyume": "", "prymitka": ""}
+{"id": 5039, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C05", "V01"], "rezyume": "", "prymitka": ""}
+{"id": 5040, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C05", "V01"], "rezyume": "", "prymitka": ""}
+{"id": 5041, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C05"], "rezyume": "", "prymitka": ""}
+{"id": 5042, "yurysdyktsiia": "господарська", "typ": "Ю", "pidtyp": "", "haluz": ["C03"], "rezyume": "", "prymitka": ""}
+{"id": 5055, "yurysdyktsiia": "господарська", "typ": "ПП", "pidtyp": "учасники і представництво", "haluz": ["P08"], "rezyume": "", "prymitka": "галузь: екологічне право — окремого коду немає; поєднує процесуальну правосуб'єктність і матеріальне право на захист"}
+{"id": 5056, "yurysdyktsiia": "господарська", "typ": "ПП", "pidtyp": "учасники і представництво", "haluz": ["C01"], "rezyume": "", "prymitka": "галузь матеріального спору з тексту неочевидна"}
+{"id": 5057, "yurysdyktsiia": "господарська", "typ": "ПП", "pidtyp": "учасники і представництво", "haluz": ["C03"], "rezyume": "", "prymitka": ""}
+{"id": 5058, "yurysdyktsiia": "цивільна", "typ": "ПП", "pidtyp": "учасники і представництво", "haluz": ["C06"], "rezyume": "", "prymitka": ""}
+{"id": 5059, "yurysdyktsiia": "кримінальна", "typ": "ПП", "pidtyp": "інше процесуальне", "haluz": ["K02"], "rezyume": "", "prymitka": ""}
+{"id": 5060, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["P07", "P08"], "rezyume": "", "prymitka": "галузь: екологічне право і дозвільна система — окремого коду немає"}
+{"id": 5061, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C01", "P08"], "rezyume": "", "prymitka": "галузь: позовна давність у спорах за участю прокурора, предмет спору з тексту неочевидний"}
+{"id": 5062, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C01", "P08"], "rezyume": "", "prymitka": "галузь: позовна давність у спорах за участю прокурора, предмет спору з тексту неочевидний"}
+{"id": 5063, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C05"], "rezyume": "", "prymitka": ""}
+{"id": 5064, "yurysdyktsiia": "господарська", "typ": "МП", "pidtyp": "", "haluz": ["C01"], "rezyume": "", "prymitka": "галузь: загальне положення про способи захисту"}
+{"id": 5065, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C02"], "rezyume": "", "prymitka": ""}
+{"id": 5066, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C02"], "rezyume": "", "prymitka": ""}
+{"id": 5067, "yurysdyktsiia": "цивільна", "typ": "МП", "pidtyp": "", "haluz": ["C02"], "rezyume": "", "prymitka": ""}
